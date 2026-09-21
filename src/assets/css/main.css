@@ -298,6 +298,10 @@ body.drawer-open { overflow: hidden; }
 }
 .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 .card-img { aspect-ratio: 16 / 10; overflow: hidden; background: var(--color-sage); }
+/* respImg wraps the <img> in a <picture>, which is inline by default and won't pass a definite
+   height down to a percentage-sized child — without this, each image falls back to its own
+   native aspect ratio instead of being cropped into the uniform card-img box. */
+.card-img picture { display: block; width: 100%; height: 100%; }
 .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card-body { padding: var(--sp-3); display: flex; flex-direction: column; gap: 0.6em; flex: 1; }
 .card-body h3 { font-size: var(--fs-md); }
