@@ -266,8 +266,18 @@ module.exports = function (eleventyConfig) {
   );
 
   // ---- Responsive image shortcode (AVIF/WebP + fallback, logs placeholders) ----
+  // Dedup is keyed by the image URL and persisted across build processes (not just an
+  // in-memory Set for this run) by reading IMAGES_TODO.md's existing entries once at startup —
+  // otherwise every fresh `npx eleventy` invocation re-appends the same already-logged
+  // placeholders, since a new process starts with an empty in-memory Set every time.
   const IMAGES_TODO_PATH = path.join(__dirname, "IMAGES_TODO.md");
   const loggedPlaceholders = new Set();
+  try {
+    const existing = fs.readFileSync(IMAGES_TODO_PATH, "utf8");
+    for (const m of existing.matchAll(/:\s*(https?:\/\/\S+)/g)) loggedPlaceholders.add(m[1]);
+  } catch (e) {
+    /* file doesn't exist yet — nothing to preload */
+  }
 
   function logPlaceholder(src, context) {
     if (!/unsplash|pexels/i.test(src) || loggedPlaceholders.has(src)) return;

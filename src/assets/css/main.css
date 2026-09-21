@@ -398,11 +398,12 @@ html[lang="ar"] { --font-sans: "IBM Plex Sans Arabic", var(--font-sans); --font-
 
 /* ---- Trade routes map ---- */
 .trade-map {
-  background: var(--color-sage);
+  background: var(--color-bg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   padding: var(--sp-3);
   margin-block-start: var(--sp-4);
+  overflow: hidden;
 }
 .trade-map .route { animation: dash 14s linear infinite; }
 @keyframes dash { to { stroke-dashoffset: -120; } }
