@@ -25,6 +25,17 @@
 [[headers]]
   for = "/assets/*"
   [headers.values]
+    # NOT immutable/long-lived here: main.css, main.js and the other hand-written files under
+    # /assets/ keep the same URL forever even when their content changes on a new deploy, so a
+    # year-long "immutable" cache (the previous setting) silently hid every CSS/JS fix from
+    # anyone who'd already loaded the site — no amount of hard-refreshing would show the update
+    # until the cache naturally expired. Only genuinely content-hashed paths (below) get long
+    # caching, since their URL itself changes whenever the content does.
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
