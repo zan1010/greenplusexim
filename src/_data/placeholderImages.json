@@ -1,0 +1,12 @@
+{
+  "hero-port": { "url": "https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920", "credit": "Tom Fisk / Pexels", "alt": "Aerial view of a busy container port with stacked shipping containers" },
+  "hero-port-2": { "url": "https://images.pexels.com/photos/6595774/pexels-photo-6595774.jpeg?auto=compress&cs=tinysrgb&w=1920", "credit": "Kelly / Pexels", "alt": "Cargo ship unloading shipping containers at a port" },
+  "fresh-fruits": { "url": "https://images.pexels.com/photos/12708049/pexels-photo-12708049.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Close-up display of fresh fruits at a market" },
+  "fresh-vegetables": { "url": "https://images.pexels.com/photos/1437811/pexels-photo-1437811.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Engin Akyurt / Pexels", "alt": "Fresh onions, garlic and tomatoes" },
+  "vegetables-market": { "url": "https://images.pexels.com/photos/17302468/pexels-photo-17302468.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Fresh fruit and vegetables at a market" },
+  "grains-rice": { "url": "https://images.pexels.com/photos/11789292/pexels-photo-11789292.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Close-up photograph of rice grains" },
+  "spices": { "url": "https://images.pexels.com/photos/5504603/pexels-photo-5504603.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Colourful spices on display at a market" },
+  "warehouse": { "url": "https://images.pexels.com/photos/31043129/pexels-photo-31043129.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Warehouse workers handling logistics boxes" },
+  "founder-portrait": { "url": "https://images.pexels.com/photos/19746166/pexels-photo-19746166.jpeg?auto=compress&cs=tinysrgb&w=800", "credit": "Istiak Remon / Pexels", "alt": "Portrait of a businessman in formal attire" },
+  "market-general": { "url": "https://images.pexels.com/photos/37321079/pexels-photo-37321079.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Vibrant display of fresh market produce" }
+}

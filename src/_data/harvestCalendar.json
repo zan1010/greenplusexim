@@ -1,0 +1,17 @@
+[
+  { "product": "Pomegranate", "months": [1,2,3,9,10,11,12] },
+  { "product": "Grapes", "months": [1,2,3,4] },
+  { "product": "Banana", "months": [1,2,3,4,5,6,7,8,9,10,11,12] },
+  { "product": "Mango (Alphonso, Kesar)", "months": [3,4,5,6] },
+  { "product": "Papaya", "months": [1,2,3,4,5,6,7,8,9,10,11,12] },
+  { "product": "Watermelon", "months": [2,3,4,5,6] },
+  { "product": "Lemon / Lime", "months": [1,2,3,4,5,6,7,8,9,10,11,12] },
+  { "product": "Red Onion", "months": [1,2,3,4,11,12] },
+  { "product": "Potato", "months": [1,2,3,12] },
+  { "product": "Green Chilli", "months": [1,2,3,4,5,10,11,12] },
+  { "product": "Tomato", "months": [1,2,3,11,12] },
+  { "product": "1121 / Pusa Basmati Rice", "months": [10,11,12,1] },
+  { "product": "Wheat", "months": [3,4,5] },
+  { "product": "Turmeric", "months": [1,2,3] },
+  { "product": "Chickpeas", "months": [2,3,4] }
+]

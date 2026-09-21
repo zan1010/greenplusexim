@@ -1,0 +1,83 @@
+---
+permalink: /markets/
+layout: null
+type: hub
+title: "Export Markets We Ship To"
+description: "Green Plus EXIM ships Indian produce, grains, seafood, feed and fertilizers worldwide. Explore import regulations, ports and transit times by region and country."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Markets" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Export Markets" %}
+{% set pageLede = "Where we ship, what India supplies to each market, and what documentation each destination expects." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="tldr-box" style="max-width:76ch">
+      <p><strong>Quick answer:</strong> Green Plus EXIM ships from Indian ports to buyers across the Middle East &amp; GCC, South Asia, Southeast Asia, East Asia, Europe, Africa, North America and Latin America. Each market page below sets out what India exports there (with cited trade data), the ports and typical transit times, documentation expectations and payment norms.</p>
+    </div>
+    {% include "partials/trade-routes-map.njk" %}
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container">
+    <h2>Browse by region</h2>
+    <div class="grid grid--4" style="margin-block-start:var(--sp-3)">
+      <a class="card" href="/markets/middle-east-gcc/"><div class="card-body"><h3>Middle East &amp; GCC</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">UAE, Saudi Arabia, Iraq, Oman, Kuwait, Qatar, Yemen.</p></div></a>
+      <a class="card" href="/markets/south-asia/"><div class="card-body"><h3>South Asia</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Bangladesh, Nepal, Sri Lanka, Bhutan, Maldives.</p></div></a>
+      <a class="card" href="/markets/southeast-asia/"><div class="card-body"><h3>Southeast Asia</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Malaysia, Vietnam, Indonesia, Thailand, Philippines, Singapore.</p></div></a>
+      <a class="card" href="/markets/east-asia/"><div class="card-body"><h3>East Asia</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">China, Japan, South Korea, Taiwan, Hong Kong.</p></div></a>
+      <a class="card" href="/markets/europe/"><div class="card-body"><h3>Europe</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Netherlands, UK, Germany, Italy, France, Spain, Russia.</p></div></a>
+      <a class="card" href="/markets/africa/"><div class="card-body"><h3>Africa</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Kenya, Egypt, Morocco, Nigeria, South Africa, Djibouti.</p></div></a>
+      <a class="card" href="/markets/north-america/"><div class="card-body"><h3>North America</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">United States, Canada, Mexico.</p></div></a>
+      <a class="card" href="/markets/latin-america/"><div class="card-body"><h3>Latin America</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Brazil, Argentina, Chile, Colombia, Peru.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Country guides</h2>
+    <p class="lede">Detailed guides with cited trade data, ports, documentation and payment norms.</p>
+    <div class="grid grid--4" style="margin-block-start:var(--sp-3)">
+      <a class="card" href="/markets/uae/"><div class="card-body"><h3>United Arab Emirates</h3></div></a>
+      <a class="card" href="/markets/saudi-arabia/"><div class="card-body"><h3>Saudi Arabia</h3></div></a>
+      <a class="card" href="/markets/iraq/"><div class="card-body"><h3>Iraq</h3></div></a>
+      <a class="card" href="/markets/bangladesh/"><div class="card-body"><h3>Bangladesh</h3></div></a>
+      <a class="card" href="/markets/malaysia/"><div class="card-body"><h3>Malaysia</h3></div></a>
+      <a class="card" href="/markets/netherlands/"><div class="card-body"><h3>Netherlands</h3></div></a>
+      <a class="card" href="/markets/usa/"><div class="card-body"><h3>United States</h3></div></a>
+      <a class="card" href="/markets/china/"><div class="card-body"><h3>China</h3></div></a>
+      <a class="card" href="/markets/united-kingdom/"><div class="card-body"><h3>United Kingdom</h3></div></a>
+      <a class="card" href="/markets/nepal/"><div class="card-body"><h3>Nepal</h3></div></a>
+      <a class="card" href="/markets/sri-lanka/"><div class="card-body"><h3>Sri Lanka</h3></div></a>
+      <a class="card" href="/markets/vietnam/"><div class="card-body"><h3>Vietnam</h3></div></a>
+      <a class="card" href="/markets/indonesia/"><div class="card-body"><h3>Indonesia</h3></div></a>
+      <a class="card" href="/markets/germany/"><div class="card-body"><h3>Germany</h3></div></a>
+      <a class="card" href="/markets/oman/"><div class="card-body"><h3>Oman</h3></div></a>
+      <a class="card" href="/markets/yemen/"><div class="card-body"><h3>Yemen</h3></div></a>
+      <a class="card" href="/markets/kuwait/"><div class="card-body"><h3>Kuwait</h3></div></a>
+      <a class="card" href="/markets/japan/"><div class="card-body"><h3>Japan</h3></div></a>
+      <a class="card" href="/markets/italy/"><div class="card-body"><h3>Italy</h3></div></a>
+      <a class="card" href="/markets/france/"><div class="card-body"><h3>France</h3></div></a>
+      <a class="card" href="/markets/russia/"><div class="card-body"><h3>Russia</h3></div></a>
+      <a class="card" href="/markets/uzbekistan/"><div class="card-body"><h3>Uzbekistan</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container prose" style="max-width:76ch">
+    <h2>How we choose which markets to publish guides for</h2>
+    <p>Every market page on this site is backed by trade data we could actually verify and cite — mostly WITS (World Bank) / UN Comtrade figures for India's exports by destination, supplemented by APEDA and MPEDA data where relevant. Where we couldn't verify a country's trade in a product, we don't publish a number for it.</p>
+    <p>That means our market coverage reflects where India demonstrably ships, not where we'd like to claim a presence. If your country isn't listed, that doesn't mean we can't supply it — it means we haven't published a data-backed guide yet. <a href="/get-a-quote/">Send us your requirement</a> and we'll respond regardless of whether there's a page for your market.</p>
+  </div>
+</section>
+
+{% set formId = "markets-hub" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

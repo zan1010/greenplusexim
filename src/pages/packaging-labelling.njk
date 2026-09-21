@@ -1,0 +1,47 @@
+---
+permalink: /packaging-labelling/
+title: "Packaging & Labelling Options"
+description: "Standard and custom packaging formats for Green Plus EXIM's export products, plus labelling and private-label options for your market."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Packaging & Labelling" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Packaging & Labelling" %}
+{% set pageLede = "Standard formats by product category, and what's possible for custom packaging or private label." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>Standard packaging by category</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">Category</th><th scope="col">Common formats</th></tr></thead>
+        <tbody>
+          <tr><td>Fresh fruits &amp; vegetables</td><td>Corrugated cartons (5–20kg), mesh/net bags, ventilated crates</td></tr>
+          <tr><td>Grains &amp; rice</td><td>25kg/50kg PP or jute bags, 1-tonne jumbo bags, bulk container liners</td></tr>
+          <tr><td>Pulses &amp; oilseeds</td><td>25kg/50kg PP bags, jumbo bags for bulk orders</td></tr>
+          <tr><td>Spices</td><td>25kg/50kg PP bags; retail-ready pouches on request for private label</td></tr>
+          <tr><td>Frozen seafood</td><td>Individually Quick Frozen (IQF) or block-frozen, master cartons, carton weights per buyer spec</td></tr>
+          <tr><td>Animal feed</td><td>25kg/50kg PP bags, jumbo bags, bulk vessel loading for large orders</td></tr>
+          <tr><td>Fertilizers &amp; organic manure</td><td>25kg/50kg PP bags, jumbo bags</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Exact options vary by product — see the packaging section on each product page for what's typically available, and tell us your preferred format when you request a quote.</p>
+
+    <h2>Labelling</h2>
+    <p>We can apply neutral export labelling, or your own artwork for a private-label order. Labels are typically produced in English by default; multi-language labelling for a specific destination market can be arranged — tell us what your import regulations require (ingredient lists, net weight declarations, country-of-origin marking, etc.) and we'll confirm what we can accommodate.</p>
+
+    <h2>Private label &amp; custom packaging</h2>
+    <p>For bulk buyers wanting their own brand on retail-ready packaging, see <a href="/private-label-bulk-supply/">Private Label &amp; Bulk Supply</a>.</p>
+
+    <h2>Container loading</h2>
+    <p>Packaging format affects how much product fits per container. Use our <a href="/resources/container-loading-calculator/">Container Loading Calculator</a> for an estimate based on your chosen bag/carton size.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

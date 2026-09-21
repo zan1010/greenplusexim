@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('en') }}" dir="{{ dir | default('ltr') }}" data-ga4-id="{{ site.analytics.ga4MeasurementId }}" data-clarity-id="{{ site.analytics.clarityProjectId }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ title }}{% if title and not rawTitle %} | Green Plus EXIM{% endif %}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ (canonical or page.url) | absUrl }}">
+  {% if noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
+
+  {# ---- hreflang ---- #}
+  {% if hreflangGroup %}
+    {% for alt in hreflangGroup %}
+    <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url | absUrl }}">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ hreflangGroup[0].url | absUrl }}">
+  {% endif %}
+
+  {# ---- Open Graph / Twitter ---- #}
+  <meta property="og:type" content="{{ ogType | default('website') }}">
+  <meta property="og:site_name" content="Green Plus EXIM">
+  <meta property="og:title" content="{{ ogTitle | default(title) }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ (canonical or page.url) | absUrl }}">
+  <meta property="og:image" content="{{ ogImage or placeholderImages['hero-port'].url }}">
+  <meta property="og:locale" content="{{ ogLocale | default('en_US') }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ ogTitle | default(title) }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ ogImage or placeholderImages['hero-port'].url }}">
+
+  {% if site.analytics.gscVerification and 'TODO' not in site.analytics.gscVerification %}
+  <meta name="google-site-verification" content="{{ site.analytics.gscVerification }}">
+  {% endif %}
+  {% if site.analytics.bingVerification and 'TODO' not in site.analytics.bingVerification %}
+  <meta name="msvalidate.01" content="{{ site.analytics.bingVerification }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  {# ---- Sitewide JSON-LD ---- #}
+  <script type="application/ld+json">
+  {{ {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": (site.url + "/#organization"),
+    "name": site.companyName,
+    "url": site.url,
+    "logo": (site.url + "/assets/img/logo.png"),
+    "foundingDate": site.foundedYear | string,
+    "founder": {
+      "@type": "Person",
+      "name": site.founder.name,
+      "url": (site.url + "/authors/" + site.founder.slug + "/")
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": site.address.addressLocality,
+      "addressRegion": site.address.addressRegion,
+      "addressCountry": site.address.addressCountry
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": site.phoneE164,
+      "email": site.email,
+      "contactType": "sales",
+      "areaServed": "Worldwide",
+      "availableLanguage": ["English", "Arabic", "Spanish", "French"]
+    }],
+    "knowsAbout": ["Fresh fruit export", "Rice export", "Spices export", "Frozen seafood export", "Animal feed export", "Organic manure export", "Fertilizer export"]
+  } | jsonify | safe }}
+  </script>
+  <script type="application/ld+json">
+  {{ {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": (site.url + "/#website"),
+    "url": site.url,
+    "name": site.companyName,
+    "publisher": { "@id": (site.url + "/#organization") },
+    "inLanguage": lang | default('en')
+  } | jsonify | safe }}
+  </script>
+
+  {% block schema %}{% endblock %}
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  {% if minimalHeader %}{% include "partials/header-minimal.njk" %}{% else %}{% include "partials/header.njk" %}{% endif %}
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  {% if not minimalHeader %}{% include "partials/mobile-cta-bar.njk" %}{% endif %}
+  {% include "partials/whatsapp-float.njk" %}
+  {% include "partials/quick-quote-modal.njk" %}
+
+  <script src="/assets/js/analytics.js" defer></script>
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/forms.js" defer></script>
+  <script src="/assets/js/modals.js" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

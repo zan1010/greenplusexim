@@ -1,0 +1,86 @@
+{
+  "hs": "0904.21 / 0904.22 (dried chilli, whole / crushed or ground); WITS legacy 0904.20",
+  "product": "Red Chilli (dried)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/090420",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 1297287380,
+  "india_world_total_qty_kg": 537599000,
+  "india_exports_by_country": [
+    {
+      "country": "China",
+      "iso2": "CN",
+      "value_usd": 455842510,
+      "qty": 186559000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Thailand",
+      "iso2": "TH",
+      "value_usd": 136728710,
+      "qty": 55112400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 132195810,
+      "qty": 38849800,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 125104920,
+      "qty": 60289400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Sri Lanka",
+      "iso2": "LK",
+      "value_usd": 78717110,
+      "qty": 42770600,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Indonesia",
+      "iso2": "ID",
+      "value_usd": 74364180,
+      "qty": 36593300,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "value_usd": 53408670,
+      "qty": 22736300,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 30198770,
+      "qty": 13638900,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 21319380,
+      "qty": 5147580,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Vietnam",
+      "iso2": "VN",
+      "value_usd": 20162810,
+      "qty": 8129100,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). This is India's single largest spice export by value: USD 1.297 BILLION in 2024 across ~537,599 MT. China alone takes ~35% of value. Note the HS nuance: WITS reports under the legacy aggregate 0904.20; current HS2017+ nomenclature splits this into 0904.21 (dried, neither crushed nor ground) and 0904.22 (crushed or ground), so a customs filing should use the split code. Strong candidate for the highest-priority blog cluster (China, Thailand, Indonesia, Sri Lanka, Bangladesh all major)."
+}

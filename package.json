@@ -1,0 +1,40 @@
+{
+  "name": "greenplus-exim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Green Plus EXIM — Indian export house website (Eleventy static site)",
+  "scripts": {
+    "dev": "eleventy --serve --incremental",
+    "build": "eleventy && node scripts/generate-spec-sheets.mjs",
+    "check": "node scripts/check-all.js",
+    "check:html": "html-validate \"_site/**/*.html\"",
+    "check:links": "hyperlink _site --canonicalroot https://www.greenplusexim.com --skip \"https://wa.me/*\"",
+    "check:forms": "node scripts/check-forms.js",
+    "check:compliance": "node scripts/check-compliance.js",
+    "check:orphans": "node scripts/check-orphans.js",
+    "check:broken-links": "node scripts/check-broken-links.js",
+    "check:blog-quality": "node scripts/check-blog-quality.js",
+    "check:mobile-rtl": "node scripts/check-mobile-rtl.mjs",
+    "check:crawler-access": "node scripts/check-crawler-access.mjs",
+    "check:uniqueness": "node scripts/uniqueness.mjs",
+    "seo-audit": "node scripts/seo-audit.mjs",
+    "indexnow-submit": "node scripts/indexnow-submit.mjs",
+    "check:lhci": "lhci autorun"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
+    "html-validate": "^8.24.0",
+    "hyperlink": "^5.0.4",
+    "@axe-core/playwright": "^4.10.0",
+    "playwright": "^1.47.0",
+    "@lhci/cli": "^0.14.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true,
+    "core-js@2.6.12": true
+  }
+}

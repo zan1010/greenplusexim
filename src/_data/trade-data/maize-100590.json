@@ -1,0 +1,86 @@
+{
+  "hs": "1005.90 (maize / corn, other than seed)",
+  "product": "Maize (Corn)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/100590",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 142989370,
+  "india_world_total_qty_kg": 480916000,
+  "india_exports_by_country": [
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "value_usd": 89921840,
+      "qty": 312275000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Sri Lanka",
+      "iso2": "LK",
+      "value_usd": 21603890,
+      "qty": 70656300,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bhutan",
+      "iso2": "BT",
+      "value_usd": 14995440,
+      "qty": 49337600,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Oman",
+      "iso2": "OM",
+      "value_usd": 3111260,
+      "qty": 9197100,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 2242700,
+      "qty": 8789830,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Japan",
+      "iso2": "JP",
+      "value_usd": 1947760,
+      "qty": 5142950,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Yemen",
+      "iso2": "YE",
+      "value_usd": 1620370,
+      "qty": 4479200,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 1586570,
+      "qty": 5004500,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Mozambique",
+      "iso2": "MZ",
+      "value_usd": 1408190,
+      "qty": 3605360,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Zambia",
+      "iso2": "ZM",
+      "value_usd": 921580,
+      "qty": 2500000,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 142.99M across ~480,916 MT. Overwhelmingly a land-border/regional trade — Nepal alone is ~63% of value and ~65% of volume, with Bhutan and Sri Lanka next. That means maize content should target regional South Asian buyers and overland/short-sea logistics, NOT long-haul container buyers. Average unit value is low (~USD 297/MT), consistent with bulk feed-grade rather than specialty corn."
+}

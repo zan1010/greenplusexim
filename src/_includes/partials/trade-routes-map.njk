@@ -1,0 +1,54 @@
+<div class="trade-map reveal" role="img" aria-label="Diagram of Green Plus EXIM's export trade lanes from India to the Middle East &amp; GCC, South Asia, Southeast Asia, East Asia, Europe, Africa, North America and Latin America">
+  <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+    <defs>
+      <marker id="routeArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#C9A227"/>
+      </marker>
+    </defs>
+
+    <!-- Radar-style rings centred on India, purely decorative grounding so the nodes don't float in empty space -->
+    <g stroke="#0F3D2E" stroke-width="1" fill="none" opacity="0.08">
+      <circle cx="400" cy="230" r="70"/>
+      <circle cx="400" cy="230" r="140"/>
+      <circle cx="400" cy="230" r="210"/>
+    </g>
+
+    <g stroke="#C9A227" stroke-width="1.5" fill="none" opacity="0.75">
+      <path class="route" d="M400,230 C420,150 440,90 428,66" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+      <path class="route" d="M400,230 C470,180 540,140 582,114" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+      <path class="route" d="M400,230 C500,240 590,265 652,286" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+      <path class="route" d="M400,230 C480,280 540,320 582,336" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+      <path class="route" d="M400,230 C430,290 445,325 458,338" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+      <path class="route" d="M400,230 C320,265 240,285 194,288" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+      <path class="route" d="M400,230 C300,180 210,140 146,112" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+      <path class="route" d="M400,230 C280,280 180,320 116,338" stroke-dasharray="6 6" marker-end="url(#routeArrow)"/>
+    </g>
+
+    <g fill="#0F3D2E">
+      <circle cx="428" cy="66" r="5"/>
+      <circle cx="582" cy="114" r="5"/>
+      <circle cx="652" cy="286" r="5"/>
+      <circle cx="582" cy="336" r="5"/>
+      <circle cx="458" cy="338" r="5"/>
+      <circle cx="194" cy="288" r="5"/>
+      <circle cx="146" cy="112" r="5"/>
+      <circle cx="116" cy="338" r="5"/>
+    </g>
+
+    <!-- India hub, drawn last so it sits on top of every route line -->
+    <circle cx="400" cy="230" r="11" fill="#0F3D2E"/>
+    <circle cx="400" cy="230" r="16" fill="none" stroke="#0F3D2E" stroke-width="1.5" opacity="0.35"/>
+
+    <g font-family="Inter, sans-serif" font-size="14" fill="#14201B" font-weight="600">
+      <text x="428" y="52" text-anchor="middle">Europe</text>
+      <text x="582" y="100" text-anchor="middle">Middle East &amp; GCC</text>
+      <text x="652" y="304" text-anchor="middle">East Asia</text>
+      <text x="582" y="356" text-anchor="middle">Southeast Asia</text>
+      <text x="458" y="358" text-anchor="middle">South Asia</text>
+      <text x="194" y="306" text-anchor="middle">Africa</text>
+      <text x="146" y="98" text-anchor="middle">North America</text>
+      <text x="116" y="356" text-anchor="middle">Latin America</text>
+      <text x="400" y="264" text-anchor="middle" font-size="15" font-weight="700">India</text>
+    </g>
+  </svg>
+</div>

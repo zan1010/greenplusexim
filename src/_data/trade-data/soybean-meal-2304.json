@@ -1,0 +1,19 @@
+{
+  "hs": "2304",
+  "product": "Soybean meal (de-oiled cake)",
+  "unit": "MT",
+  "currency": "USD",
+  "source_name": "Soybean Processors Association of India (SOPA), oil marketing year 2024-25 (Oct 2024–Sep 2025), as reported by Outlook Business / DPRJ Universal",
+  "source_url": "https://www.outlookbusiness.com/news/indias-soybean-meal-exports-fall-by-11-due-to-high-prices",
+  "retrieved_date": "2026-09-17",
+  "year": "2024-25 (oil marketing year, Oct–Sep)",
+  "india_exports_by_country": [
+    { "country": "Germany", "iso2": "DE", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "France", "iso2": "FR", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Nepal", "iso2": "NP", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Kenya", "iso2": "KE", "value_usd": null, "qty": null, "qty_unit": null }
+  ],
+  "world_top_importers": [],
+  "notes": "Named as India's top 5 soybean-meal export destinations for OMY 2024-25, jointly accounting for ~55% of total export volume — but the source gave no individual per-country volume or USD value, so those fields are left null rather than estimated. Aggregate: total exports fell 11% YoY to 20.23 lakh tonnes (2.023 million MT) in OMY2024-25, down from 2.275 million MT the prior year, attributed to Indian soybean meal being priced above US/Brazil/Argentina competition. No USD export value was found in the sources checked for this session — recommend a follow-up query directly to SOPA (sopa.org) or DGCI&S for the value figure before this anchors a priced blog post."
+}

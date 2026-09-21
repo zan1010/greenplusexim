@@ -1,0 +1,35 @@
+---
+permalink: /pt/blog/
+layout: null
+title: "Blog de Exportação | Green Plus EXIM"
+description: "Guias de compra por produto e mercado — especificações, documentação, logística e preços para importadores que compram da Índia."
+lang: pt
+dir: ltr
+rawTitle: true
+noindex: true
+eleventyExcludeFromCollections: true
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+<section class="section" style="padding-block-start:var(--sp-3)">
+  <div class="container">
+    <h1>Blog de Exportação</h1>
+    <p class="lede">Guias de compra por produto e mercado.</p>
+    <div class="grid grid--3" style="margin-block-start:var(--sp-3)">
+      {% for post in collections.all %}
+        {% if post.data.lang == "pt" and post.data.category and post.url != "/pt/blog/" %}
+        <a class="card" href="{{ post.url }}">
+          <div class="card-body">
+            <h3>{{ post.data.title }}</h3>
+            <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ post.data.description }}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% set formId = "pt-blog-hub" %}
+{% set thankYouUrl = "/pt/thank-you/" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

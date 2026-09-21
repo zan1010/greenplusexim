@@ -1,0 +1,31 @@
+---
+permalink: /resources/
+title: "Export Resources & Buyer Guides"
+description: "Free tools and guides for importers sourcing from India: Incoterms guide, HS code finder, container loading calculator, harvest calendar and glossary."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Resources" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Resources for Importers" %}
+{% set pageLede = "Practical tools and guides for anyone sourcing fresh produce, grains, seafood, feed or fertilizers from India." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--3">
+      <a class="card" href="/resources/incoterms-guide/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-doc"></use></svg><h3>Incoterms Guide</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">FOB, CIF, CFR and EXW — who's responsible for what, and when.</p></div></a>
+      <a class="card" href="/resources/hs-code-finder/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-search"></use></svg><h3>HS Code Finder</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Look up the HS code for any product we export.</p></div></a>
+      <a class="card" href="/resources/container-loading-calculator/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-container"></use></svg><h3>Container Loading Calculator</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Estimate how much product fits per 20ft/40ft container.</p></div></a>
+      <a class="card" href="/resources/harvest-calendar/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-calendar"></use></svg><h3>Harvest Calendar</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">When India's key produce is in season.</p></div></a>
+      <a class="card" href="/resources/import-guide-from-india/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-globe"></use></svg><h3>Import Guide from India</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">A first-time importer's guide to sourcing from India.</p></div></a>
+      <a class="card" href="/resources/glossary/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-doc"></use></svg><h3>Glossary</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">60+ export and trade-finance terms, explained.</p></div></a>
+      <a class="card" href="/faq/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-check"></use></svg><h3>FAQ</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">30+ common buyer questions, answered.</p></div></a>
+      <a class="card" href="/blog/"><div class="card-body"><svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-leaf"></use></svg><h3>Blog</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Buyer guides by product and destination market.</p></div></a>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

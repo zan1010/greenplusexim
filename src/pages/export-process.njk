@@ -1,0 +1,43 @@
+---
+permalink: /export-process/
+title: "Export Process — Inquiry to Delivery"
+description: "How an export order moves from first inquiry through specs, quote, samples, contract, production, inspection, documentation, shipping and delivery."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Export Process" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Export Process" %}
+{% set pageLede = "Eleven steps from your first message to your goods landing at your port." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <p>Every order follows the same sequence, whether it's a trial container or a repeat annual contract. Knowing the sequence helps you plan your own timeline around it.</p>
+
+    <ol style="list-style:decimal;padding-inline-start:1.4em;display:flex;flex-direction:column;gap:1.2em">
+      <li><strong>Inquiry.</strong> You send product, quantity, destination and any spec or packaging requirement — via the <a href="/get-a-quote/">quote form</a> or WhatsApp.</li>
+      <li><strong>Specifications confirmed.</strong> We confirm what grade/spec is currently available and ask any clarifying questions (size, moisture, packaging format, labelling needs).</li>
+      <li><strong>Quote.</strong> You receive an FOB, CIF, CFR or EXW price for your quantity, with a validity window (commodity prices move — see each product page for current guidance).</li>
+      <li><strong>Samples (if required).</strong> See <a href="/sample-policy/">Sample Policy</a> for availability and any charges.</li>
+      <li><strong>Contract agreed.</strong> Incoterm, payment terms, quantity, specification, packaging and delivery window are put in writing.</li>
+      <li><strong>Payment terms confirmed.</strong> LC, advance/CAD or TT — see <a href="/payment-terms/">Payment Terms</a>.</li>
+      <li><strong>Sourcing, production and packing.</strong> Product is sourced or produced, graded and packed to your agreed specification.</li>
+      <li><strong>Pre-shipment inspection.</strong> {{ site.inspectionStatement }}</li>
+      <li><strong>Documentation prepared.</strong> {{ site.complianceStatement }}</li>
+      <li><strong>Shipping.</strong> Loaded at the relevant port ({{ site.ports | join(', ') }}) and booked with a shipping line matched to your destination and required transit time — see <a href="/logistics-shipping/">Logistics &amp; Shipping</a>.</li>
+      <li><strong>Delivery.</strong> Tracked through to your destination port, with documentation sent ahead so your customs clearance isn't waiting on paperwork.</li>
+    </ol>
+
+    <h2>How long does the whole process take?</h2>
+    <p>From confirmed order to vessel departure typically depends on whether the product is in season/in stock or needs to be sourced and processed to order — fresh produce moves faster once harvest windows align, while a first order on a new specification may need more lead time for sourcing and sampling. Ask for a timeline estimate specific to your product when you request a quote.</p>
+
+    <h2>Read more</h2>
+    <p>For a fuller walkthrough of each step with realistic timelines, see <a href="/blog/how-exporting-with-green-plus-exim-works/">How Exporting With Green Plus EXIM Works</a> on our blog.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

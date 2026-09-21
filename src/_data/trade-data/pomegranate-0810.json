@@ -1,0 +1,19 @@
+{
+  "hs": "0810 90 (fresh pomegranate)",
+  "product": "Fresh pomegranate",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "Trade-press compilation (dataverseeinc.in / seair.co.in), APEDA-linked",
+  "source_url": "https://dataverseeinc.in/pomegranate-export-from-india-global-trade-insights-2024-25/",
+  "retrieved_date": "2026-09-17",
+  "year": "2024-25 (Apr–Jan partial year)",
+  "india_exports_by_country": [
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 18600000, "qty": null, "qty_unit": null },
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Netherlands", "iso2": "NL", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Nepal", "iso2": "NP", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Saudi Arabia", "iso2": "SA", "value_usd": null, "qty": null, "qty_unit": null }
+  ],
+  "world_top_importers": [],
+  "notes": "Aggregate: April 2024–January 2025 (10-month partial FY2024-25) pomegranate exports totalled USD 59.76 million, up 21% YoY. UAE is the only country with a specific value (USD 18.6 million, ~31% of the partial-year total). Netherlands, France and Germany were named as European markets and Bangladesh/Nepal as South Asian markets, Saudi Arabia/Qatar as Gulf markets, but without individual values — left null. Note France and Germany were mentioned as markets but are not in the top-5 list above (only 5 rows kept per schema intent); check APEDA source directly for a full ranked list before publishing."
+}

@@ -1,0 +1,78 @@
+---
+permalink: /logistics-shipping/
+title: "Logistics & Shipping"
+description: "Which Indian ports we ship from, typical transit-time ranges by region, reefer container options and how Incoterms affect who arranges shipping."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Logistics & Shipping" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Logistics & Shipping" %}
+{% set pageLede = "Ports, container types and typical transit times — so you can plan your inventory around a realistic delivery window." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>Which ports do you ship from?</h2>
+    <p>Depending on your product and destination, we route shipments through {{ site.ports | join(', ') }}, plus air cargo for time-sensitive or small-volume orders. Nhava Sheva (JNPT) and Mundra handle the majority of our container volume; Chennai, Kolkata, Kochi and Visakhapatnam are used where they offer a shorter inland leg from the sourcing region or a better sailing schedule to your destination.</p>
+
+    <h2>Do you use reefer containers?</h2>
+    <p>Yes — fresh fruits, vegetables and frozen seafood ship in temperature-controlled reefer containers, with the temperature set for that specific product. Dry cargo (grains, pulses, spices, animal feed, fertilizers) ships in standard dry containers unless a specific product requires humidity control.</p>
+
+    <h2>How long does shipping take?</h2>
+    <p>Transit time depends on the destination port, the shipping line's routing, and whether it's a direct or transshipment service. As a general guide:</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">Region</th><th scope="col">Typical transit time*</th></tr></thead>
+        <tbody>
+          <tr><td>Middle East &amp; GCC</td><td>5–12 days</td></tr>
+          <tr><td>South Asia (Bangladesh, Sri Lanka, Nepal)</td><td>2–7 days</td></tr>
+          <tr><td>Southeast Asia</td><td>7–15 days</td></tr>
+          <tr><td>East Asia</td><td>12–20 days</td></tr>
+          <tr><td>Europe</td><td>18–28 days</td></tr>
+          <tr><td>East Africa</td><td>7–14 days</td></tr>
+          <tr><td>North America (East Coast)</td><td>25–35 days</td></tr>
+          <tr><td>Latin America</td><td>25–40 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">*General ranges based on typical shipping-line schedules from Indian west-coast ports; ask us for a current estimate to your specific port, since routings and transshipment options change.</p>
+
+    <h2>Incoterms, explained</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">Incoterm</th><th scope="col">Who arranges main shipping</th><th scope="col">Risk transfers to buyer at</th></tr></thead>
+        <tbody>
+          <tr><td>EXW (Ex Works)</td><td>Buyer</td><td>Our warehouse/factory</td></tr>
+          <tr><td>FOB (Free On Board)</td><td>Buyer books the vessel; we load it</td><td>Once loaded on vessel at Indian port</td></tr>
+          <tr><td>CFR (Cost and Freight)</td><td>We book and pay freight</td><td>Once loaded on vessel at Indian port (insurance is buyer's responsibility)</td></tr>
+          <tr><td>CIF (Cost, Insurance and Freight)</td><td>We book freight and insurance</td><td>Once loaded on vessel at Indian port</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Not sure which one fits your situation? Tell us your destination port and whether you have an existing freight forwarder relationship, and we'll recommend an Incoterm. See our full <a href="/resources/incoterms-guide/">Incoterms Guide</a> for more detail, or read <a href="/blog/incoterms-guide-fob-cif-cfr-exw-explained/">Choosing the Right Incoterm from India</a> on our blog for a decision-framework approach.</p>
+
+    <h2>Container loading — how much fits?</h2>
+    <p>Loading capacity varies by product density and packaging format. Use our <a href="/resources/container-loading-calculator/">Container Loading Calculator</a> for an estimate, or check the packaging table on each product page.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+
+<section class="section section--sage">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    {% set faqId = "log" %}
+    {% set faqs = [
+      { q: "Can you ship less than a full container?", a: "Most of our export volume moves as FCL (full container load), but for some products a trial LCL (less than container load) quantity can be discussed — ask when you send your requirement." },
+      { q: "Do you handle customs clearance at my end?", a: "Export customs clearance from India is on us. Import clearance at your destination is typically your responsibility or your customs broker's, unless otherwise agreed." },
+      { q: "What happens if my shipment is delayed at sea?", a: "We track bookings with the shipping line and will flag any known delay as soon as we're informed, along with an updated ETA." },
+      { q: "Can I choose my own freight forwarder?", a: "Under EXW and FOB terms, yes — you or your forwarder arranges the main carriage. Under CFR/CIF, we book the freight." }
+    ] %}
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

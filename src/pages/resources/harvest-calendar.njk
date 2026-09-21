@@ -1,0 +1,43 @@
+---
+permalink: /resources/harvest-calendar/
+title: "India Produce Harvest Calendar"
+description: "Typical harvest and availability months for key Indian fruits, vegetables, grains and spices we export."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Resources", url: "/resources/" }, { label: "Harvest Calendar" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Harvest Calendar" %}
+{% set pageLede = "Typical availability windows for key products, by month. India's growing regions vary widely, so treat this as a planning guide, not a guarantee." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    {% set monthLabels = ["J","F","M","A","M","J","J","A","S","O","N","D"] %}
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            {% for m in monthLabels %}<th scope="col">{{ m }}</th>{% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in harvestCalendar %}
+          <tr>
+            <td>{{ row.product }}</td>
+            {% for i in range(1, 13) %}
+            <td style="text-align:center;{% if i in row.months %}background:rgba(46,125,79,0.15){% endif %}">{% if i in row.months %}●{% endif %}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:var(--fs-sm);color:var(--color-ink-muted);margin-block-start:var(--sp-2)">Availability shifts year to year with weather and growing conditions. Ask us for current availability before planning a shipment window.</p>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

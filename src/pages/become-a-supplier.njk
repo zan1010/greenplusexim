@@ -1,0 +1,36 @@
+---
+permalink: /become-a-supplier/
+title: "Become a Supplier"
+description: "Farmers, FPOs, processors and aggregators: register your product and capacity with Green Plus EXIM to be considered for export supply contracts."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Become a Supplier" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Become a Supplier" %}
+{% set pageLede = "We work with farmers, FPOs, processors and aggregators across India's producing regions. Tell us what you grow or produce." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>What we look for</h2>
+    <p>Consistent quality, honest capacity estimates, and a willingness to work to the grading and documentation standards an export buyer expects. We work across fresh produce, grains, pulses, spices, seafood, animal feed ingredients and organic manure/fertilizer inputs — if you produce or process any of these, we want to hear from you.</p>
+
+    <h2>How it works</h2>
+    <ol style="list-style:decimal;padding-inline-start:1.4em;display:flex;flex-direction:column;gap:0.8em">
+      <li>Submit your details below — product, location, approximate capacity.</li>
+      <li>We review submissions against current buyer demand and sourcing gaps.</li>
+      <li>If there's a fit, we'll follow up to discuss grading standards, quantities and a trial order.</li>
+    </ol>
+    <p>We can't guarantee a response to every submission, but we do review new supplier details regularly, especially for products where we're actively sourcing additional capacity.</p>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container" style="max-width:640px">
+    <h2>Supplier Registration</h2>
+    {% include "partials/supplier-partnership-form.njk" %}
+  </div>
+</section>
+{% endblock %}

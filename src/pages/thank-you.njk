@@ -1,0 +1,39 @@
+---
+permalink: /thank-you/
+title: "Thank You"
+description: "Your enquiry has been received."
+lang: en
+dir: ltr
+noindex: true
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+<section class="section">
+  <div class="container" style="max-width:640px;text-align:center">
+    <svg width="56" height="56" aria-hidden="true" style="color:var(--color-leaf);margin-inline:auto"><use href="/assets/icons.svg#icon-check"></use></svg>
+    <h1>Thank you — we've received your enquiry</h1>
+    <p class="lede" style="margin-inline:auto">We reply within 24 business hours. If it's urgent, message us on WhatsApp and we'll get back to you faster.</p>
+    <div class="cluster" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-primary" href="#" data-whatsapp>
+        <svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-whatsapp"></use></svg>
+        WhatsApp Us
+      </a>
+      <a class="btn btn-secondary" href="/">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container">
+    <h2 style="text-align:center">While you wait, a few buying guides</h2>
+    <div class="grid grid--3" style="margin-block-start:var(--sp-3)">
+      <a class="card" href="/resources/import-guide-from-india/"><div class="card-body"><h3>Import Guide from India</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">A first-time importer's guide to sourcing from India.</p></div></a>
+      <a class="card" href="/resources/incoterms-guide/"><div class="card-body"><h3>Incoterms Guide</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">FOB, CIF, CFR and EXW explained.</p></div></a>
+      <a class="card" href="/logistics-shipping/"><div class="card-body"><h3>Logistics &amp; Shipping</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Ports, transit times and reefer containers.</p></div></a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="/assets/js/lead-thankyou.js" defer></script>
+{% endblock %}

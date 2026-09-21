@@ -1,0 +1,46 @@
+---
+permalink: /resources/hs-code-finder/
+title: "HS Code Finder for Indian Exports"
+description: "Search HS codes for fresh produce, grains, pulses, spices, seafood, animal feed and fertilizer products exported from India."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Resources", url: "/resources/" }, { label: "HS Code Finder" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "HS Code Finder" %}
+{% set pageLede = "Search by product or category to find the HS heading for goods we export from India." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <p style="max-width:70ch;color:var(--color-ink-muted);font-size:var(--fs-sm)">These are the HS headings (4–6 digit) we work with day to day, for reference. Tariff classification can vary by exact product form and destination-country interpretation — always confirm the applicable code with your customs broker or our team before filing an import declaration.</p>
+
+    <div class="form-field" style="max-width:420px;margin-block:var(--sp-3)">
+      <label for="hs-search">Search product or category</label>
+      <input type="text" id="hs-search" placeholder="e.g. rice, shrimp, manure, 0910">
+    </div>
+
+    <div class="table-wrap">
+      <table class="data-table" id="hs-table">
+        <thead><tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">HS Code</th></tr></thead>
+        <tbody>
+          {% for row in hsCodes %}
+          <tr data-search="{{ (row.product + ' ' + row.category + ' ' + row.hs) | lower }}">
+            <td>{{ row.product }}</td>
+            <td>{{ row.category }}</td>
+            <td>{{ row.hs }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <p id="hs-empty" hidden style="padding:var(--sp-2)">No matching products. Try a different search term, or <a href="/get-a-quote/">ask us directly</a>.</p>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}
+{% block scripts %}
+<script src="/assets/js/hs-finder.js" defer></script>
+{% endblock %}

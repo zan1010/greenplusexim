@@ -1,0 +1,86 @@
+{
+  "hs": "0713.40 (lentils, dried, shelled)",
+  "product": "Lentils (Masoor)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/071340",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 148657140,
+  "india_world_total_qty_kg": 168505000,
+  "india_exports_by_country": [
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 91531210,
+      "qty": 104552000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Iraq",
+      "iso2": "IQ",
+      "value_usd": 16129040,
+      "qty": 18464200,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Djibouti",
+      "iso2": "DJ",
+      "value_usd": 5769630,
+      "qty": 7220160,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 5516160,
+      "qty": 5852460,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "value_usd": 5232360,
+      "qty": 6242970,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Sri Lanka",
+      "iso2": "LK",
+      "value_usd": 4779340,
+      "qty": 5863730,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 2645380,
+      "qty": 3067730,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 2305790,
+      "qty": 1638410,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bhutan",
+      "iso2": "BT",
+      "value_usd": 1712960,
+      "qty": 1742180,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "value_usd": 1703970,
+      "qty": 2120750,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 148.66M across ~168,505 MT. Heavy single-market concentration: Bangladesh alone is ~62% of both value and volume, so this is effectively a Bangladesh-facing product line. Worth noting India is simultaneously a large lentil IMPORTER (duty-free import windows for some pulses ran to 31 March 2026) — so framing should be about re-export/processing capability and specific varieties, not about India being a net surplus origin."
+}

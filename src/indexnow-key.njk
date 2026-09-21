@@ -1,0 +1,5 @@
+---
+eleventyExcludeFromCollections: true
+permalink: "{% if 'TODO' not in site.analytics.indexNowKey %}/{{ site.analytics.indexNowKey }}.txt{% else %}/indexnow-key-not-configured.txt{% endif %}"
+---
+{{ site.analytics.indexNowKey }}

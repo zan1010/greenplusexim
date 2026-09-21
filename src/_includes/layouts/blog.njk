@@ -1,0 +1,128 @@
+{% extends "layouts/base.njk" %}
+
+{% block schema %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": (date | dateIso),
+  "dateModified": ((updated or date) | dateIso),
+  "inLanguage": lang,
+  "image": (ogImage or placeholderImages['hero-port'].url),
+  "author": { "@type": "Person", "name": (authorName or "Jamil Khan"), "url": (site.url + "/authors/" + (author or "jamil-khan") + "/") },
+  "publisher": { "@type": "Organization", "name": site.companyName, "@id": (site.url + "/#organization") },
+  "about": product,
+  "citation": (sources | default([]) | citationUrls)
+} | jsonify | safe }}
+</script>
+{% endblock %}
+
+{% block content %}
+{% set pageH1 = title %}
+{% set thankYouUrl = "/thank-you/" if lang == "en" or not lang else "/" + lang + "/thank-you/" %}
+{% include "partials/breadcrumbs.njk" %}
+
+<article class="section" style="padding-block-start:var(--sp-3)">
+  <div class="container prose" style="max-width:76ch">
+    <h1>{{ title }}</h1>
+    <div class="cluster" style="font-size:var(--fs-xs);color:var(--color-ink-muted);margin-block-end:var(--sp-2)">
+      <span>By <a href="/authors/{{ author or 'jamil-khan' }}/">{{ authorName or "Jamil Khan" }}</a></span>
+      <span>·</span>
+      <span>Published {{ date | dateDisplay }}</span>
+      {% if updated and updated != date %}<span>·</span><span>Updated {{ updated | dateDisplay }}</span>{% endif %}
+      {% if reviewedBy %}<span>·</span><span>Reviewed by {{ reviewedBy }}</span>{% endif %}
+    </div>
+
+    <div class="tldr-box">
+      <p><strong>Quick answer:</strong> {{ tldr }}</p>
+    </div>
+
+    <div class="cta-band reveal" style="margin-block:var(--sp-3)">
+      <div>
+        <h3 style="font-size:var(--fs-md)">{{ ctaHeadline | default("Need a quote for this?") }}</h3>
+        <p style="color:rgba(255,255,255,0.8);font-size:var(--fs-sm)">Response within 24 business hours.</p>
+      </div>
+      <a class="btn btn-primary" href="/get-a-quote/" data-quote-cta="blog-intro">Get Export Quote</a>
+    </div>
+
+    {{ content | safe }}
+
+    {% if keyFacts %}
+    <div class="key-facts">
+      <h3>Key facts</h3>
+      <ul>
+        {% for fact in keyFacts %}<li>{{ fact }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</article>
+
+{% if tradeData %}
+{% set td = tradeDataFiles[tradeData] %}
+<section class="section section--sage">
+  <div class="container" style="max-width:76ch">
+    {% include "partials/trade-data-table.njk" %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container" style="max-width:600px">
+    <div class="rfq-form-wrap reveal">
+      <h3 style="font-size:var(--fs-md);margin-block-end:0.3em">{{ midCtaHeadline | default("Get a quick quote") }}</h3>
+      <p style="font-size:var(--fs-sm);color:var(--color-ink-muted);margin-block-end:1em">Response within 24 business hours · No obligation</p>
+      {% set formId = "blog-mid" %}
+      {% set prefillProduct = product %}
+      {% set prefillCountry = targetCountry %}
+      {% include "partials/quick-quote-form.njk" %}
+    </div>
+  </div>
+</section>
+
+{% if faq and faq.length %}
+<section class="section section--sage">
+  <div class="container" style="max-width:76ch">
+    <h2>Frequently Asked Questions</h2>
+    {% set faqId = slug %}
+    {% set faqs = faq %}
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+{% endif %}
+
+{% if sources and sources.length %}
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    <h2>Sources</h2>
+    <ul style="display:flex;flex-direction:column;gap:0.5em;padding-inline-start:1.4em;list-style:disc">
+      {% for s in sources %}
+      <li><a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.label }}</a></li>
+      {% endfor %}
+    </ul>
+    <p style="font-size:var(--fs-xs);color:var(--color-ink-muted);margin-block-start:1em">Last updated {{ (updated or date) | dateDisplay }}.</p>
+  </div>
+</section>
+{% endif %}
+
+{% if relatedLinks %}
+<section class="section section--sage">
+  <div class="container">
+    <h2>Related reading</h2>
+    <div class="grid grid--3">
+      {% for r in relatedLinks %}
+      <a class="card" href="{{ r.url }}"><div class="card-body"><h3>{{ r.label }}</h3></div></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% set ctaHeadline = bottomCtaHeadline | default("Get Your Export Quote") %}
+{% set formId = "blog-bottom" %}
+{% set prefillProduct = product %}
+{% set prefillCountry = targetCountry %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

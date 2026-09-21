@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/blog.njk",
+  "lang": "pt",
+  "dir": "ltr",
+  "author": "jamil-khan",
+  "authorName": "Jamil Khan",
+  "reviewedBy": "Equipa Editorial Green Plus EXIM",
+  "category": "buyer-guides",
+  "ogLocale": "pt_BR"
+}

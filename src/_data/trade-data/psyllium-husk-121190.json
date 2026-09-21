@@ -1,0 +1,86 @@
+{
+  "hs": "1211.90 (plants and parts used in pharmacy/perfumery, other) — BROAD category, includes psyllium/isabgol",
+  "product": "Psyllium Husk (Isabgol) — within broader HS 1211.90",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/121190",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 535237240,
+  "india_world_total_qty_kg": 121397000,
+  "india_exports_by_country": [
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 165631680,
+      "qty": 26743400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "value_usd": 79129530,
+      "qty": 11155900,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Italy",
+      "iso2": "IT",
+      "value_usd": 36425290,
+      "qty": 4898790,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "China",
+      "iso2": "CN",
+      "value_usd": 22901000,
+      "qty": 15008100,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 17213880,
+      "qty": 5311010,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 16202230,
+      "qty": 2026090,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 15075570,
+      "qty": 15254900,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "France",
+      "iso2": "FR",
+      "value_usd": 14766690,
+      "qty": 2299710,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "value_usd": 10102790,
+      "qty": 1446830,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "value_usd": 9652600,
+      "qty": 1372680,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "MEDIUM CONFIDENCE ON PRODUCT ATTRIBUTION — the underlying figures are primary-tier (WITS/UN Comtrade) and reliable, BUT HS 1211.90 is a broad basket covering many medicinal/perfumery plant materials, not psyllium alone. India is the dominant world origin for psyllium/isabgol and psyllium is understood to be a large share of this line, but the USD 535.24M total here must NOT be presented as 'India's psyllium husk exports' — that would overstate it. Use this table only with an explicit caveat that the code is broader than psyllium, or use it directionally to identify markets (USA ~31%, Germany, Italy) rather than as a psyllium-specific figure. A psyllium-specific number needs India's 8-digit ITC-HS line (1211 90 32 / 1211 90 33 territory), which was not accessible this session."
+}

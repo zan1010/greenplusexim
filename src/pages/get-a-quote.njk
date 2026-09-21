@@ -1,0 +1,32 @@
+---
+permalink: /get-a-quote/
+title: "Get Your Export Quote"
+description: "Request an FOB or CIF export quote from Green Plus EXIM. Tell us your product, quantity and destination — we respond within 24 business hours."
+lang: en
+dir: ltr
+minimalHeader: true
+breadcrumbs: [{ label: "Get a Quote" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+<section class="section" style="padding-block-start:var(--sp-4)">
+  <div class="container">
+    <div class="grid grid--2" style="align-items:start;gap:var(--sp-5)">
+      <div>
+        <h1>Get Your Export Quote</h1>
+        <p class="lede">Tell us what you need — product, quantity and destination — and we'll come back with FOB/CIF pricing, lead time and documentation details within 24 business hours.</p>
+        <ul style="margin-block-start:var(--sp-3);display:flex;flex-direction:column;gap:0.7em">
+          <li class="cluster"><svg width="18" height="18" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-check"></use></svg> No obligation</li>
+          <li class="cluster"><svg width="18" height="18" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-check"></use></svg> Samples available on request</li>
+          <li class="cluster"><svg width="18" height="18" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-check"></use></svg> Documentation matched to your destination market</li>
+        </ul>
+        <p style="margin-block-start:var(--sp-3)">Prefer WhatsApp? <a href="#" data-whatsapp style="text-decoration:underline">Message us directly</a> — {{ site.phoneDisplay }}.</p>
+      </div>
+      <div>
+        {% set formId = "landing" %}
+        {% include "partials/rfq-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

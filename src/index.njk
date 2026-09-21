@@ -1,0 +1,203 @@
+---
+permalink: /
+title: "Green Plus EXIM | Export House from India"
+rawTitle: true
+description: "Green Plus EXIM ships fresh produce, grains, seafood, animal feed and fertilizers from India since 2000. IEC & APEDA registered. Get an FOB/CIF quote in 24 hours."
+lang: en
+dir: ltr
+ogType: website
+---
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-media">
+    {% respImg placeholderImages["hero-port"].url, placeholderImages["hero-port"].alt, { priority: true, sizes: "100vw", widths: [640,960,1400,1920], context: "Home hero — port/containers" } %}
+  </div>
+  <div class="container hero-content">
+    <h1>India's Export House for Fresh Produce, Grains, Seafood, Feed &amp; Fertilizers</h1>
+    <p class="lede">Sourced across India's growing regions and ports, graded to spec and shipped to your port — with documentation prepared for your destination market. Trading since {{ site.foundedYear }}.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="/get-a-quote/" data-quote-cta="hero">Get Export Quote</a>
+      <a class="btn btn-secondary" href="#" data-whatsapp>
+        <svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-whatsapp"></use></svg>
+        WhatsApp Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="container">
+    <ul>
+      <li>Since {{ site.foundedYear }}</li>
+      <li>IEC &amp; APEDA Registered</li>
+      <li>Mumbai Port Access</li>
+      <li>Worldwide Shipping</li>
+      <li>Samples on Request</li>
+    </ul>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <h2 class="reveal">What We Export from India</h2>
+    <p class="lede reveal">A full-fledged export house — fresh produce, staples, seafood, feed ingredients and fertilizers, sourced against your specification and shipped in the quantity you need, from trial orders to annual contracts.</p>
+    <div class="grid grid--4" style="margin-block-start:var(--sp-4)">
+      {% for cat in productCategories %}
+      <a class="card reveal" href="{{ cat.url }}">
+        <div class="card-body">
+          <svg width="28" height="28" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-{{ cat.icon }}"></use></svg>
+          <h3>{{ cat.label }}</h3>
+          <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ cat.blurb }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container">
+    <h2 class="reveal">How Exporting With Us Works</h2>
+    <p class="lede reveal">A clear process from first enquiry to delivery at your port — so you know what to expect at every stage.</p>
+    <div class="grid grid--4" style="margin-block-start:var(--sp-4)">
+      {% set steps = [
+        { n: "1", t: "Send your requirement", d: "Product, quantity, destination and any spec or packaging needs — via form or WhatsApp." },
+        { n: "2", t: "Get specs & a quote", d: "We confirm available grades, packaging and an FOB/CIF price for your quantity." },
+        { n: "3", t: "Samples & contract", d: "Request samples if needed, then we agree terms — Incoterm, payment and delivery window." },
+        { n: "4", t: "Production, inspection & docs", d: "Sourcing, grading, packing and pre-shipment inspection, with documentation matched to your market." },
+        { n: "5", t: "Shipping & delivery", d: "Loaded at Nhava Sheva, Mundra or the nearest port and tracked through to your destination port." }
+      ] %}
+      {% for s in steps | limit(4) %}
+      <div class="card reveal">
+        <div class="card-body">
+          <span class="chip chip--gold">Step {{ s.n }}</span>
+          <h3>{{ s.t }}</h3>
+          <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ s.d }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="grid grid--4" style="margin-block-start:var(--sp-3)">
+      {% for s in steps %}
+        {% if loop.index == 5 %}
+        <div class="card reveal">
+          <div class="card-body">
+            <span class="chip chip--gold">Step {{ s.n }}</span>
+            <h3>{{ s.t }}</h3>
+            <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ s.d }}</p>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+      <a class="card reveal" href="/export-process/" style="display:flex;align-items:center;justify-content:center;text-align:center;background:var(--color-forest);color:#fff">
+        <div class="card-body" style="align-items:center">
+          <h3 style="color:#fff">See the full export process</h3>
+          <svg width="24" height="24" aria-hidden="true"><use href="/assets/icons.svg#icon-arrow-right"></use></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="reveal">Where Our Shipments Go</h2>
+    <p class="lede reveal">We ship to buyers across the Middle East &amp; GCC, Europe, Southeast Asia, East Asia, Africa, North America, Latin America and South Asia. Explore regulations, ports and documentation by destination.</p>
+    {% include "partials/trade-routes-map.njk" %}
+    <div class="cluster reveal" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-secondary" href="/markets/">Explore All Markets</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container">
+    <h2 class="reveal">Why Buyers Work With Green Plus EXIM</h2>
+    <div class="grid grid--3" style="margin-block-start:var(--sp-4)">
+      <div class="card reveal">
+        <div class="card-body">
+          <svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-shield"></use></svg>
+          <h3>Documentation matched to your market</h3>
+          <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ site.complianceStatement }}</p>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-body">
+          <svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-scale"></use></svg>
+          <h3>Sourcing across India's growing regions</h3>
+          <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Direct sourcing relationships across India's key producing states, so we can match your grade and volume requirement.</p>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-body">
+          <svg width="26" height="26" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-ship"></use></svg>
+          <h3>Port access on both coasts</h3>
+          <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Shipments routed via Nhava Sheva (JNPT), Mundra, Chennai, Kolkata, Kochi or Visakhapatnam depending on origin and destination.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cluster reveal" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-secondary" href="/why-green-plus-exim/">Why Green Plus EXIM</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="reveal">Our Quality Process</h2>
+    <p class="lede reveal">Quality is managed as a process, not a certificate. {{ site.complianceChecklistCta }}</p>
+    <div class="grid grid--4" style="margin-block-start:var(--sp-4)">
+      <div class="card reveal"><div class="card-body"><h3>1. Sourcing checks</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Supplier and lot verification before procurement.</p></div></div>
+      <div class="card reveal"><div class="card-body"><h3>2. Grading</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Sorted and graded to the specification agreed in your contract.</p></div></div>
+      <div class="card reveal"><div class="card-body"><h3>3. Pre-shipment inspection</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ site.inspectionStatement }}</p></div></div>
+      <div class="card reveal"><div class="card-body"><h3>4. Lab testing on request</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Moisture, admixture and residue testing arranged as required by your market.</p></div></div>
+    </div>
+    <div class="cluster reveal" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-secondary" href="/quality-compliance/">Quality &amp; Compliance</a>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+
+<section class="section section--sage">
+  <div class="container">
+    <h2 class="reveal">Latest Buyer Guides</h2>
+    <p class="lede reveal">Specifications, documentation and market guides for importers sourcing from India.</p>
+    <div class="grid grid--3" style="margin-block-start:var(--sp-3)">
+      <a class="card reveal" href="/blog/how-exporting-with-green-plus-exim-works/"><div class="card-body"><h3>How Exporting With Green Plus EXIM Works</h3></div></a>
+      <a class="card reveal" href="/blog/how-to-verify-an-indian-exporter-before-you-pay/"><div class="card-body"><h3>Verify an Indian Exporter Before You Pay</h3></div></a>
+      <a class="card reveal" href="/blog/organic-cow-manure-exporter-from-india/"><div class="card-body"><h3>Organic Cow Manure Exporter: Buyer Guide</h3></div></a>
+      <a class="card reveal" href="/blog/frozen-vannamei-shrimp-exporter-usa/"><div class="card-body"><h3>Frozen Shrimp Exporter to the USA</h3></div></a>
+      <a class="card reveal" href="/blog/india-spice-export-market-overview-2024/"><div class="card-body"><h3>India Spice Export Data by Country, 2024</h3></div></a>
+      <a class="card reveal" href="/blog/incoterms-guide-fob-cif-cfr-exw-explained/"><div class="card-body"><h3>Choosing the Right Incoterm from India</h3></div></a>
+    </div>
+    <div class="cluster reveal" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-secondary" href="/blog/">See All Guides</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="reveal">Frequently Asked Questions</h2>
+    {% set faqId = "home" %}
+    {% set faqs = [
+      { q: "What is the minimum order quantity?", a: "Our default MOQ is " + site.defaultMoq + ". Some products allow smaller trial quantities — ask when you send your requirement." },
+      { q: "Which Incoterms do you work on?", a: "FOB, CIF, CFR and EXW are all available depending on the product and destination. If you're not sure which to choose, tell us your destination port and we'll recommend one." },
+      { q: "Can I get samples before ordering?", a: "Yes, samples are available on request for most products. See our Sample Policy page for details and any charges." },
+      { q: "What documents do you provide with a shipment?", a: site.complianceStatement },
+      { q: "How long does shipping take?", a: "Transit time depends on the destination port and shipping line. See our Logistics &amp; Shipping page for typical transit-time ranges by region." },
+      { q: "How do I pay for an order?", a: "We work with Letter of Credit (LC), advance payment / Cash Against Documents (CAD) and Telegraphic Transfer (TT), depending on the order size and relationship. See Payment Terms for details." }
+    ] %}
+    {% include "partials/faq.njk" %}
+    <div class="cluster reveal" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-secondary" href="/faq/">See All FAQs</a>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

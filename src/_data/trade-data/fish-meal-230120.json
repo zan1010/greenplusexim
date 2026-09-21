@@ -1,0 +1,86 @@
+{
+  "hs": "2301.20 (flours, meals and pellets of fish, unfit for human consumption)",
+  "product": "Fish Meal",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/230120",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 257989850,
+  "india_world_total_qty_kg": 208151000,
+  "india_exports_by_country": [
+    {
+      "country": "China",
+      "iso2": "CN",
+      "value_usd": 93080790,
+      "qty": 70344000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Vietnam",
+      "iso2": "VN",
+      "value_usd": 40458240,
+      "qty": 33007500,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Other Asia, nes",
+      "iso2": null,
+      "value_usd": 35576420,
+      "qty": 27727200,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Japan",
+      "iso2": "JP",
+      "value_usd": 25388390,
+      "qty": 17191300,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 23793650,
+      "qty": 29890300,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Turkey",
+      "iso2": "TR",
+      "value_usd": 9545500,
+      "qty": 6964000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "value_usd": 8862990,
+      "qty": 6071150,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "value_usd": 8042170,
+      "qty": 5416000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Korea, Rep.",
+      "iso2": "KR",
+      "value_usd": 3954770,
+      "qty": 3228180,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Oman",
+      "iso2": "OM",
+      "value_usd": 2806610,
+      "qty": 2240000,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 257.99M across ~208,151 MT. China ~36% of value, Vietnam second — aquaculture feed demand is the driver, so buyer personas are shrimp/fish farm feed mills rather than livestock. 'Other Asia, nes' in Comtrade normally denotes Taiwan. Together with groundnut kernels and fish meal, this strengthens the case for a Vietnamese-language animal-feed cluster."
+}

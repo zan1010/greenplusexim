@@ -1,0 +1,69 @@
+[
+  {
+    "group": "General",
+    "items": [
+      { "q": "What does Green Plus EXIM export?", "a": "Fresh fruits and vegetables, grains and rice, pulses, spices, fish and seafood, animal feed ingredients, fertilizers and organic manure, plus other Indian export categories on request." },
+      { "q": "Where is Green Plus EXIM based?", "a": "Mumbai, Maharashtra, India, with sourcing relationships across India's producing regions." },
+      { "q": "How long has Green Plus EXIM been trading?", "a": "Since 2000 — over 25 years." },
+      { "q": "Do you sell to individual consumers?", "a": "No — we supply importers, distributors, wholesalers, retail chains, manufacturers/processors and trading companies at export volumes." },
+      { "q": "What registrations do you hold?", "a": "IEC (Import Export Code) and APEDA registration. See our Registrations page for details." }
+    ]
+  },
+  {
+    "group": "Ordering & Quotes",
+    "items": [
+      { "q": "How do I request a quote?", "a": "Use the Get a Quote form, or send your product, quantity and destination via WhatsApp." },
+      { "q": "How fast will I get a response?", "a": "Within 24 business hours." },
+      { "q": "What is the minimum order quantity?", "a": "Our default MOQ is 1 x 20ft container; trial orders are discussed on a per-product basis." },
+      { "q": "Can I order a trial quantity before committing to a full container?", "a": "Yes, for most products — ask when you send your requirement." },
+      { "q": "Do prices change?", "a": "Yes — commodity and shipping prices move regularly. Quotes carry a validity window; request a current quote rather than relying on an old one." },
+      { "q": "Can you supply on a repeat/contract basis?", "a": "Yes — monthly, quarterly or annual supply arrangements can be discussed. See Private Label &amp; Bulk Supply." }
+    ]
+  },
+  {
+    "group": "Products & Specifications",
+    "items": [
+      { "q": "Can I get samples before ordering?", "a": "Yes, for most products, subject to season and availability. See our Sample Policy." },
+      { "q": "How do I know what grade/specification I'll receive?", "a": "Specifications are confirmed in writing before production or procurement begins, based on your requirement." },
+      { "q": "Do specifications vary by season?", "a": "For fresh produce, yes — grade and availability follow harvest calendars. See each product page's availability calendar." },
+      { "q": "Can you supply custom packaging or private label?", "a": "Yes for many products — see Packaging &amp; Labelling and Private Label &amp; Bulk Supply." },
+      { "q": "How is your organic manure described?", "a": "We use 'organic manure' and 'organic fertilizer' as product-type descriptions, not as certification claims." }
+    ]
+  },
+  {
+    "group": "Payment",
+    "items": [
+      { "q": "What payment methods do you accept?", "a": "Letter of Credit (LC), advance payment / Cash Against Documents (CAD), and Telegraphic Transfer (TT). See Payment Terms." },
+      { "q": "Do you require full payment in advance?", "a": "It depends on order size and relationship — first orders often use LC or a partial advance; terms are agreed per order." },
+      { "q": "Which currency do you invoice in?", "a": "Typically USD; other currencies can be discussed." }
+    ]
+  },
+  {
+    "group": "Shipping & Logistics",
+    "items": [
+      { "q": "Which ports do you ship from?", "a": "Nhava Sheva (JNPT), Mundra, Chennai, Kolkata, Kochi and Visakhapatnam, plus air cargo for time-sensitive orders." },
+      { "q": "Do you use reefer containers?", "a": "Yes, for fresh produce and frozen seafood." },
+      { "q": "Which Incoterms do you support?", "a": "FOB, CIF, CFR and EXW. See Logistics &amp; Shipping for details." },
+      { "q": "How long does shipping take to my country?", "a": "It varies by region — see the transit-time table on Logistics &amp; Shipping, or ask for an estimate to your specific port." },
+      { "q": "Can you ship less than a full container?", "a": "Mostly we ship FCL, but a trial LCL quantity can be discussed for some products." },
+      { "q": "Who handles import customs clearance?", "a": "That's typically the buyer's responsibility or their customs broker's, unless otherwise agreed." }
+    ]
+  },
+  {
+    "group": "Documentation & Compliance",
+    "items": [
+      { "q": "What documents come with a shipment?", "a": "Export documentation prepared to match destination-country and buyer requirements — phytosanitary certificate, certificate of origin, fumigation certificate, lab test reports and more, as applicable." },
+      { "q": "Can you arrange third-party inspection?", "a": "Yes — SGS, Bureau Veritas, Intertek or your nominated agency can be arranged on request." },
+      { "q": "Do you provide lab test reports?", "a": "Yes, on request, for moisture, admixture, residue and other relevant tests." },
+      { "q": "How do I know what documentation my country requires?", "a": "Share your compliance checklist and we will confirm the documentation for your shipment. See also our country-specific market pages for regulatory overviews." },
+      { "q": "What industry certifications do you hold?", "a": "We hold IEC and APEDA registration. We don't hold or claim other industry certifications." }
+    ]
+  },
+  {
+    "group": "Becoming a Partner",
+    "items": [
+      { "q": "How can I become a supplier?", "a": "Farmers, FPOs, processors and aggregators can register their product and capacity via our Become a Supplier page." },
+      { "q": "Do you work with new exporters or brokers?", "a": "Our focus is direct sourcing relationships and direct buyer relationships; reach out via Contact if you'd like to discuss a specific opportunity." }
+    ]
+  }
+]

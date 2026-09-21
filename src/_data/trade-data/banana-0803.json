@@ -1,0 +1,19 @@
+{
+  "hs": "0803 90 (fresh bananas, excl. plantains)",
+  "product": "Banana (Cavendish / G9)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "APEDA-linked trade compilation (citrusfreight.com / indiabusinesstrade.in), FY2024-25",
+  "source_url": "https://www.citrusfreight.com/resource/blog/top-10-export-destinations-for-indian-bananas-in-2025",
+  "retrieved_date": "2026-09-17",
+  "year": "2024-25",
+  "india_exports_by_country": [
+    { "country": "Iraq", "iso2": "IQ", "value_usd": 69200000, "qty": null, "qty_unit": null, "yoy_change_pct": 121.4 },
+    { "country": "Iran", "iso2": "IR", "value_usd": 51900000, "qty": null, "qty_unit": null, "yoy_change_pct": 17.3 },
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 47900000, "qty": null, "qty_unit": null, "yoy_change_pct": 65.2 },
+    { "country": "Uzbekistan", "iso2": "UZ", "value_usd": 23200000, "qty": null, "qty_unit": null, "yoy_change_pct": 124.7 },
+    { "country": "Oman", "iso2": "OM", "value_usd": 19300000, "qty": null, "qty_unit": null, "yoy_change_pct": 18.8 }
+  ],
+  "world_top_importers": [],
+  "notes": "Bananas are India's largest fruit export by value: FY2024-25 total ~USD 377.5 million, ~0.40-0.45 million MT. Iran + Iraq + UAE + Nepal together account for over 80% of India's banana exports (Nepal's individual value was not given in the source, so it is omitted from the table above rather than estimated). This is one of the better-sourced datasets gathered this session — good candidate for an early, confident blog post ('Bananas from India to GCC')."
+}

@@ -1,0 +1,38 @@
+---
+permalink: /llms-full.txt
+eleventyExcludeFromCollections: true
+---
+# Green Plus EXIM — Full Reference
+
+## Company
+- Legal/trading name: {{ site.companyName }}
+- Founded: {{ site.foundedYear }} ({{ site.yearsInTrade }} years in trade)
+- Founder: {{ site.founder.name }}
+- Headquarters: {{ site.address.addressLocality }}, {{ site.address.addressRegion }}, India
+- Email: {{ site.email }}
+- Phone / WhatsApp: {{ site.phoneDisplay }}
+- Business hours: {{ site.hours.display }}
+- Registrations held: IEC (Import Export Code), APEDA (RCMC). Green Plus EXIM does not claim FSSAI, ISO, HACCP, BRC, GlobalG.A.P., MPEDA, NPOP/USDA/EU Organic, Halal or any other certification.
+
+## Positioning
+{{ site.positioning }}
+
+## Compliance & documentation approach
+{{ site.complianceStatement }} {{ site.complianceChecklistCta }} {{ site.inspectionStatement }}
+
+## Product categories
+{% for cat in productCategories %}- {{ cat.label }}: {{ cat.blurb }} ({{ site.url }}{{ cat.url }})
+{% endfor %}
+
+## Ports used
+{% for port in site.ports %}- {{ port }}
+{% endfor %}
+
+## Export process (summary)
+Inquiry → specifications confirmed → quote (FOB/CIF/CFR/EXW) → samples if required → contract terms agreed → payment terms agreed (LC, advance/CAD or TT) → production/packing → pre-shipment inspection and lab testing on request → documentation prepared for destination market → shipping → delivery.
+
+## Markets served
+Middle East & GCC, Europe, Southeast Asia, East Asia, Africa, North America, Latin America, South Asia.
+
+## How to request a quote
+Buyers can submit product, quantity, destination country and specification via the RFQ form at {{ site.url }}/get-a-quote/ or via WhatsApp at {{ site.phoneDisplay }}. Typical response time: within 24 business hours.

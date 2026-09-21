@@ -1,0 +1,20 @@
+{
+  "hs": "0703 10 (onions, shallots)",
+  "product": "Fresh red onion",
+  "unit": "USD / MT",
+  "currency": "USD",
+  "source_name": "Trade-data aggregator compilations (seair.co.in, tradeimex.in) citing APEDA/DGCI&S-derived figures; year attribution imprecise in sources checked",
+  "source_url": "https://www.seair.co.in/blog/onion-export-data-from-india-major-list-of-onion-exporters.aspx",
+  "retrieved_date": "2026-09-17",
+  "year": "2024-25 (approximate — see notes)",
+  "india_exports_by_country": [
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": 187000000, "qty": null, "qty_unit": null },
+    { "country": "Malaysia", "iso2": "MY", "value_usd": 72100000, "qty": null, "qty_unit": null },
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 45600000, "qty": null, "qty_unit": null },
+    { "country": "Sri Lanka", "iso2": "LK", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Nepal", "iso2": "NP", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Kuwait", "iso2": "KW", "value_usd": null, "qty": null, "qty_unit": null }
+  ],
+  "world_top_importers": [],
+  "notes": "CAUTION — DGFT POLICY IS VOLATILE FOR THIS PRODUCT: as of the August 2026 check, onion exports are 'Free' but subject to a Minimum Export Price (~$550/MT) and a 20% export duty; India banned onion exports outright for ~6 months in 2023-24 (HS 0703 10 19 moved to 'Prohibited' until 31 Mar 2024) and has changed policy with little notice historically. Any onion page or blog post must say pricing/duty terms are confirmed at time of order, not quoted as fixed. On the data itself: aggregate FY figure cited was ~1,147,721.91 MT / ~USD 453.95 million, but the source blended what appear to be FY2024-25 and FY2025-26 references without clearly separating them — treat the total-year figure as indicative only. The three per-country values above were stated without an explicit year in the source; verify against APEDA's Fresh Onions page (apeda.gov.in/FreshOnions) before using precise dollar figures in a published blog post. Export duty on onions was removed 1 April 2025 per one source; MEP is a separate, still-active control as of the August 2026 search."
+}

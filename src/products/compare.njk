@@ -1,0 +1,103 @@
+---
+permalink: /products/compare/
+layout: null
+type: tool
+title: "Compare Indian Export Products"
+description: "Compare Green Plus EXIM's Indian export products by category, HS code, packaging, container loading and key markets — filter and search to find the right product."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Products", url: "/products/" }, { label: "Compare" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Compare Indian Export Products" %}
+{% set pageLede = "Every product we've published a data-backed page for, in one filterable table — category, HS code, packaging, container loading and key markets, all sourced from the individual product pages." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="tldr-box" style="max-width:76ch;margin-block-end:var(--sp-4)">
+      <p><strong>Quick answer:</strong> This table lists every product with a published, data-backed page — {{ collections.products.length }} in total across {{ collections.productCategories.length }} categories. Filter by category or search by name; every row links through to the full product page with specifications, cited trade data, documentation and a quote form.</p>
+    </div>
+
+    <div class="compare-controls" style="display:flex;gap:var(--sp-3);flex-wrap:wrap;align-items:end;margin-block-end:var(--sp-3)">
+      <div>
+        <label for="compare-search" style="display:block;font-weight:600;margin-block-end:0.3em">Search by product name</label>
+        <input type="search" id="compare-search" placeholder="e.g. turmeric, guar gum, shrimp" style="min-width:16rem">
+      </div>
+      <div>
+        <label for="compare-category" style="display:block;font-weight:600;margin-block-end:0.3em">Category</label>
+        <select id="compare-category">
+          <option value="">All categories</option>
+          {% for cat in collections.productCategories | sort(false, false, "data.categoryName") %}
+          <option value="{{ cat.data.categoryName }}">{{ cat.data.categoryName }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <p id="compare-count" style="color:var(--color-ink-muted);font-size:var(--fs-sm);margin-block-end:0.5em" aria-live="polite"></p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data-table" id="compare-table">
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Category</th>
+            <th scope="col">HS code</th>
+            <th scope="col">Key markets</th>
+            <th scope="col">Packaging</th>
+            <th scope="col">20ft loading</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in collections.products | sort(false, false, "data.productName") %}
+          <tr data-category="{{ p.data.category }}" data-name="{{ p.data.productName | lower }}">
+            <td><a href="{{ p.url }}">{{ p.data.productName }}</a></td>
+            <td>{{ p.data.category }}</td>
+            <td>{{ p.data.hsCode }}</td>
+            <td>{{ p.data.keyMarkets | default("—") }}</td>
+            <td>{{ p.data.packaging | truncate(60) if p.data.packaging else "—" }}</td>
+            <td>{{ p.data.loading20 | default("—") }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p id="compare-empty" hidden style="color:var(--color-ink-muted);margin-block-start:var(--sp-2)">No products match that search — try a different term or clear the category filter.</p>
+    <p style="font-size:var(--fs-sm);color:var(--color-ink-muted);margin-block-start:var(--sp-2)">Not seeing a product you need? We supply beyond this list too — <a href="/get-a-quote/">send us your requirement</a> and we'll confirm current availability, even without a published page.</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var search = document.getElementById("compare-search");
+  var category = document.getElementById("compare-category");
+  var rows = Array.prototype.slice.call(document.querySelectorAll("#compare-table tbody tr"));
+  var count = document.getElementById("compare-count");
+  var empty = document.getElementById("compare-empty");
+
+  function applyFilter() {
+    var term = (search.value || "").trim().toLowerCase();
+    var cat = category.value;
+    var visible = 0;
+    rows.forEach(function (row) {
+      var matchesTerm = !term || row.getAttribute("data-name").indexOf(term) !== -1;
+      var matchesCat = !cat || row.getAttribute("data-category") === cat;
+      var show = matchesTerm && matchesCat;
+      row.hidden = !show;
+      if (show) visible++;
+    });
+    count.textContent = visible + " of " + rows.length + " products shown";
+    empty.hidden = visible !== 0;
+  }
+
+  search.addEventListener("input", applyFilter);
+  category.addEventListener("change", applyFilter);
+  applyFilter();
+})();
+</script>
+
+{% include "partials/cta-band.njk" %}
+{% set formId = "compare" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

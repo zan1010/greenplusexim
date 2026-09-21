@@ -1,0 +1,43 @@
+---
+permalink: /contact/
+title: "Contact Us"
+description: "Contact Green Plus EXIM for export enquiries, supplier partnerships or general questions. Phone, WhatsApp, email and office hours."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Contact" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Contact Us" %}
+{% set pageLede = "For export enquiries, use the quote form so we can respond with specifics. For anything else, reach us directly below." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container grid grid--2" style="align-items:start">
+    <div>
+      <h2>Get in touch</h2>
+      <ul style="display:flex;flex-direction:column;gap:1em;margin-block-start:1em">
+        <li class="cluster"><svg width="20" height="20" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-phone"></use></svg> <a href="tel:{{ site.phoneE164 }}">{{ site.phoneDisplay }}</a></li>
+        <li class="cluster"><svg width="20" height="20" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-whatsapp"></use></svg> <a href="#" data-whatsapp>WhatsApp: {{ site.phoneDisplay }}</a></li>
+        <li class="cluster"><svg width="20" height="20" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-mail"></use></svg> <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li class="cluster"><svg width="20" height="20" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-pin"></use></svg> {{ site.address.addressLocality }}, {{ site.address.addressRegion }}, India</li>
+      </ul>
+      <p style="margin-block-start:1em"><strong>Hours:</strong> {{ site.hours.display }}</p>
+
+      <div style="margin-block-start:var(--sp-3);border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--color-border)">
+        <iframe
+          src="https://maps.google.com/maps?q=Mumbai%2C%20Maharashtra%2C%20India&t=&z=11&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="280" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Map showing Green Plus EXIM's location in Mumbai, Maharashtra, India"></iframe>
+      </div>
+    </div>
+
+    <div>
+      <h2>Send a message</h2>
+      {% include "partials/contact-form.njk" %}
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

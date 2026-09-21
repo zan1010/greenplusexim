@@ -1,0 +1,86 @@
+{
+  "hs": "2306.90 (oil-cake and other solid residues, other — incl. neem cake; also a DORB stream per DGFT Notification 37/2025-26)",
+  "product": "Other Oil-Cake & Residues (incl. Neem Cake)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/230690",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 65613910,
+  "india_world_total_qty_kg": 403941000,
+  "india_exports_by_country": [
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 22391010,
+      "qty": 69040800,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Korea, Rep.",
+      "iso2": "KR",
+      "value_usd": 16834360,
+      "qty": 175417000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Other Asia, nes",
+      "iso2": null,
+      "value_usd": 7536990,
+      "qty": 79869300,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "value_usd": 6321410,
+      "qty": 24069800,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Japan",
+      "iso2": "JP",
+      "value_usd": 4200640,
+      "qty": 16540900,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "China",
+      "iso2": "CN",
+      "value_usd": 2313820,
+      "qty": 15559500,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Vietnam",
+      "iso2": "VN",
+      "value_usd": 1538710,
+      "qty": 8694650,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bhutan",
+      "iso2": "BT",
+      "value_usd": 1038310,
+      "qty": 3172570,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Spain",
+      "iso2": "ES",
+      "value_usd": 867710,
+      "qty": 2051860,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "France",
+      "iso2": "FR",
+      "value_usd": 508390,
+      "qty": 4081830,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "MEDIUM CONFIDENCE ON PRODUCT ATTRIBUTION — figures are primary-tier (WITS/UN Comtrade) but 2306.90 is a residual 'other oilcake' basket covering neem cake, various minor oilcakes AND part of the de-oiled rice bran stream (DGFT Notification 37/2025-26 lists 2306 90 19 / 2306 90 29 / 2306 90 90 alongside 2302 40 00 for DORB). Do NOT attribute the USD 65.61M total to neem cake alone. Korea Rep. is an outlier worth noting: 175,417 MT for USD 16.83M implies a very low ~USD 96/MT unit value, consistent with bulk low-grade feed/fertilizer residue rather than a specialty product. Use directionally for market identification only."
+}

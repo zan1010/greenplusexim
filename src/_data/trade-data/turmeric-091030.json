@@ -1,0 +1,86 @@
+{
+  "hs": "0910.30 (turmeric / curcuma)",
+  "product": "Turmeric",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/091030",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 327989520,
+  "india_world_total_qty_kg": 177738000,
+  "india_exports_by_country": [
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 50941510,
+      "qty": 27902400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 50025300,
+      "qty": 36197500,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 23543590,
+      "qty": 8940160,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "value_usd": 17890140,
+      "qty": 8462800,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Morocco",
+      "iso2": "MA",
+      "value_usd": 14934220,
+      "qty": 8282310,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Iran",
+      "iso2": "IR",
+      "value_usd": 14872490,
+      "qty": 8427750,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "value_usd": 10506000,
+      "qty": 5850850,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "value_usd": 10145080,
+      "qty": 4216330,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 8991300,
+      "qty": 3896850,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Indonesia",
+      "iso2": "ID",
+      "value_usd": 8074000,
+      "qty": 3382510,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier source (WITS/UN Comtrade), per-country USD values AND quantities both reported. India world total 2024: USD 327.99M across 177,738 MT. Cross-check: a separate trade-press figure puts FY2024-25 turmeric exports at USD 341.54M (up 50.7% YoY from USD 226.58M in FY2023-24) with India holding ~66% of world market share — that is a fiscal-year figure and not directly comparable to the calendar-2024 WITS number, so do not mix the two in one table. UAE and Bangladesh are near-tied as the #1 market."
+}

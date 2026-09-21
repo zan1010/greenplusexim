@@ -1,0 +1,17 @@
+{
+  "hs": "3101",
+  "product": "Organic manure / cow dung / animal & vegetable fertilizers",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "SeAir / ExportImportData.in trade-data aggregators (compiled from Indian customs shipping-bill records); DGFT/APEDA not directly queried",
+  "source_url": "https://www.seair.co.in/blog/cow-dung-export-data-from-india.aspx",
+  "retrieved_date": "2026-09-17",
+  "year": "2023-24",
+  "india_exports_by_country": [
+    { "country": "Italy", "iso2": "IT", "value_usd": 455149.65, "qty": null, "qty_unit": null },
+    { "country": "France", "iso2": "FR", "value_usd": 436100, "qty": null, "qty_unit": null },
+    { "country": "United States", "iso2": "US", "value_usd": 367411.38, "qty": null, "qty_unit": null }
+  ],
+  "world_top_importers": [],
+  "notes": "LOWER-CONFIDENCE SOURCE: figures come from private trade-data aggregator sites (SeAir, ExportImportData.in) that compile Indian customs shipping-bill records, not directly from DGCI&S/APEDA. FY2023-24 total category value cited elsewhere as ~INR 400 crore combined across fresh cow dung (INR 125 cr), 'fertilisers' (INR 173.67 cr) and compost manure (INR 88.02 cr) under this HS heading — those INR splits were not independently verified against a primary source either. Other markets repeatedly mentioned in secondary sources but without individual values: Maldives, Singapore, China, Nepal, Brazil, and Gulf countries (for palm-plantation fertilizer use). Recommend the owner verify against APEDA AgriExchange or DGCI&S TradeStat directly if this data will anchor a pillar blog post (this is the flagship 'Organic Cow Manure Exporter from India' cluster per the brief's seed title list)."
+}

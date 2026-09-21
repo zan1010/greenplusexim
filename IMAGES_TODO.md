@@ -1,0 +1,93 @@
+# Images To Replace
+
+Every entry below is a royalty-free Unsplash/Pexels placeholder used during build. Replace with real photography (produce, warehouses, packing lines, containers, port operations, and a real portrait of Mr. Jamil Khan) before launch. This file is appended to automatically by the `respImg` shortcode at build time — do not hand-edit the list format, but feel free to add notes.
+
+## How to replace
+1. Add the real image file to `src/assets/img/real/<name>.jpg`.
+2. Update the `{% respImg %}` call's source path in the relevant template.
+3. Re-run `npm run build` and delete the corresponding line here.
+
+---
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920

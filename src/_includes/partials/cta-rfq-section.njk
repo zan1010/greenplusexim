@@ -1,0 +1,19 @@
+<section class="section section--sage" id="get-quote">
+  <div class="container">
+    <div class="grid grid--2" style="align-items:start;gap:var(--sp-5)">
+      <div>
+        <h2>{{ ctaHeadline | default("Get Your Export Quote") }}</h2>
+        <p class="lede">{{ ctaSubtext | default("Share your requirement — quantity, destination and specs — and we'll come back with FOB/CIF pricing, lead time and documentation details.") }}</p>
+        <ul style="margin-block-start:var(--sp-3);display:flex;flex-direction:column;gap:0.6em">
+          <li class="cluster"><svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-check"></use></svg> Response within 24 business hours</li>
+          <li class="cluster"><svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-check"></use></svg> No obligation</li>
+          <li class="cluster"><svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-check"></use></svg> Samples available on request</li>
+        </ul>
+      </div>
+      <div>
+        {% set formId = formId | default("main") %}
+        {% include "partials/rfq-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>

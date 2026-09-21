@@ -1,0 +1,140 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+{% set pageH1 = marketH1 | default("Exporting from India to " + marketName) %}
+{% set pageLede = tagline %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2" style="gap:var(--sp-5);align-items:start">
+      <div class="prose">
+        <div class="tldr-box">
+          <p><strong>Quick answer:</strong> {{ quickAnswer }}</p>
+        </div>
+        {{ content | safe }}
+      </div>
+      <div>
+        {% set formId = "market" %}
+        {% set prefillCountry = iso2 %}
+        {% include "partials/rfq-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if iso2 and countryTradeIndex[iso2] %}
+{% set rows = countryTradeIndex[iso2] %}
+<section class="section section--sage">
+  <div class="container" style="max-width:76ch">
+    <h2 id="what-india-exports">What India exports to {{ marketName }}</h2>
+    <p>Products we handle where verified trade data shows India exporting to {{ marketName }}. Figures are India's total exports of that product to {{ marketName }} in the year shown — not our own shipment volumes.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">India's exports to {{ marketName }}</th>
+            <th scope="col">Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows | limit(14) %}
+          <tr>
+            <td>{{ row.product }}{% if row.hs %} <span style="color:var(--color-ink-muted);font-size:var(--fs-xs)">(HS {{ row.hs | truncateHs }})</span>{% endif %}</td>
+            <td>
+              {%- if row.value_usd %}${{ row.value_usd | money }}
+              {%- elif row.qty %}{{ row.qty | money }} {{ row.qty_unit }}
+              {%- else %}<span style="color:var(--color-ink-muted)">Reported market, value not broken out</span>{% endif -%}
+            </td>
+            <td>{{ row.year }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% barChart rows | limit(8), { label: "India's exports to " + marketName + " by product" } %}
+    <p class="source-note">
+      <strong>Sources:</strong> compiled from the per-product trade-data files cited on each product page — primarily WITS (World Bank) / UN Comtrade for calendar year 2024, with some products from APEDA, MPEDA and trade-press compilations. Each product page states its own source, year and any limitations. Retrieved {{ buildDate }}.
+    </p>
+  </div>
+</section>
+{% endif %}
+
+{% if regulations %}
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>Import regulations for {{ marketName }}</h2>
+    {{ regulations | safe }}
+  </div>
+</section>
+{% endif %}
+
+{% if ports %}
+<section class="section section--sage">
+  <div class="container" style="max-width:76ch">
+    <h2>Ports &amp; transit time</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">Destination port</th><th scope="col">Typical transit from Indian west-coast ports</th></tr></thead>
+        <tbody>
+          {% for port in ports %}
+          <tr><td>{{ port.name }}</td><td>{{ port.transit }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Transit times are general guidance based on typical shipping-line schedules and change with routing and transshipment. Ask for a current estimate to your port.</p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>Documentation for shipments to {{ marketName }}</h2>
+    <p>{{ site.complianceStatement }}</p>
+    {% if documentation %}
+    <ul style="display:flex;flex-direction:column;gap:0.5em;margin-block:var(--sp-2);padding-inline-start:1.4em;list-style:disc">
+      {% for doc in documentation %}<li>{{ doc | safe }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    <p>{{ site.complianceChecklistCta }} {{ site.inspectionStatement }}</p>
+
+    {% if paymentNorms %}
+    <h2>Payment &amp; currency norms</h2>
+    <p>{{ paymentNorms }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+
+{% if faqs %}
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    <h2>{{ marketName }} import FAQs</h2>
+    {% set faqId = "market" %}
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+{% endif %}
+
+{% if relatedMarkets %}
+<section class="section section--sage">
+  <div class="container">
+    <h2>Related markets</h2>
+    <div class="grid grid--3">
+      {% for m in relatedMarkets %}
+      <a class="card" href="{{ m.url }}"><div class="card-body"><h3>{{ m.label }}</h3></div></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% set ctaHeadline = "Get an export quote for " + marketName %}
+{% set ctaSubtext = "Tell us your product, quantity and destination port — we'll confirm availability, documentation and a current FOB or CIF price within 24 business hours." %}
+{% set prefillCountry = iso2 %}
+{% set formId = "market-bottom" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

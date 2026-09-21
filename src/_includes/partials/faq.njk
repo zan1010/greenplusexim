@@ -1,0 +1,18 @@
+{% if faqs and faqs.length %}
+<div class="faq-list">
+  {% for item in faqs %}
+  <div class="faq-item">
+    <button type="button" aria-expanded="false" aria-controls="faq-panel-{{ loop.index }}-{{ faqId | default('') }}" id="faq-btn-{{ loop.index }}-{{ faqId | default('') }}">
+      <span>{{ item.q }}</span>
+      <svg class="chevron" width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-chevron-down"></use></svg>
+    </button>
+    <div class="faq-answer" id="faq-panel-{{ loop.index }}-{{ faqId | default('') }}">
+      <p>{{ item.a | safe }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<script type="application/ld+json">
+{{ faqs | faqSchema | safe }}
+</script>
+{% endif %}

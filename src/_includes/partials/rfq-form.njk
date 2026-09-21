@@ -1,0 +1,168 @@
+{# Reusable export-inquiry (RFQ) form. Same name="export-inquiry" and field set on every instance.
+   Visible labels/placeholders/options/buttons are localized via the `t` filter; field `name`
+   attributes and option `value`s stay English and identical across every language/instance. #}
+<div class="rfq-form-wrap">
+  <p class="form-progress" data-role="progress"
+     data-step1-label="{{ i18n | t(lang, 'step1Label') }}"
+     data-step2-label="{{ i18n | t(lang, 'step2Label') }}">{{ i18n | t(lang, 'step1Label') }}</p>
+  <form name="export-inquiry" method="POST" action="{{ thankYouUrl | default('/thank-you/') }}"
+        data-netlify="true" netlify-honeypot="bot-field" class="rfq-form"
+        data-sending-label="{{ i18n | t(lang, 'sendingBtn') }}">
+    <input type="hidden" name="form-name" value="export-inquiry">
+    <p class="visually-hidden"><label>{{ i18n | t(lang, 'leaveEmpty') }} <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+    <input type="hidden" name="source_page" value="">
+    <input type="hidden" name="page_language" value="{{ lang | default('en') }}">
+    <input type="hidden" name="product_context" value="{{ prefillProduct | default('') }}">
+    <input type="hidden" name="utm_source" value="">
+    <input type="hidden" name="utm_medium" value="">
+    <input type="hidden" name="utm_campaign" value="">
+    <input type="hidden" name="referrer" value="">
+
+    <div class="form-step" data-step="1">
+      <div class="form-field">
+        <label for="rfq-category-{{ formId }}">{{ i18n | t(lang, 'productCategory') }}</label>
+        <select id="rfq-category-{{ formId }}" name="product_category" required>
+          <option value="">{{ i18n | t(lang, 'selectCategory') }}</option>
+          <option value="Fresh Fruits">{{ i18n | t(lang, 'catFreshFruits') }}</option>
+          <option value="Fresh Vegetables">{{ i18n | t(lang, 'catFreshVegetables') }}</option>
+          <option value="Grains &amp; Rice">{{ i18n | t(lang, 'catGrainsRice') }}</option>
+          <option value="Pulses">{{ i18n | t(lang, 'catPulses') }}</option>
+          <option value="Spices">{{ i18n | t(lang, 'catSpices') }}</option>
+          <option value="Fish &amp; Seafood">{{ i18n | t(lang, 'catFishSeafood') }}</option>
+          <option value="Animal Feed">{{ i18n | t(lang, 'catAnimalFeed') }}</option>
+          <option value="Fertilizers">{{ i18n | t(lang, 'catFertilizers') }}</option>
+          <option value="Organic Manure">{{ i18n | t(lang, 'catOrganicManure') }}</option>
+          <option value="Oilseeds">{{ i18n | t(lang, 'catOilseeds') }}</option>
+          <option value="Other">{{ i18n | t(lang, 'catOther') }}</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="rfq-product-{{ formId }}">{{ i18n | t(lang, 'productName') }}</label>
+        <input id="rfq-product-{{ formId }}" type="text" name="product_name" value="{{ prefillProduct | default('') }}" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="rfq-qty-{{ formId }}">{{ i18n | t(lang, 'quantity') }}</label>
+          <input id="rfq-qty-{{ formId }}" type="number" min="1" name="quantity" required>
+        </div>
+        <div class="form-field">
+          <label for="rfq-qty-unit-{{ formId }}">{{ i18n | t(lang, 'unit') }}</label>
+          <select id="rfq-qty-unit-{{ formId }}" name="quantity_unit" required>
+            <option value="MT">{{ i18n | t(lang, 'unitMT') }}</option>
+            <option value="Containers (20ft)">{{ i18n | t(lang, 'unitContainers20') }}</option>
+            <option value="Containers (40ft)">{{ i18n | t(lang, 'unitContainers40') }}</option>
+            <option value="Kg">{{ i18n | t(lang, 'unitKg') }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="rfq-freq-{{ formId }}">{{ i18n | t(lang, 'orderFrequency') }}</label>
+        <select id="rfq-freq-{{ formId }}" name="order_frequency">
+          <option value="One-time / Trial">{{ i18n | t(lang, 'freqOneTime') }}</option>
+          <option value="Monthly">{{ i18n | t(lang, 'freqMonthly') }}</option>
+          <option value="Quarterly">{{ i18n | t(lang, 'freqQuarterly') }}</option>
+          <option value="Annual contract">{{ i18n | t(lang, 'freqAnnual') }}</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="rfq-country-{{ formId }}">{{ i18n | t(lang, 'destinationCountry') }}</label>
+        <select id="rfq-country-{{ formId }}" name="destination_country" required>
+          <option value="">{{ i18n | t(lang, 'selectCountry') }}</option>
+          {% for c in countries %}
+          <option value="{{ c.name }}" {% if c.iso2 == prefillCountry %}selected{% endif %}>{{ c.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="rfq-port-{{ formId }}">{{ i18n | t(lang, 'destinationPort') }} <span class="hint">{{ i18n | t(lang, 'optional') }}</span></label>
+        <input id="rfq-port-{{ formId }}" type="text" name="destination_port">
+      </div>
+
+      <div class="form-field">
+        <label for="rfq-incoterm-{{ formId }}">{{ i18n | t(lang, 'incoterm') }}</label>
+        <select id="rfq-incoterm-{{ formId }}" name="incoterm">
+          <option value="FOB">FOB</option>
+          <option value="CIF">CIF</option>
+          <option value="CFR">CFR</option>
+          <option value="EXW">EXW</option>
+          <option value="Not sure">{{ i18n | t(lang, 'incotermNotSure') }}</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="rfq-pack-{{ formId }}">{{ i18n | t(lang, 'packagingRequirement') }} <span class="hint">{{ i18n | t(lang, 'optional') }}</span></label>
+        <input id="rfq-pack-{{ formId }}" type="text" name="packaging_requirement">
+      </div>
+
+      <div class="form-step-actions">
+        <button type="button" class="btn btn-primary btn-block" data-next-step>{{ i18n | t(lang, 'continueBtn') }}</button>
+      </div>
+    </div>
+
+    <div class="form-step" data-step="2" hidden>
+      <div class="form-field">
+        <label for="rfq-name-{{ formId }}">{{ i18n | t(lang, 'fullName') }}</label>
+        <input id="rfq-name-{{ formId }}" type="text" name="full_name" required autocomplete="name">
+      </div>
+      <div class="form-field">
+        <label for="rfq-company-{{ formId }}">{{ i18n | t(lang, 'companyName') }}</label>
+        <input id="rfq-company-{{ formId }}" type="text" name="company_name" required autocomplete="organization">
+      </div>
+      <div class="form-field">
+        <label for="rfq-btype-{{ formId }}">{{ i18n | t(lang, 'businessType') }}</label>
+        <select id="rfq-btype-{{ formId }}" name="business_type">
+          <option value="Importer">{{ i18n | t(lang, 'bizImporter') }}</option>
+          <option value="Distributor">{{ i18n | t(lang, 'bizDistributor') }}</option>
+          <option value="Wholesaler">{{ i18n | t(lang, 'bizWholesaler') }}</option>
+          <option value="Retail chain">{{ i18n | t(lang, 'bizRetail') }}</option>
+          <option value="Manufacturer/Processor">{{ i18n | t(lang, 'bizManufacturer') }}</option>
+          <option value="Trading company">{{ i18n | t(lang, 'bizTrading') }}</option>
+          <option value="Other">{{ i18n | t(lang, 'bizOther') }}</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="rfq-email-{{ formId }}">{{ i18n | t(lang, 'email') }}</label>
+        <input id="rfq-email-{{ formId }}" type="email" name="email" required autocomplete="email">
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="rfq-dial-{{ formId }}">{{ i18n | t(lang, 'countryCode') }}</label>
+          <select id="rfq-dial-{{ formId }}" name="whatsapp_country_code" required>
+            {% for c in countries %}
+            <option value="{{ c.dial }}">{{ c.name }} ({{ c.dial }})</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="rfq-phone-{{ formId }}">{{ i18n | t(lang, 'whatsappNumber') }}</label>
+          <input id="rfq-phone-{{ formId }}" type="tel" name="whatsapp_phone" required autocomplete="tel">
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="rfq-website-{{ formId }}">{{ i18n | t(lang, 'companyWebsite') }} <span class="hint">{{ i18n | t(lang, 'optional') }}</span></label>
+        <input id="rfq-website-{{ formId }}" type="url" name="website">
+      </div>
+      <div class="form-field">
+        <label for="rfq-message-{{ formId }}">{{ i18n | t(lang, 'message') }} <span class="hint">{{ i18n | t(lang, 'optional') }}</span></label>
+        <textarea id="rfq-message-{{ formId }}" name="message" rows="3"></textarea>
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" id="rfq-consent-{{ formId }}" name="consent" required value="yes">
+        <label for="rfq-consent-{{ formId }}">{{ i18n | t(lang, 'consentText') }} <a href="/privacy-policy/">{{ i18n | t(lang, 'privacyPolicy') }}</a>.</label>
+      </div>
+
+      <div class="form-step-actions">
+        <button type="button" class="btn btn-secondary" data-prev-step>{{ i18n | t(lang, 'backBtn') }}</button>
+        <button type="submit" class="btn btn-primary btn-block">{{ i18n | t(lang, 'submitBtn') }}</button>
+      </div>
+    </div>
+
+    <p class="form-microcopy">{{ i18n | t(lang, 'microcopy') }}</p>
+  </form>
+</div>

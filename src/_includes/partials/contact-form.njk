@@ -1,0 +1,36 @@
+{# Reusable general contact form — same name and field set on every instance. #}
+<div class="rfq-form-wrap">
+  <form name="contact" method="POST" action="/thank-you/"
+        data-netlify="true" netlify-honeypot="bot-field-ct" class="quick-quote-form">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="visually-hidden"><label>Leave empty: <input type="text" name="bot-field-ct" tabindex="-1" autocomplete="off"></label></p>
+    <input type="hidden" name="source_page" value="">
+    <input type="hidden" name="page_language" value="en">
+
+    <div class="form-field">
+      <label for="ct-name">Full name</label>
+      <input id="ct-name" type="text" name="full_name" required autocomplete="name">
+    </div>
+    <div class="form-field">
+      <label for="ct-email">Email</label>
+      <input id="ct-email" type="email" name="email" required autocomplete="email">
+    </div>
+    <div class="form-field">
+      <label for="ct-subject">Subject</label>
+      <select id="ct-subject" name="subject">
+        <option value="Export enquiry">Export enquiry</option>
+        <option value="Supplier partnership">Supplier partnership</option>
+        <option value="Press / media">Press / media</option>
+        <option value="General question">General question</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="ct-message">Message</label>
+      <textarea id="ct-message" name="message" rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+    <p class="form-microcopy">Response within 24 business hours</p>
+  </form>
+</div>

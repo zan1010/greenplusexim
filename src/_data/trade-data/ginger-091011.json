@@ -1,0 +1,86 @@
+{
+  "hs": "0910.11 (ginger, neither crushed nor ground); WITS legacy 0910.10",
+  "product": "Ginger",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/091010",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 98897460,
+  "india_world_total_qty_kg": 82257900,
+  "india_exports_by_country": [
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 32520470,
+      "qty": 61428200,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Morocco",
+      "iso2": "MA",
+      "value_usd": 18185380,
+      "qty": 4290940,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 10540200,
+      "qty": 2480650,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 9003570,
+      "qty": 4884420,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "value_usd": 4269170,
+      "qty": 1517720,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 3649490,
+      "qty": 945347,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "value_usd": 2002710,
+      "qty": 480913,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "South Africa",
+      "iso2": "ZA",
+      "value_usd": 1568360,
+      "qty": 686205,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "value_usd": 1392130,
+      "qty": 473898,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "value_usd": 1336030,
+      "qty": 360404,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 98.90M across ~82,258 MT. Bangladesh is ~33% of value but ~75% of volume — i.e. Bangladesh buys low-unit-value bulk ginger while Morocco, USA and the EU buy at materially higher unit values. That value/volume split is a genuinely useful insight for pricing conversations and is worth making explicit in content."
+}

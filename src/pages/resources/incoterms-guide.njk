@@ -1,0 +1,48 @@
+---
+permalink: /resources/incoterms-guide/
+title: "Incoterms Guide for Importers"
+description: "FOB, CIF, CFR and EXW explained for buyers importing from India — who arranges shipping, who pays for what, and when risk transfers."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Resources", url: "/resources/" }, { label: "Incoterms Guide" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Incoterms Guide" %}
+{% set pageLede = "The four Incoterms we use most often, explained in plain terms." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <p><strong>Quick answer:</strong> FOB means the buyer arranges and pays for the main sea freight from the Indian port onward; CIF and CFR mean the seller arranges it (CIF also includes insurance); EXW means the buyer arranges everything from our warehouse door. Which one you choose affects your price, your risk, and how much logistics coordination falls on you.</p>
+
+    <h2>EXW — Ex Works</h2>
+    <p>We make the goods available at our warehouse or factory. You (or your forwarder) arrange and pay for everything from there — inland transport to port, export customs formalities, ocean freight, import customs, and delivery to your final location. This gives you maximum control over logistics but requires you to have or appoint a capable forwarder in India.</p>
+
+    <h2>FOB — Free On Board</h2>
+    <p>We handle inland transport to the Indian port, export customs clearance, and loading the goods onto the vessel you've booked. You (or your forwarder) book the ocean freight and take on risk once the goods are loaded. This is the most common term for experienced importers who already have freight relationships.</p>
+
+    <h2>CFR — Cost and Freight</h2>
+    <p>We handle everything FOB covers, plus we book and pay for ocean freight to your destination port. Risk still transfers to you once goods are loaded at the Indian port — insurance for the ocean leg is your responsibility.</p>
+
+    <h2>CIF — Cost, Insurance and Freight</h2>
+    <p>Same as CFR, but we also arrange marine insurance for the shipment. This is popular with first-time importers who want fewer moving parts to coordinate, at the cost of less control over carrier and routing choices.</p>
+
+    <h2>Which one should I choose?</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">If you...</th><th scope="col">Consider</th></tr></thead>
+        <tbody>
+          <tr><td>Already have a freight forwarder and want the lowest landed cost</td><td>FOB</td></tr>
+          <tr><td>Want fewer parties to coordinate on your first order</td><td>CIF</td></tr>
+          <tr><td>Want to manage the entire logistics chain yourself</td><td>EXW</td></tr>
+          <tr><td>Want freight handled for you but manage your own insurance</td><td>CFR</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Not sure? Tell us your destination port and whether you have an existing forwarder relationship when you <a href="/get-a-quote/">request a quote</a> — we'll recommend a term. See also <a href="/blog/incoterms-guide-fob-cif-cfr-exw-explained/">Choosing the Right Incoterm from India</a> on our blog for a decision-framework walkthrough.</p>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

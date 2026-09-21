@@ -1,0 +1,12 @@
+[
+  { "code": "en", "label": "English", "dir": "ltr", "path": "/" },
+  { "code": "es", "label": "Español", "dir": "ltr", "path": "/es/" },
+  { "code": "pt", "label": "Português", "dir": "ltr", "path": "/pt/" },
+  { "code": "fr", "label": "Français", "dir": "ltr", "path": "/fr/" },
+  { "code": "de", "label": "Deutsch", "dir": "ltr", "path": "/de/" },
+  { "code": "nl", "label": "Nederlands", "dir": "ltr", "path": "/nl/" },
+  { "code": "ar", "label": "العربية", "dir": "rtl", "path": "/ar/" },
+  { "code": "id", "label": "Bahasa Indonesia", "dir": "ltr", "path": "/id/" },
+  { "code": "vi", "label": "Tiếng Việt", "dir": "ltr", "path": "/vi/" },
+  { "code": "ms", "label": "Bahasa Melayu", "dir": "ltr", "path": "/ms/" }
+]

@@ -1,0 +1,147 @@
+{
+  "primary": [
+    {
+      "label": "Products",
+      "url": "/products/",
+      "megaMenu": true,
+      "columns": [
+        {
+          "heading": "Fresh Produce",
+          "items": [
+            { "label": "Fresh Fruits", "url": "/products/fresh-fruits/" },
+            { "label": "Fresh Vegetables", "url": "/products/fresh-vegetables/" }
+          ]
+        },
+        {
+          "heading": "Staples",
+          "items": [
+            { "label": "Grains & Rice", "url": "/products/grains-rice/" },
+            { "label": "Pulses", "url": "/products/pulses/" },
+            { "label": "Spices", "url": "/products/spices/" },
+            { "label": "Oilseeds", "url": "/products/oilseeds/" }
+          ]
+        },
+        {
+          "heading": "Seafood & Feed",
+          "items": [
+            { "label": "Fish & Seafood", "url": "/products/fish-seafood/" },
+            { "label": "Animal Feed", "url": "/products/animal-feed/" }
+          ]
+        },
+        {
+          "heading": "Fertilizers & More",
+          "items": [
+            { "label": "Fertilizers", "url": "/products/fertilizers/" },
+            { "label": "Organic Manure", "url": "/products/organic-manure/" },
+            { "label": "Dehydrated Products", "url": "/products/dehydrated-products/" },
+            { "label": "Other Indian Exports", "url": "/products/other-indian-exports/" }
+          ]
+        },
+        {
+          "heading": "Tools",
+          "items": [
+            { "label": "Compare All Products", "url": "/products/compare/" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Markets",
+      "url": "/markets/",
+      "megaMenu": true,
+      "columns": [
+        {
+          "heading": "Regions",
+          "items": [
+            { "label": "Middle East & GCC", "url": "/markets/middle-east-gcc/" },
+            { "label": "Europe", "url": "/markets/europe/" },
+            { "label": "Southeast Asia", "url": "/markets/southeast-asia/" },
+            { "label": "East Asia", "url": "/markets/east-asia/" }
+          ]
+        },
+        {
+          "heading": "More Regions",
+          "items": [
+            { "label": "Africa", "url": "/markets/africa/" },
+            { "label": "North America", "url": "/markets/north-america/" },
+            { "label": "Latin America", "url": "/markets/latin-america/" },
+            { "label": "South Asia", "url": "/markets/south-asia/" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Why Us",
+      "url": "/why-green-plus-exim/",
+      "children": [
+        { "label": "About", "url": "/about/" },
+        { "label": "Quality & Compliance", "url": "/quality-compliance/" },
+        { "label": "Registrations", "url": "/registrations/" },
+        { "label": "Export Process", "url": "/export-process/" },
+        { "label": "Logistics & Shipping", "url": "/logistics-shipping/" },
+        { "label": "Payment Terms", "url": "/payment-terms/" },
+        { "label": "Packaging & Labelling", "url": "/packaging-labelling/" },
+        { "label": "Sample Policy", "url": "/sample-policy/" },
+        { "label": "Private Label & Bulk Supply", "url": "/private-label-bulk-supply/" },
+        { "label": "Become a Supplier", "url": "/become-a-supplier/" }
+      ]
+    },
+    {
+      "label": "Resources",
+      "url": "/resources/",
+      "children": [
+        { "label": "Blog", "url": "/blog/" },
+        { "label": "Incoterms Guide", "url": "/resources/incoterms-guide/" },
+        { "label": "HS Code Finder", "url": "/resources/hs-code-finder/" },
+        { "label": "Container Loading Calculator", "url": "/resources/container-loading-calculator/" },
+        { "label": "Harvest Calendar", "url": "/resources/harvest-calendar/" },
+        { "label": "Import Guide from India", "url": "/resources/import-guide-from-india/" },
+        { "label": "Glossary", "url": "/resources/glossary/" },
+        { "label": "FAQ", "url": "/faq/" }
+      ]
+    },
+    { "label": "Contact", "url": "/contact/" }
+  ],
+  "footerColumns": [
+    {
+      "heading": "Company",
+      "items": [
+        { "label": "About", "url": "/about/" },
+        { "label": "Why Green Plus EXIM", "url": "/why-green-plus-exim/" },
+        { "label": "Quality & Compliance", "url": "/quality-compliance/" },
+        { "label": "Registrations", "url": "/registrations/" },
+        { "label": "Become a Supplier", "url": "/become-a-supplier/" },
+        { "label": "Authors", "url": "/authors/" },
+        { "label": "Contact", "url": "/contact/" }
+      ]
+    },
+    {
+      "heading": "Buying from Us",
+      "items": [
+        { "label": "Export Process", "url": "/export-process/" },
+        { "label": "Payment Terms", "url": "/payment-terms/" },
+        { "label": "Logistics & Shipping", "url": "/logistics-shipping/" },
+        { "label": "Packaging & Labelling", "url": "/packaging-labelling/" },
+        { "label": "Sample Policy", "url": "/sample-policy/" },
+        { "label": "Get a Quote", "url": "/get-a-quote/" }
+      ]
+    },
+    {
+      "heading": "Resources",
+      "items": [
+        { "label": "Blog", "url": "/blog/" },
+        { "label": "FAQ", "url": "/faq/" },
+        { "label": "Glossary", "url": "/resources/glossary/" },
+        { "label": "HS Code Finder", "url": "/resources/hs-code-finder/" },
+        { "label": "HTML Sitemap", "url": "/sitemap/" }
+      ]
+    },
+    {
+      "heading": "Legal",
+      "items": [
+        { "label": "Privacy Policy", "url": "/privacy-policy/" },
+        { "label": "Terms & Conditions", "url": "/terms-conditions/" }
+      ]
+    }
+  ]
+}

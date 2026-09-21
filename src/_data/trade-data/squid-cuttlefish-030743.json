@@ -1,0 +1,86 @@
+{
+  "hs": "0307.43 (cuttlefish and squid, frozen); WITS legacy 0307.49",
+  "product": "Squid & Cuttlefish (frozen)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/030749",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 11670650,
+  "india_world_total_qty_kg": 2679160,
+  "india_exports_by_country": [
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 5505190,
+      "qty": 843659,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Spain",
+      "iso2": "ES",
+      "value_usd": 2607580,
+      "qty": 911298,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Italy",
+      "iso2": "IT",
+      "value_usd": 1365800,
+      "qty": 401125,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "France",
+      "iso2": "FR",
+      "value_usd": 736380,
+      "qty": 189005,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Belgium",
+      "iso2": "BE",
+      "value_usd": 362790,
+      "qty": 100844,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Japan",
+      "iso2": "JP",
+      "value_usd": 259850,
+      "qty": 26703,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "value_usd": 212450,
+      "qty": 25026,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Vietnam",
+      "iso2": "VN",
+      "value_usd": 116620,
+      "qty": 20000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Mauritius",
+      "iso2": "MU",
+      "value_usd": 107870,
+      "qty": 30350,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Greece",
+      "iso2": "GR",
+      "value_usd": 97340,
+      "qty": 21208,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "MEDIUM CONFIDENCE ON COMPLETENESS — figures are primary-tier (WITS/UN Comtrade) but the USD 11.67M total under legacy code 0307.49 looks LOW relative to India's known cephalopod trade, which suggests much of the volume is reported under other 0307 subheadings (0307.42/0307.43/0307.99 splits differ across HS revisions and reporting years). Treat the country RANKING (USA ~47%, then Spain, Italy, France) as directionally sound, but do NOT present the total as India's complete squid/cuttlefish export value. Note the strongly European/Mediterranean skew — Spain, Italy, France, Belgium and Greece all appear, which supports Spanish/Italian-language content for this line specifically."
+}

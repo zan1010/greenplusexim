@@ -1,0 +1,35 @@
+---
+permalink: /authors/jamil-khan/
+title: "Jamil Khan — Founder, Green Plus EXIM"
+description: "Jamil Khan founded Green Plus EXIM in 2000 and leads the company's sourcing and export operations."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Authors", url: "/authors/" }, { label: "Jamil Khan" }]
+---
+{% extends "layouts/base.njk" %}
+{% block schema %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jamil Khan",
+  "url": (site.url + "/authors/jamil-khan/"),
+  "jobTitle": "Founder",
+  "worksFor": { "@type": "Organization", "name": site.companyName, "url": site.url },
+  "description": authors[0].bio
+} | jsonify | safe }}
+</script>
+{% endblock %}
+{% block content %}
+{% set pageH1 = "Jamil Khan" %}
+{% set pageLede = "Founder, Green Plus EXIM" %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:70ch">
+    <p>{{ authors[0].bio }}</p>
+    <p>Articles and guides on this site written or reviewed by Jamil draw on his experience running Green Plus EXIM's sourcing and export operations since {{ site.foundedYear }}.</p>
+    <p><a href="/about/">Read more about Green Plus EXIM →</a></p>
+  </div>
+</section>
+{% endblock %}

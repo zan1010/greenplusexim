@@ -1,0 +1,51 @@
+---
+permalink: /resources/container-loading-calculator/
+title: "Container Loading Calculator"
+description: "Estimate how many tonnes of product fit in a 20ft or 40ft container based on packaging type and bag weight. For planning only — confirm exact figures with us."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Resources", url: "/resources/" }, { label: "Container Loading Calculator" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Container Loading Calculator" %}
+{% set pageLede = "A quick estimate for planning purposes — not a substitute for a confirmed loading plan." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container" style="max-width:600px">
+    <form id="container-calc" class="rfq-form-wrap">
+      <div class="form-field">
+        <label for="container_type">Container type</label>
+        <select id="container_type" name="container_type">
+          <option value="20ft">20ft container</option>
+          <option value="40ft">40ft container</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="density_category">Product / packaging type</label>
+        <select id="density_category" name="density_category">
+          <option value="bagged-dense">Dense bagged goods (rice, pulses, grains, sugar)</option>
+          <option value="bagged-light">Light bagged goods (spices, dehydrated products)</option>
+          <option value="jumbo-bulk">Jumbo bags / bulk (feed, fertilizer)</option>
+          <option value="frozen-carton">Frozen seafood (master cartons)</option>
+          <option value="fresh-carton">Fresh fruit/vegetables (ventilated cartons)</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="bag_weight_kg">Bag/carton weight (kg) <span class="hint">(optional — for a bag-count estimate)</span></label>
+        <input type="number" id="bag_weight_kg" name="bag_weight_kg" min="1" placeholder="e.g. 25">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Calculate</button>
+    </form>
+    <div id="container-calc-result" class="card" hidden style="margin-block-start:var(--sp-3);padding:var(--sp-3)"></div>
+
+    <p style="font-size:var(--fs-sm);color:var(--color-ink-muted);margin-block-start:var(--sp-3)">This tool gives a planning-stage estimate only, based on typical packing density by product type. Actual container payload depends on the exact product, packaging format and local weight/axle regulations at your port. Always confirm exact loading figures with us before booking a shipment.</p>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}
+{% block scripts %}
+<script src="/assets/js/container-calculator.js" defer></script>
+{% endblock %}

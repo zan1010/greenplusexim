@@ -1,0 +1,317 @@
+[
+  {
+    "product": "Pomegranate",
+    "category": "Fresh Fruits",
+    "hs": "0810.90"
+  },
+  {
+    "product": "Grapes",
+    "category": "Fresh Fruits",
+    "hs": "0806.10"
+  },
+  {
+    "product": "Banana",
+    "category": "Fresh Fruits",
+    "hs": "0803.90"
+  },
+  {
+    "product": "Mango (Alphonso, Kesar)",
+    "category": "Fresh Fruits",
+    "hs": "0804.50"
+  },
+  {
+    "product": "Papaya",
+    "category": "Fresh Fruits",
+    "hs": "0807.20"
+  },
+  {
+    "product": "Watermelon",
+    "category": "Fresh Fruits",
+    "hs": "0807.11"
+  },
+  {
+    "product": "Lemon / Lime",
+    "category": "Fresh Fruits",
+    "hs": "0805.50"
+  },
+  {
+    "product": "Coconut",
+    "category": "Fresh Fruits",
+    "hs": "0801.19"
+  },
+  {
+    "product": "Red Onion",
+    "category": "Fresh Vegetables",
+    "hs": "0703.10"
+  },
+  {
+    "product": "Potato",
+    "category": "Fresh Vegetables",
+    "hs": "0701.90"
+  },
+  {
+    "product": "Garlic",
+    "category": "Fresh Vegetables",
+    "hs": "0703.20"
+  },
+  {
+    "product": "Green Chilli",
+    "category": "Fresh Vegetables",
+    "hs": "0709.60"
+  },
+  {
+    "product": "Drumstick",
+    "category": "Fresh Vegetables",
+    "hs": "0709.99"
+  },
+  {
+    "product": "Okra",
+    "category": "Fresh Vegetables",
+    "hs": "0709.99"
+  },
+  {
+    "product": "Tomato",
+    "category": "Fresh Vegetables",
+    "hs": "0702.00"
+  },
+  {
+    "product": "Ginger",
+    "category": "Fresh Vegetables",
+    "hs": "0910.11"
+  },
+  {
+    "product": "1121 Basmati Rice",
+    "category": "Grains & Rice",
+    "hs": "1006.30"
+  },
+  {
+    "product": "Pusa Basmati Rice",
+    "category": "Grains & Rice",
+    "hs": "1006.30"
+  },
+  {
+    "product": "Non-Basmati Rice (IR64, Sona Masoori, Parboiled)",
+    "category": "Grains & Rice",
+    "hs": "1006.30"
+  },
+  {
+    "product": "Maize / Corn",
+    "category": "Grains & Rice",
+    "hs": "1005.90"
+  },
+  {
+    "product": "Wheat",
+    "category": "Grains & Rice",
+    "hs": "1001.99"
+  },
+  {
+    "product": "Millets (Jowar, Bajra, Ragi)",
+    "category": "Grains & Rice",
+    "hs": "1008.29 (jowar/sorghum 1007.90)"
+  },
+  {
+    "product": "Chickpeas (Kabuli / Desi)",
+    "category": "Pulses",
+    "hs": "0713.20"
+  },
+  {
+    "product": "Toor Dal",
+    "category": "Pulses",
+    "hs": "0713.60"
+  },
+  {
+    "product": "Moong",
+    "category": "Pulses",
+    "hs": "0713.31"
+  },
+  {
+    "product": "Urad",
+    "category": "Pulses",
+    "hs": "0713.31"
+  },
+  {
+    "product": "Masoor",
+    "category": "Pulses",
+    "hs": "0713.40"
+  },
+  {
+    "product": "Turmeric",
+    "category": "Spices",
+    "hs": "0910.30"
+  },
+  {
+    "product": "Red Chilli",
+    "category": "Spices",
+    "hs": "0904.21 / 0904.22"
+  },
+  {
+    "product": "Cumin",
+    "category": "Spices",
+    "hs": "0909.31"
+  },
+  {
+    "product": "Coriander",
+    "category": "Spices",
+    "hs": "0909.21"
+  },
+  {
+    "product": "Black Pepper",
+    "category": "Spices",
+    "hs": "0904.11"
+  },
+  {
+    "product": "Cardamom",
+    "category": "Spices",
+    "hs": "0908.31"
+  },
+  {
+    "product": "Frozen Vannamei Shrimp",
+    "category": "Fish & Seafood",
+    "hs": "0306.17"
+  },
+  {
+    "product": "Black Tiger Shrimp",
+    "category": "Fish & Seafood",
+    "hs": "0306.17"
+  },
+  {
+    "product": "Frozen Ribbonfish",
+    "category": "Fish & Seafood",
+    "hs": "0303.89"
+  },
+  {
+    "product": "Indian Mackerel",
+    "category": "Fish & Seafood",
+    "hs": "0303.89"
+  },
+  {
+    "product": "Squid & Cuttlefish",
+    "category": "Fish & Seafood",
+    "hs": "0307.43"
+  },
+  {
+    "product": "Pomfret",
+    "category": "Fish & Seafood",
+    "hs": "0303.89"
+  },
+  {
+    "product": "Sardines",
+    "category": "Fish & Seafood",
+    "hs": "0303.53"
+  },
+  {
+    "product": "Soybean Meal",
+    "category": "Animal Feed",
+    "hs": "2304.00"
+  },
+  {
+    "product": "Rice Bran / DORB",
+    "category": "Animal Feed",
+    "hs": "2302.20 (DORB also 2306.90)"
+  },
+  {
+    "product": "Groundnut Cake",
+    "category": "Animal Feed",
+    "hs": "2305.00"
+  },
+  {
+    "product": "Rapeseed / Mustard Meal",
+    "category": "Animal Feed",
+    "hs": "2306.49 (2306.41 if low-erucic)"
+  },
+  {
+    "product": "Cottonseed Cake",
+    "category": "Animal Feed",
+    "hs": "2306.10"
+  },
+  {
+    "product": "Maize DDGS",
+    "category": "Animal Feed",
+    "hs": "2303.30"
+  },
+  {
+    "product": "Fish Meal",
+    "category": "Animal Feed",
+    "hs": "2301.20"
+  },
+  {
+    "product": "Cattle & Poultry Feed",
+    "category": "Animal Feed",
+    "hs": "2309.90"
+  },
+  {
+    "product": "Organic Cow Manure / Cow Dung Powder",
+    "category": "Fertilizers & Manure",
+    "hs": "3101.00"
+  },
+  {
+    "product": "Vermicompost",
+    "category": "Fertilizers & Manure",
+    "hs": "3101.00"
+  },
+  {
+    "product": "Neem Cake",
+    "category": "Fertilizers & Manure",
+    "hs": "2306.90"
+  },
+  {
+    "product": "Bio-Fertilizers",
+    "category": "Fertilizers & Manure",
+    "hs": "3101.00"
+  },
+  {
+    "product": "Bone Meal",
+    "category": "Fertilizers & Manure",
+    "hs": "0506.90"
+  },
+  {
+    "product": "Poultry Manure",
+    "category": "Fertilizers & Manure",
+    "hs": "3101.00"
+  },
+  {
+    "product": "Seaweed-Based Fertilizer",
+    "category": "Fertilizers & Manure",
+    "hs": "3101.00"
+  },
+  {
+    "product": "Compost",
+    "category": "Fertilizers & Manure",
+    "hs": "3101.00"
+  },
+  {
+    "product": "Sesame Seeds (Hulled / Natural)",
+    "category": "Oilseeds & Others",
+    "hs": "1207.40"
+  },
+  {
+    "product": "Groundnut Kernels",
+    "category": "Oilseeds & Others",
+    "hs": "1202.42"
+  },
+  {
+    "product": "Makhana (Fox Nut)",
+    "category": "Oilseeds & Others",
+    "hs": "1404.90 (verify)"
+  },
+  {
+    "product": "Jaggery",
+    "category": "Oilseeds & Others",
+    "hs": "1701.13 / 1701.14"
+  },
+  {
+    "product": "Dehydrated Onion & Garlic Powder",
+    "category": "Oilseeds & Others",
+    "hs": "0712.20 (garlic 0712.90)"
+  },
+  {
+    "product": "Guar Gum",
+    "category": "Oilseeds & Others",
+    "hs": "1302.32"
+  },
+  {
+    "product": "Psyllium Husk",
+    "category": "Oilseeds & Others",
+    "hs": "1211.90"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "hs": "0306 17 (frozen shrimp/prawns); broader heading 0306",
+  "product": "Frozen vannamei / black tiger shrimp",
+  "unit": "MT (quantity); USD million (value, aggregate only)",
+  "currency": "USD",
+  "source_name": "MPEDA (Marine Products Export Development Authority) FY2024-25 export performance, as reported via PIB press release and republished by agritimes.co.in / thehawk.in",
+  "source_url": "https://agritimes.co.in/aquaculture/indias-seafood-exports-us-7-45-billion-in-fy-2024-25-mpeda",
+  "retrieved_date": "2026-09-17",
+  "year": "2024-25",
+  "india_exports_by_country": [
+    { "country": "United States", "iso2": "US", "value_usd": null, "qty": 311948, "qty_unit": "MT" },
+    { "country": "China", "iso2": "CN", "value_usd": null, "qty": 136164, "qty_unit": "MT" },
+    { "country": "European Union", "iso2": "EU", "value_usd": null, "qty": 99310, "qty_unit": "MT" },
+    { "country": "Southeast Asia (region)", "iso2": null, "value_usd": null, "qty": 58003, "qty_unit": "MT" },
+    { "country": "Japan", "iso2": "JP", "value_usd": null, "qty": 38917, "qty_unit": "MT" },
+    { "country": "Middle East (region)", "iso2": null, "value_usd": null, "qty": 32784, "qty_unit": "MT" }
+  ],
+  "world_top_importers": [],
+  "notes": "Aggregate figures (verified): total seafood exports FY2024-25 = 1,698,170 MT / INR 62,408.45 crore / USD 7.45 billion. Frozen shrimp alone = 741,529 MT / INR 43,334.25 crore / USD 5,177.01 million, remaining the top export item. Per-country breakdown above is QUANTITY (MT) ONLY — per-country USD value was not found in the sources checked and has deliberately been left null rather than estimated/prorated (rule: never invent a number). A more recent FY2025-26 figure was also seen (total frozen shrimp 792,647 MT, USA 256,128 MT, China 169,505 MT, value USD 5,624.48 million) but was not used as the primary year here since the country breakdown for that year was incomplete in the sources checked; worth revisiting for a 2025-26 update. Original primary source is MPEDA's official press release PDF (mpeda.gov.in) — direct PDF text extraction failed in this session (image-based PDF, poppler/pdftoppm unavailable); recommend the owner or a future session try again with a PDF text tool, or query MPEDA's statistics portal directly for the authoritative per-country USD split."
+}

@@ -1,0 +1,95 @@
+{% extends "layouts/base.njk" %}
+
+{% block schema %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": (productName + " from India to " + marketName),
+  "description": description,
+  "image": (productImage or placeholderImages['hero-port'].url),
+  "category": category,
+  "brand": { "@type": "Organization", "name": site.companyName, "@id": (site.url + "/#organization") },
+  "additionalProperty": [{ "@type": "PropertyValue", "name": "HS Code", "value": hsCode }]
+} | jsonify | safe }}
+</script>
+{% endblock %}
+
+{% block content %}
+{% set pageH1 = productName + " Exporter from India to " + marketName %}
+{% set pageLede = tagline %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2" style="gap:var(--sp-5);align-items:start">
+      <div class="prose">
+        <div class="tldr-box">
+          <p><strong>Quick answer:</strong> {{ quickAnswer }}</p>
+        </div>
+
+        <div class="chip-row" style="margin-block:var(--sp-2)">
+          <span class="chip chip--gold">HS {{ hsCode }}</span>
+          <span class="chip"><a href="{{ productUrl }}" style="color:inherit">{{ productName }} product page</a></span>
+          <span class="chip"><a href="{{ marketUrl }}" style="color:inherit">{{ marketName }} market page</a></span>
+        </div>
+
+        {{ content | safe }}
+      </div>
+
+      <div>
+        {% set formId = "product-country" %}
+        {% set prefillProduct = productName %}
+        {% set prefillCountry = iso2 %}
+        {% set ctaHeadline = "Get a quote — " + productName + " to " + marketName %}
+        {% include "partials/rfq-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if documentation %}
+<section class="section section--sage">
+  <div class="container" style="max-width:76ch">
+    <h2>Documentation for {{ productName | lower }} shipments to {{ marketName }}</h2>
+    <p>{{ site.complianceStatement }}</p>
+    <ul style="display:flex;flex-direction:column;gap:0.5em;margin-block:var(--sp-2);padding-inline-start:1.4em;list-style:disc">
+      {% for doc in documentation %}<li>{{ doc }}</li>{% endfor %}
+    </ul>
+    {% if paymentNorms %}<p><strong>Payment norms:</strong> {{ paymentNorms }}</p>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% include "partials/cta-band.njk" %}
+
+{% if faqs %}
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    <h2>{{ productName }} to {{ marketName }}: FAQs</h2>
+    {% set faqId = "product-country" %}
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+{% endif %}
+
+{% if relatedPairs %}
+<section class="section section--sage">
+  <div class="container">
+    <h2>Related routes</h2>
+    <div class="grid grid--3">
+      {% for rel in relatedPairs %}
+      <a class="card" href="{{ rel.url }}"><div class="card-body"><h3>{{ rel.label }}</h3></div></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% set ctaHeadline = "Request a quote — " + productName + " to " + marketName %}
+{% set ctaSubtext = "Tell us your quantity and required specification — we'll confirm current availability, documentation and a FOB or CIF price to " + marketName + " within 24 business hours." %}
+{% set prefillProduct = productName %}
+{% set prefillCountry = iso2 %}
+{% set formId = "product-country-bottom" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

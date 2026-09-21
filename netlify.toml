@@ -1,0 +1,98 @@
+[build]
+  # `|| true` on the IndexNow step: it's a nice-to-have ping, not a deploy gate. It no-ops safely
+  # until a real IndexNow key is set in src/_data/site.json (see OWNER_TODO.md).
+  command = "npm run build && (node scripts/indexnow-submit.mjs || true)"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# ---- Security headers ----
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://region1.google-analytics.com; frame-src https://www.google.com; base-uri 'self'; form-action 'self'; object-src 'none'"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/optimized/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ---- Legacy URL redirects (301) ----
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+[[redirects]]
+  from = "/services"
+  to = "/products/"
+  status = 301
+[[redirects]]
+  from = "/gallery"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/Agriculture-Produce"
+  to = "/products/fresh-fruits/"
+  status = 301
+[[redirects]]
+  from = "/Organic-Manure"
+  to = "/products/organic-manure/"
+  status = 301
+[[redirects]]
+  from = "/Packaged-Water"
+  to = "/products/"
+  status = 301
+[[redirects]]
+  from = "/Spices"
+  to = "/products/spices/"
+  status = 301
+[[redirects]]
+  from = "/Leather-and-Footwear"
+  to = "/products/other-indian-exports/"
+  status = 301
+[[redirects]]
+  from = "/Textile-and-Apparel"
+  to = "/products/other-indian-exports/"
+  status = 301
+[[redirects]]
+  from = "/Privacy-Policy"
+  to = "/privacy-policy/"
+  status = 301
+[[redirects]]
+  from = "/Terms-&-Conditions"
+  to = "/terms-conditions/"
+  status = 301
+
+# ---- Force www + HTTPS ----
+[[redirects]]
+  from = "https://greenplusexim.com/*"
+  to = "https://www.greenplusexim.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://greenplusexim.com/*"
+  to = "https://www.greenplusexim.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.greenplusexim.com/*"
+  to = "https://www.greenplusexim.com/:splat"
+  status = 301
+  force = true

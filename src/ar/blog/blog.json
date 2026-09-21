@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/blog.njk",
+  "lang": "ar",
+  "dir": "rtl",
+  "author": "jamil-khan",
+  "authorName": "جميل خان",
+  "reviewedBy": "فريق التحرير في Green Plus EXIM",
+  "category": "buyer-guides",
+  "ogLocale": "ar_AE"
+}

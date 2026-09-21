@@ -1,0 +1,25 @@
+---
+permalink: /authors/
+title: "Authors"
+description: "The people behind Green Plus EXIM's guides and market research."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Authors" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Authors" %}
+{% include "partials/page-header.njk" %}
+<section class="section">
+  <div class="container grid grid--2">
+    {% for a in authors %}
+    <a class="card" href="/authors/{{ a.slug }}/">
+      <div class="card-body">
+        <h3>{{ a.name }}</h3>
+        <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ a.role }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

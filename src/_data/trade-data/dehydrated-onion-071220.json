@@ -1,0 +1,86 @@
+{
+  "hs": "0712.20 (dried onions, whole/cut/sliced/broken/powder)",
+  "product": "Dehydrated Onion",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/071220",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 221394900,
+  "india_world_total_qty_kg": 113241000,
+  "india_exports_by_country": [
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 25732840,
+      "qty": 11461000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Brazil",
+      "iso2": "BR",
+      "value_usd": 25207730,
+      "qty": 13630900,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "value_usd": 24694420,
+      "qty": 12081200,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Indonesia",
+      "iso2": "ID",
+      "value_usd": 14833150,
+      "qty": 10954400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Belgium",
+      "iso2": "BE",
+      "value_usd": 12825570,
+      "qty": 5905360,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 12196600,
+      "qty": 6241320,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Russia",
+      "iso2": "RU",
+      "value_usd": 10285680,
+      "qty": 5502320,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Netherlands",
+      "iso2": "NL",
+      "value_usd": 8134840,
+      "qty": 3855790,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Spain",
+      "iso2": "ES",
+      "value_usd": 6241420,
+      "qty": 3060050,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "value_usd": 5939690,
+      "qty": 2725670,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 221.39M across ~113,241 MT, spread over roughly 120 destination markets — one of the best-diversified lines in the whole dataset. Critically, dehydrated onion is NOT subject to the fresh-onion Minimum Export Price regime that complicates HS 0703.10 pricing, and it is ~33x larger by value than fresh garlic exports. Markets are developed-economy food processors (USA, Brazil, Germany, Belgium, Netherlands, Spain). Good candidate for Spanish/Portuguese-language content given Brazil at #2 and Spain in the top 10. NOTE: this code is dried ONION only; dried garlic falls under 0712.90, which was not separately pulled."
+}

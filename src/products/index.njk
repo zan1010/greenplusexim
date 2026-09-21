@@ -1,0 +1,83 @@
+---
+permalink: /products/
+layout: null
+type: hub
+title: "Products We Export from India"
+description: "Fresh fruits, vegetables, grains, pulses, spices, seafood, animal feed, fertilizers and organic manure exported from India by Green Plus EXIM."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Products" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Products We Export from India" %}
+{% set pageLede = "Ten product categories across fresh produce, staples, seafood, feed and fertilizers — sourced to your specification and shipped to your port." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="tldr-box" style="max-width:76ch">
+      <p><strong>Quick answer:</strong> Green Plus EXIM exports fresh fruits and vegetables, grains and rice, pulses, spices, fish and seafood, animal feed ingredients, fertilizers and organic manure from India. Our default MOQ is {{ site.defaultMoq }}, with FOB, CIF, CFR and EXW terms available. Send your product, quantity and destination port for a quote within 24 business hours.</p>
+    </div>
+
+    <div class="grid grid--3" style="margin-block-start:var(--sp-4)">
+      {% for cat in productCategories %}
+      <a class="card" href="{{ cat.url }}">
+        <div class="card-body">
+          <svg width="28" height="28" aria-hidden="true" style="color:var(--color-leaf)"><use href="/assets/icons.svg#icon-{{ cat.icon }}"></use></svg>
+          <h3>{{ cat.label }}</h3>
+          <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ cat.blurb }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container">
+    <h2>Product guides</h2>
+    <p class="lede">Detailed specification, packaging, seasonality and market pages for the products we're asked about most.</p>
+    <div class="grid grid--3" style="margin-block-start:var(--sp-3)">
+      <a class="card" href="/products/fresh-fruits/banana/"><div class="card-body"><span class="chip chip--gold">HS 0803.90</span><h3>Banana</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Cavendish G9, reefer-shipped at 13–14°C.</p></div></a>
+      <a class="card" href="/products/fresh-fruits/pomegranate/"><div class="card-body"><span class="chip chip--gold">HS 0810.90</span><h3>Pomegranate</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Bhagwa, count-graded, September–March.</p></div></a>
+      <a class="card" href="/products/fresh-fruits/grapes/"><div class="card-body"><span class="chip chip--gold">HS 0806.10</span><h3>Grapes</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Thompson &amp; Flame Seedless, January–April.</p></div></a>
+      <a class="card" href="/products/fresh-vegetables/red-onion/"><div class="card-body"><span class="chip chip--gold">HS 0703.10</span><h3>Red Onion</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Nashik red, size-graded, mesh-packed.</p></div></a>
+      <a class="card" href="/products/grains-rice/basmati-rice/"><div class="card-body"><span class="chip chip--gold">HS 1006.30</span><h3>Basmati Rice</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">1121 &amp; Pusa, raw/steam/sella, aged.</p></div></a>
+      <a class="card" href="/products/fish-seafood/frozen-vannamei-shrimp/"><div class="card-body"><span class="chip chip--gold">HS 0306.17</span><h3>Frozen Vannamei Shrimp</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">HOSO to PD, IQF or block, count-graded.</p></div></a>
+      <a class="card" href="/products/animal-feed/soybean-meal/"><div class="card-body"><span class="chip chip--gold">HS 2304.00</span><h3>Soybean Meal</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">46–48% protein, non-GMO by origin.</p></div></a>
+      <a class="card" href="/products/organic-manure/cow-manure/"><div class="card-body"><span class="chip chip--gold">HS 3101</span><h3>Organic Cow Manure</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Composted powder, granule or cake.</p></div></a>
+      <a class="card" href="/products/oilseeds/sesame-seeds/"><div class="card-body"><span class="chip chip--gold">HS 1207.40</span><h3>Sesame Seeds</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Hulled &amp; natural, to 99.95% purity.</p></div></a>
+      <a class="card" href="/products/spices/turmeric/"><div class="card-body"><span class="chip chip--gold">HS 0910.30</span><h3>Turmeric</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Salem &amp; Nizamabad, whole/powder.</p></div></a>
+      <a class="card" href="/products/spices/red-chilli/"><div class="card-body"><span class="chip chip--gold">HS 0904.21/22</span><h3>Red Chilli</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Guntur, Byadgi &amp; Teja, graded.</p></div></a>
+      <a class="card" href="/products/spices/cumin/"><div class="card-body"><span class="chip chip--gold">HS 0909.31</span><h3>Cumin</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Gujarat &amp; Rajasthan, machine-cleaned.</p></div></a>
+      <a class="card" href="/products/spices/cardamom/"><div class="card-body"><span class="chip chip--gold">HS 0908.31</span><h3>Cardamom</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Kerala small green cardamom, graded.</p></div></a>
+      <a class="card" href="/products/pulses/chickpeas/"><div class="card-body"><span class="chip chip--gold">HS 0713.20</span><h3>Chickpeas</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Kabuli &amp; Desi, machine-cleaned.</p></div></a>
+      <a class="card" href="/products/oilseeds/guar-gum/"><div class="card-body"><span class="chip chip--gold">HS 1302.32</span><h3>Guar Gum</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Food &amp; industrial grade powder.</p></div></a>
+      <a class="card" href="/products/animal-feed/fish-meal/"><div class="card-body"><span class="chip chip--gold">HS 2301.20</span><h3>Fish Meal</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Aquaculture-grade, feed-mill supply.</p></div></a>
+      <a class="card" href="/products/fresh-fruits/mango/"><div class="card-body"><span class="chip chip--gold">HS 0804.50</span><h3>Mango</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Alphonso &amp; Kesar, seasonal.</p></div></a>
+    </div>
+    <p style="margin-block-start:var(--sp-3)"><a href="/products/compare/">Compare all {{ collections.products.length }} products in one filterable table →</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>How we handle a product enquiry</h2>
+    <p>Whatever the category, the sequence is the same: you tell us the product, grade, quantity and destination; we confirm what's available at that specification and quote an FOB or CIF price; samples follow if you need them; then specification, packaging, Incoterm and payment terms go into a contract before anything is sourced or shipped. See the full <a href="/export-process/">export process</a>.</p>
+
+    <h2>Specifications are confirmed per contract</h2>
+    <p>Each product page below publishes typical specification ranges as a starting point for discussion — grade, size, moisture, admixture and so on. Those are indicative. The specification that governs your shipment is the one written into your contract, confirmed against what's actually available in that season.</p>
+
+    <h2>Documentation</h2>
+    <p>{{ site.complianceStatement }} {{ site.complianceChecklistCta }}</p>
+
+    <h2>Don't see what you need?</h2>
+    <p>We're a full-fledged export house and regularly source outside our published list. If you need an Indian-origin product that isn't shown here, <a href="/get-a-quote/">send us the requirement</a> — we'll tell you honestly whether we can supply it at the grade and volume you need.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+{% set formId = "products-hub" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

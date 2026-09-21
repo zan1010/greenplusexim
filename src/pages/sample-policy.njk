@@ -1,0 +1,35 @@
+---
+permalink: /sample-policy/
+title: "Sample Policy"
+description: "How to request product samples from Green Plus EXIM before placing a bulk export order — availability, typical charges and lead time."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Sample Policy" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Sample Policy" %}
+{% set pageLede = "Samples help you verify quality before committing to a bulk order — here's how to request them." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>Are samples available?</h2>
+    <p>Yes, for most products. Sample availability depends on season (for fresh produce, samples are limited to harvest windows) and product type — ask when you send your requirement and we'll confirm what's currently available.</p>
+
+    <h2>Is there a charge?</h2>
+    <p>Small samples may be provided free of charge; courier costs are typically covered by the buyer. Larger sample quantities, or samples requiring special handling (frozen seafood, for example), may carry a charge that's credited against your first bulk order. Exact terms are confirmed per request.</p>
+
+    <h2>How long does it take?</h2>
+    <p>Courier delivery time depends on your location and customs clearance at your end. For perishable samples (fresh produce, frozen seafood), we'll flag realistic delivery windows so the sample arrives usable.</p>
+
+    <h2>What do I need to provide?</h2>
+    <p>Your shipping address, any import permit or documentation your country requires for sample-quantity imports (this varies, especially for seafood and plant products), and your target specification so we send a representative sample.</p>
+
+    <h2>Request a sample</h2>
+    <p>Use the form below, or send your product and destination via WhatsApp — mention that you'd like a sample and we'll confirm availability and terms.</p>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

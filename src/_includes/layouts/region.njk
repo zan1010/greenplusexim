@@ -1,0 +1,56 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = regionName %}
+{% set pageLede = tagline %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <div class="tldr-box">
+      <p><strong>Quick answer:</strong> {{ quickAnswer }}</p>
+    </div>
+    {{ content | safe }}
+  </div>
+</section>
+
+{% if regionSlug %}
+{% set topProducts = regionCountryMap[regionSlug] | regionTopProducts(countryTradeIndex) %}
+{% if topProducts.length %}
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    <h2 id="top-products">What India exports most to {{ regionName }}</h2>
+    <p>Aggregated from our verified per-country trade-data files — total India export value by product, summed across the {{ regionSlug | slugify }} countries where we have cited figures.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">Product</th><th scope="col">Combined export value</th><th scope="col">Markets in region</th></tr></thead>
+        <tbody>
+          {% for p in topProducts %}
+          <tr><td>{{ p.product }}</td><td>${{ p.value_usd | money }}</td><td>{{ p.countryCount }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% barChart topProducts, { label: "Combined India export value by product, " + regionName } %}
+    <p class="source-note" style="margin-block-start:var(--sp-2)"><strong>Source:</strong> compiled from the per-country trade-data files cited on each country and product page in this region (primarily WITS/UN Comtrade, calendar year 2024, with some products from APEDA/MPEDA). Retrieved {{ buildDate }}.</p>
+  </div>
+</section>
+{% endif %}
+{% endif %}
+
+{% if marketCountries %}
+<section class="section section--sage">
+  <div class="container">
+    <h2>Country guides in {{ regionName }}</h2>
+    <div class="grid grid--4" style="margin-block-start:var(--sp-3)">
+      {% for c in marketCountries %}
+      <a class="card" href="{{ c.url }}"><div class="card-body"><h3>{{ c.label }}</h3></div></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% include "partials/cta-band.njk" %}
+{% set formId = "region" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

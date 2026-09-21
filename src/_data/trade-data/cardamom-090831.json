@@ -1,0 +1,86 @@
+{
+  "hs": "0908.31 (cardamoms, neither crushed nor ground); WITS legacy 0908.30",
+  "product": "Cardamom",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/090830",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 203579730,
+  "india_world_total_qty_kg": 9032840,
+  "india_exports_by_country": [
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 80489520,
+      "qty": 3488360,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "value_usd": 43097270,
+      "qty": 1815910,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 13622130,
+      "qty": 557445,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Kuwait",
+      "iso2": "KW",
+      "value_usd": 11483940,
+      "qty": 468901,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Iraq",
+      "iso2": "IQ",
+      "value_usd": 7953690,
+      "qty": 331103,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "value_usd": 7309430,
+      "qty": 301656,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "value_usd": 5312250,
+      "qty": 208489,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "value_usd": 4386480,
+      "qty": 193999,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 4275370,
+      "qty": 473905,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Oman",
+      "iso2": "OM",
+      "value_usd": 2206470,
+      "qty": 100212,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 203.58M across only ~9,033 MT — by far the highest unit value of any spice in this dataset (~USD 22.5/kg average), so this is a high-value/low-volume line. GCC dominance is striking: UAE + Saudi Arabia alone are ~61% of export value; adding Kuwait, Iraq and Oman puts the Gulf well above 70%. Strongest candidate on the whole list for an Arabic-language blog cluster."
+}

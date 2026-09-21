@@ -1,0 +1,51 @@
+---
+permalink: /why-green-plus-exim/
+title: "Why Choose Us"
+description: "Why importers, distributors and wholesalers work with Green Plus EXIM: direct sourcing, matched specifications, transparent documentation and dual-coast port access from India."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Why Us" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Why Buyers Choose Green Plus EXIM" %}
+{% set pageLede = "Procurement teams don't switch suppliers for a slogan. Here's what actually changes when you source through us." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>You get one contact for multiple commodities</h2>
+    <p>Most exporters specialise in a single commodity. We don't — Green Plus EXIM ships fresh produce, staples, seafood, feed ingredients and fertilizers under one account relationship. If your sourcing needs shift seasonally, or you want to consolidate suppliers, that's a conversation with the same team rather than a new vendor search.</p>
+
+    <h2>Specifications are agreed before anything ships</h2>
+    <p>Grade, size/count, moisture, admixture and packaging are confirmed in writing before production or procurement begins. If a lot doesn't meet the agreed specification, we tell you before it ships, not after it clears customs at your end.</p>
+
+    <h2>Documentation matches your market, not a generic template</h2>
+    <p>{{ site.complianceStatement }} Every destination has different requirements — a GCC buyer's paperwork looks different from an EU buyer's. {{ site.complianceChecklistCta }}</p>
+
+    <h2>Dual-coast port access</h2>
+    <p>Depending on your product and destination, shipments route through {{ site.ports | join(', ') }}. That flexibility usually means shorter inland transit and more shipping-line options than a single-port supplier can offer.</p>
+
+    <h2>Trial orders are a normal way to start</h2>
+    <p>Our default MOQ is {{ site.defaultMoq }}. We'd rather earn a repeat contract by performing on a trial order than push a buyer into a volume commitment before they've seen the product land.</p>
+
+    <h2>We say no to what we can't deliver honestly</h2>
+    <p>We don't claim certifications we don't hold, and we don't inflate lead times or specs to win an order. If a product is out of season, restricted for export, or a grade we can't currently source, we'll tell you — and suggest an alternative where one exists.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+
+<section class="section section--sage">
+  <div class="container">
+    <h2>Related reading</h2>
+    <div class="grid grid--3">
+      <a class="card" href="/quality-compliance/"><div class="card-body"><h3>Quality &amp; Compliance</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">How we manage sourcing checks, grading and inspection.</p></div></a>
+      <a class="card" href="/export-process/"><div class="card-body"><h3>Export Process</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">From inquiry to delivery, step by step.</p></div></a>
+      <a class="card" href="/logistics-shipping/"><div class="card-body"><h3>Logistics &amp; Shipping</h3><p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Ports, transit times and Incoterms explained.</p></div></a>
+    </div>
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

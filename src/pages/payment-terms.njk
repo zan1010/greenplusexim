@@ -1,0 +1,43 @@
+---
+permalink: /payment-terms/
+title: "Payment Terms — LC, TT, CAD"
+description: "Payment options for ordering from Green Plus EXIM: Letter of Credit, advance payment / Cash Against Documents and Telegraphic Transfer, explained."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Payment Terms" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Payment Terms" %}
+{% set pageLede = "Three payment structures we work with, and how to decide which fits your order." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>Letter of Credit (LC)</h2>
+    <p>An LC is issued by your bank and guarantees payment to us once we present the agreed shipping documents. It's the most secure option for both sides on larger or first-time orders, since payment is conditional on document compliance rather than trust alone. We typically work with an irrevocable LC at sight; usance terms can be discussed for established relationships.</p>
+
+    <h2>Advance payment / Cash Against Documents (CAD)</h2>
+    <p>A deposit is paid to confirm the order, with the balance paid against shipping documents (often through the buyer's and our banks, document-for-payment). The advance percentage and document-release terms are agreed per order — this is common for trial orders and repeat buyers with an established relationship.</p>
+
+    <h2>Telegraphic Transfer (TT)</h2>
+    <p>A direct bank transfer. Terms vary — some orders use TT in advance for smaller trial quantities; others use a split (partial advance, balance before or after shipment) once trust is established between both parties.</p>
+
+    <h2>Which should I choose?</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">Situation</th><th scope="col">Typically suits</th></tr></thead>
+        <tbody>
+          <tr><td>First order, larger value</td><td>LC</td></tr>
+          <tr><td>Trial order, smaller value</td><td>TT or CAD</td></tr>
+          <tr><td>Established, repeat relationship</td><td>TT or CAD, sometimes with more flexible splits</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Tell us your order size and whether this is a first or repeat order, and we'll recommend terms — see <a href="/get-a-quote/">Get a Quote</a> to start that conversation.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

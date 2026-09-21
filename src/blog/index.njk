@@ -1,0 +1,38 @@
+---
+permalink: /blog/
+layout: null
+title: "Export & Sourcing Blog"
+description: "Buyer guides, price trends, specifications and documentation guides for importers sourcing from India."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Blog" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Blog" %}
+{% set pageLede = "Buyer guides by product and destination market — specifications, documentation, logistics and pricing." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Written by <a href="/authors/jamil-khan/">Jamil Khan</a>, researched by our <a href="/authors/editorial-team/">editorial team</a>.</p>
+    {% if collections.blogEn.length %}
+    <div class="grid grid--3">
+      {% for post in collections.blogEn %}
+      <a class="card" href="{{ post.url }}">
+        <div class="card-body">
+          <span class="chip">{{ post.data.category }}</span>
+          <h3>{{ post.data.title }}</h3>
+          <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ post.data.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="lede">New buyer guides are on the way. In the meantime, see our <a href="/resources/">Resources</a> hub or jump straight to a <a href="/get-a-quote/">quote request</a>.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

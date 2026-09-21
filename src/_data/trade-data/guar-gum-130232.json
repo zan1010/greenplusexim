@@ -1,0 +1,86 @@
+{
+  "hs": "1302.32 (mucilages and thickeners from guar seeds)",
+  "product": "Guar Gum",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/130232",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 417321500,
+  "india_world_total_qty_kg": 239920000,
+  "india_exports_by_country": [
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 95899040,
+      "qty": 50749000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Russia",
+      "iso2": "RU",
+      "value_usd": 65124940,
+      "qty": 39344400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "value_usd": 54873880,
+      "qty": 31932500,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "China",
+      "iso2": "CN",
+      "value_usd": 40058100,
+      "qty": 24135600,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "value_usd": 15805390,
+      "qty": 8467440,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "value_usd": 10736530,
+      "qty": 6335130,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Netherlands",
+      "iso2": "NL",
+      "value_usd": 10616720,
+      "qty": 6420610,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Italy",
+      "iso2": "IT",
+      "value_usd": 10126560,
+      "qty": 6517230,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Brazil",
+      "iso2": "BR",
+      "value_usd": 10036930,
+      "qty": 5700150,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Indonesia",
+      "iso2": "ID",
+      "value_usd": 8151090,
+      "qty": 4874090,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 417.32M across ~239,920 MT. India is the dominant world origin for guar gum. Markets are industrial/Western (USA ~23%, Russia, Germany, China) and demand is partly tied to oil & gas fracturing fluid as well as food-grade thickener use — worth splitting those buyer personas in content. Strong candidate for German- and Russian-language market pages, and notable as one of the few products here where Russia is a top-3 market."
+}

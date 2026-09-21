@@ -1,0 +1,20 @@
+{
+  "hs": "1006 30 (basmati rice, milled)",
+  "product": "1121 / Pusa basmati rice",
+  "unit": "USD (converted from INR crore at approx ₹83.5/USD — see notes); MT (from LMT)",
+  "currency": "USD",
+  "source_name": "APEDA export data as reported by ricenewstoday.com ('Indian basmati 24-25 exports up Rs1,923cr over last season')",
+  "source_url": "https://ricenewstoday.com/indian-basmati-24-25-exports-up-rs1923cr-over-last-season/",
+  "retrieved_date": "2026-09-17",
+  "year": "2024-25",
+  "india_exports_by_country": [
+    { "country": "Saudi Arabia", "iso2": "SA", "value_usd": 1220567000, "qty": 1173000, "qty_unit": "MT" },
+    { "country": "Iraq", "iso2": "IQ", "value_usd": 862395000, "qty": 905000, "qty_unit": "MT" },
+    { "country": "Iran", "iso2": "IR", "value_usd": 763353000, "qty": 855000, "qty_unit": "MT" },
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 369940000, "qty": null, "qty_unit": null },
+    { "country": "Yemen", "iso2": "YE", "value_usd": 363899000, "qty": null, "qty_unit": null },
+    { "country": "United States", "iso2": "US", "value_usd": 341198000, "qty": null, "qty_unit": null }
+  ],
+  "world_top_importers": [],
+  "notes": "India supplies roughly 80% of world basmati rice trade, so 'world top importers' is effectively the same list as India's export destinations for this product. FY2024-25 total: 6.06 million tonnes, USD 5.94 billion (a separately reported aggregate; the six country values above sum to ~USD 3.92bn / do not sum to the reported USD 5.94bn total, meaning material volume goes to markets outside this top-6 list — treat these six as the top named destinations, not a full breakdown). INR→USD conversion used an approximate FY2024-25 average rate of ₹83.5/USD since the source reported rupee-crore figures; the source's own reported quantities (in lakh metric tonnes, LMT) were used directly for Saudi Arabia/Iraq/Iran. A separate 2025-26 source gave market-share percentages instead of dollar values (Saudi Arabia 16.6%, Iran 13.9%, Iraq 11.2%, UAE 8.2%, Yemen 5.7%) — consistent in ranking with the FY2024-25 figures used here. Recommend the owner cross-check exact figures against apeda.gov.in/BasmatiRice before publishing a priced comparison table."
+}

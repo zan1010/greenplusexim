@@ -1,0 +1,42 @@
+---
+permalink: /privacy-policy/
+title: "Privacy Policy"
+description: "How Green Plus EXIM collects and uses information submitted through our enquiry forms, WhatsApp and website analytics, including GDPR rights for EU visitors."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Privacy Policy" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Privacy Policy" %}
+{% set pageLede = "Last updated: " + buildDate %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>What we collect</h2>
+    <p>When you submit an enquiry, quote request, sample request or supplier registration through our website, we collect the information you provide: name, company name, email, phone/WhatsApp number, product and shipment details, and any message you include. Forms are processed by Netlify Forms; we do not run our own server or database for this data.</p>
+
+    <h2>How we use it</h2>
+    <p>We use submitted information to respond to your enquiry, prepare quotes, coordinate samples or shipments, and — where you've agreed — to follow up about your requirement. We do not sell your information to third parties.</p>
+
+    <h2>WhatsApp</h2>
+    <p>If you contact us via WhatsApp, that conversation is subject to WhatsApp's own privacy practices in addition to ours. We use WhatsApp conversation content the same way as form submissions — to respond to and fulfil your enquiry.</p>
+
+    <h2>Analytics and cookies</h2>
+    <p>We use Google Analytics (GA4) and Microsoft Clarity to understand how visitors use this site, and to see which pages and campaigns bring in enquiries. For visitors on EU/UK-language pages, analytics cookies are not set until you accept our cookie banner (Consent Mode v2, default denied). For other visitors, standard analytics cookies may be set on page load. You can control cookies through your browser settings at any time.</p>
+
+    <h2>Your rights (EU/UK visitors)</h2>
+    <p>If you are located in the EU or UK, you have the right to access, correct, or request deletion of personal data we hold about you, and to object to or restrict certain processing. To exercise any of these rights, contact us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+
+    <h2>Data retention</h2>
+    <p>We retain enquiry and order-related information for as long as needed to service your enquiry or ongoing business relationship, and as required for our own accounting and legal record-keeping obligations.</p>
+
+    <h2>Third-party services</h2>
+    <p>Form submissions are processed by Netlify (Netlify Forms). Analytics data is processed by Google (Analytics) and Microsoft (Clarity). Each operates under its own privacy policy in addition to ours.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or your data can be sent to <a href="mailto:{{ site.email }}">{{ site.email }}</a> or via our <a href="/contact/">Contact page</a>.</p>
+  </div>
+</section>
+{% endblock %}

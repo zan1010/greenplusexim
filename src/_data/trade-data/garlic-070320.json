@@ -1,0 +1,86 @@
+{
+  "hs": "0703.20 (garlic, fresh or chilled)",
+  "product": "Garlic",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/070320",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 6640000,
+  "india_world_total_qty_kg": 6040720,
+  "india_exports_by_country": [
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 1947900,
+      "qty": 2569860,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "value_usd": 1621500,
+      "qty": 1846950,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 847670,
+      "qty": 719245,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 765740,
+      "qty": 216282,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bhutan",
+      "iso2": "BT",
+      "value_usd": 481490,
+      "qty": 202868,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Vietnam",
+      "iso2": "VN",
+      "value_usd": 328170,
+      "qty": 211010,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Oman",
+      "iso2": "OM",
+      "value_usd": 135420,
+      "qty": 66145,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Qatar",
+      "iso2": "QA",
+      "value_usd": 116200,
+      "qty": 46034,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Kuwait",
+      "iso2": "KW",
+      "value_usd": 94550,
+      "qty": 29591,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Australia",
+      "iso2": "AU",
+      "value_usd": 65870,
+      "qty": 32001,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE ON THE NUMBERS, BUT NOTE THE STRATEGIC IMPLICATION — primary-tier (WITS/UN Comtrade), India world total 2024 only USD 6.64M across ~6,041 MT. This is a genuinely SMALL export line (China overwhelmingly dominates world garlic export trade). Recommend NOT building a major blog cluster around fresh garlic; keep it as a product page with honest positioning and route effort toward dehydrated onion/garlic (HS 0712.20, USD 221M) instead, which is where India actually competes at scale."
+}

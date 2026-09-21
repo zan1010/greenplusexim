@@ -1,0 +1,56 @@
+{
+  "companyName": "Green Plus EXIM",
+  "legalTagline": "Export House",
+  "domain": "https://www.greenplusexim.com",
+  "url": "https://www.greenplusexim.com",
+  "foundedYear": 2000,
+  "yearsInTrade": "25+",
+  "founder": {
+    "name": "Jamil Khan",
+    "title": "Founder",
+    "slug": "jamil-khan"
+  },
+  "address": {
+    "streetAddress": "TODO: Registered office address",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "TODO",
+    "addressCountry": "IN"
+  },
+  "email": "info@greenplusexim.com",
+  "phoneDisplay": "+91 87671 80960",
+  "phoneE164": "+918767180960",
+  "whatsappNumber": "918767180960",
+  "hours": {
+    "days": "Monday – Saturday",
+    "open": "09:00",
+    "close": "18:00",
+    "timezone": "IST",
+    "display": "Mon–Sat, 09:00–18:00 IST"
+  },
+  "registrations": {
+    "iecNumber": "TODO: Add IEC number",
+    "apedaRcmcNumber": "TODO: Add APEDA RCMC registration number"
+  },
+  "gstin": "TODO: Add GSTIN if to be displayed",
+  "socialProfiles": {
+    "linkedin": "",
+    "facebook": "",
+    "instagram": "",
+    "youtube": "",
+    "twitter": ""
+  },
+  "analytics": {
+    "ga4MeasurementId": "TODO: GA-XXXXXXX",
+    "clarityProjectId": "TODO: CLARITY-ID",
+    "gscVerification": "TODO: google-site-verification content value",
+    "bingVerification": "TODO: bing verification content value",
+    "indexNowKey": "TODO: generate-and-place-key-file"
+  },
+  "positioning": "Full-fledged Indian export house dealing in fresh produce, grains, seafood, animal feed, fertilizers and organic manures, plus other high-demand Indian exports.",
+  "complianceStatement": "Export documentation prepared to match destination-country and buyer requirements — phytosanitary certificate, certificate of origin, fumigation certificate, lab test reports and more, as applicable.",
+  "complianceChecklistCta": "Share your compliance checklist and we will confirm the documentation for your shipment.",
+  "inspectionStatement": "Third-party inspection (SGS, Bureau Veritas, Intertek or your nominated agency) can be arranged on request.",
+  "defaultMoq": "1 × 20ft container; trial orders discussed",
+  "ports": ["Nhava Sheva (JNPT)", "Mundra", "Chennai", "Kolkata", "Kochi", "Visakhapatnam"]
+}

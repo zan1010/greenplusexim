@@ -1,0 +1,24 @@
+---
+permalink: /404.html
+title: "Page Not Found"
+description: "The page you're looking for doesn't exist."
+lang: en
+dir: ltr
+noindex: true
+eleventyExcludeFromCollections: true
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+<section class="section">
+  <div class="container" style="max-width:600px;text-align:center">
+    <h1>Page Not Found</h1>
+    <p class="lede" style="margin-inline:auto">The page you're looking for may have moved. Try one of these instead:</p>
+    <div class="cluster" style="justify-content:center;margin-block-start:var(--sp-3);flex-wrap:wrap">
+      <a class="btn btn-primary" href="/">Home</a>
+      <a class="btn btn-secondary" href="/products/">Products</a>
+      <a class="btn btn-secondary" href="/get-a-quote/">Get a Quote</a>
+      <a class="btn btn-secondary" href="/sitemap/">HTML Sitemap</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

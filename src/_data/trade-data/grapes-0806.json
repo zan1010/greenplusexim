@@ -1,0 +1,19 @@
+{
+  "hs": "0806 10 (fresh grapes)",
+  "product": "Fresh grapes",
+  "unit": "USD / MT",
+  "currency": "USD",
+  "source_name": "Trade-data aggregator (seair.co.in) citing APEDA-linked export figures",
+  "source_url": "https://www.seair.co.in/blog/grapes-export-from-india.aspx",
+  "retrieved_date": "2026-09-17",
+  "year": "2023-24 (aggregate); 2025-26 (destination list, no values)",
+  "india_exports_by_country": [
+    { "country": "Netherlands", "iso2": "NL", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Russia", "iso2": "RU", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "United Kingdom", "iso2": "GB", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": null, "qty": null, "qty_unit": null },
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": null, "qty": null, "qty_unit": null }
+  ],
+  "world_top_importers": [],
+  "notes": "Aggregate FY2023-24 figure (best-verified number found): 343,982.34 MT exported, valued at USD 417.07 million. The 2025-26 top-5 destination list (Netherlands, Russia, UK, UAE, Bangladesh) was given as an ordered list without individual values or quantities — left null rather than estimated. Recommend checking APEDA's Grapes page (apeda.gov.in/Grapes) for the country-wise value table before publishing a data table in a blog post."
+}

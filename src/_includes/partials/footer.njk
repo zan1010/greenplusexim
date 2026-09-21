@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div>
+      <a class="brand" href="/" style="color:#fff">
+        <svg aria-hidden="true"><use href="/assets/icons.svg#icon-leaf"></use></svg>
+        <span>Green Plus EXIM</span>
+      </a>
+      <p style="margin-block-start:0.8em;font-size:var(--fs-sm);color:rgba(255,255,255,0.7);max-width:32ch">
+        India's export house for fresh produce, grains, seafood, animal feed and fertilizers. Trading since {{ site.foundedYear }}.
+      </p>
+      <p style="margin-block-start:1em;font-size:var(--fs-sm)">
+        <a href="tel:{{ site.phoneE164 }}">{{ site.phoneDisplay }}</a><br>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+        {{ site.address.addressLocality }}, {{ site.address.addressRegion }}, India
+      </p>
+    </div>
+    {% for col in nav.footerColumns %}
+    <div>
+      <h4>{{ col.heading }}</h4>
+      {% for link in col.items %}
+      <a href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  <div class="container footer-bottom">
+    <span>&copy; {{ currentYear }} Green Plus EXIM. All rights reserved.</span>
+    <span>IEC &amp; APEDA registered exporter · Mumbai, India</span>
+  </div>
+</footer>

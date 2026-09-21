@@ -1,0 +1,86 @@
+{
+  "hs": "0804.50 (guavas, mangoes and mangosteens, fresh or dried)",
+  "product": "Mango (Alphonso, Kesar)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/080450",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 154388040,
+  "india_world_total_qty_kg": 107295000,
+  "india_exports_by_country": [
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 29505290,
+      "qty": 19361200,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 27111860,
+      "qty": 9403040,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "value_usd": 19585560,
+      "qty": 21733700,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 16859300,
+      "qty": 9043910,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "value_usd": 6620800,
+      "qty": 3973010,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Canada",
+      "iso2": "CA",
+      "value_usd": 6566220,
+      "qty": 3456510,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Kuwait",
+      "iso2": "KW",
+      "value_usd": 6360270,
+      "qty": 4499970,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Oman",
+      "iso2": "OM",
+      "value_usd": 4601640,
+      "qty": 3306710,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Qatar",
+      "iso2": "QA",
+      "value_usd": 4002450,
+      "qty": 2499810,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Netherlands",
+      "iso2": "NL",
+      "value_usd": 3922730,
+      "qty": 2399800,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 154.39M across ~107,295 MT. Note the code covers guavas and mangosteens as well as mangoes, so it slightly overstates mango alone. Unit values tell a clear story: USA at ~USD 2.88/kg vs Saudi Arabia at ~USD 0.90/kg — the US/UK/Germany trade is air-freighted premium fruit (Alphonso/Kesar) while the GCC trade is higher-volume/lower-value. Content should treat these as two different buyer conversations. Mango is also strongly seasonal (see the site's harvest calendar)."
+}

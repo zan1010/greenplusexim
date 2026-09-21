@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/blog.njk",
+  "lang": "vi",
+  "dir": "ltr",
+  "author": "jamil-khan",
+  "authorName": "Jamil Khan",
+  "reviewedBy": "Đội ngũ biên tập Green Plus EXIM",
+  "category": "buyer-guides",
+  "ogLocale": "vi_VN"
+}

@@ -1,0 +1,14 @@
+[
+  { "slug": "fresh-fruits", "label": "Fresh Fruits", "icon": "leaf", "blurb": "Pomegranate, grapes, banana, mango, papaya, watermelon, lemon, coconut.", "url": "/products/fresh-fruits/" },
+  { "slug": "fresh-vegetables", "label": "Fresh Vegetables", "icon": "leaf", "blurb": "Red onion, potato, garlic, green chilli, drumstick, okra, tomato, ginger.", "url": "/products/fresh-vegetables/" },
+  { "slug": "grains-rice", "label": "Grains & Rice", "icon": "container", "blurb": "1121 & Pusa basmati, non-basmati, maize, wheat, millets.", "url": "/products/grains-rice/" },
+  { "slug": "pulses", "label": "Pulses", "icon": "container", "blurb": "Chickpeas, toor dal, moong, urad, masoor.", "url": "/products/pulses/" },
+  { "slug": "spices", "label": "Spices", "icon": "leaf", "blurb": "Turmeric, red chilli, cumin, coriander, black pepper, cardamom.", "url": "/products/spices/" },
+  { "slug": "fish-seafood", "label": "Fish & Seafood", "icon": "ship", "blurb": "Frozen vannamei & black tiger shrimp, ribbonfish, mackerel, squid, pomfret.", "url": "/products/fish-seafood/" },
+  { "slug": "animal-feed", "label": "Animal Feed", "icon": "container", "blurb": "Soybean meal, DORB, groundnut cake, mustard meal, maize DDGS, fish meal.", "url": "/products/animal-feed/" },
+  { "slug": "fertilizers", "label": "Fertilizers", "icon": "leaf", "blurb": "Bio-fertilizers, bone meal, seaweed-based fertilizer, compost.", "url": "/products/fertilizers/" },
+  { "slug": "organic-manure", "label": "Organic Manure", "icon": "leaf", "blurb": "Cow manure, vermicompost, neem cake, poultry manure.", "url": "/products/organic-manure/" },
+  { "slug": "oilseeds", "label": "Oilseeds & Others", "icon": "container", "blurb": "Sesame seeds, groundnut kernels, makhana, jaggery, guar gum, psyllium husk.", "url": "/products/oilseeds/" },
+  { "slug": "dehydrated-products", "label": "Dehydrated Products", "icon": "leaf", "blurb": "Dehydrated onion and garlic, and other processed Indian produce.", "url": "/products/dehydrated-products/" },
+  { "slug": "other-indian-exports", "label": "Other Indian Exports", "icon": "globe", "blurb": "Additional high-demand Indian export categories on request.", "url": "/products/other-indian-exports/" }
+]

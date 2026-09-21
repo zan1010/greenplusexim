@@ -1,0 +1,17 @@
+{
+  "hs": "1207 40 (sesamum seeds)",
+  "product": "Sesame seeds (hulled / natural)",
+  "unit": "USD; MT (wide range, see notes)",
+  "currency": "USD",
+  "source_name": "Mixed trade-press sources (Mundus Agri / IndexBox market reports) — LOWER CONFIDENCE, see notes",
+  "source_url": "https://www.mundus-agri.eu/news/sesame-seeds-exports-india.n34517.html",
+  "retrieved_date": "2026-09-17",
+  "year": "2024-25 (volume); 2024 (value figures, product-use framed rather than plain country totals)",
+  "india_exports_by_country": [
+    { "country": "China", "iso2": "CN", "value_usd": 52500000, "qty": null, "qty_unit": null },
+    { "country": "United States", "iso2": "US", "value_usd": 37500000, "qty": null, "qty_unit": null },
+    { "country": "Japan", "iso2": "JP", "value_usd": 22500000, "qty": null, "qty_unit": null }
+  ],
+  "world_top_importers": [],
+  "notes": "LOW CONFIDENCE — flagged for follow-up before use in a priced blog post. Export volume for FY2024-25 was reported as a wide, inconsistent range (208,000 to 330,000 MT) across sources, which is too imprecise to publish as a headline number. The three country values (China $52.5M 'for desserts', US $37.5M 'for supplements', Japan $22.5M 'for seasonings') come from a blog-style market report that frames them by end-use rather than as a clean customs-data country breakdown, and states these three markets capture '75% of shipments' without defining the base. Verified fact: India became the world's largest sesame-seed exporter in 2023 (multiple corroborating sources). Recommend re-querying APEDA AgriExchange or DGCI&S TradeStat directly for a cleaner FY2024-25 country-value table before this anchors a blog post."
+}

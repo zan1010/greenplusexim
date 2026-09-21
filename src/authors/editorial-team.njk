@@ -1,0 +1,33 @@
+---
+permalink: /authors/editorial-team/
+title: "Editorial Team — Green Plus EXIM"
+description: "The Green Plus EXIM editorial team researches and fact-checks the trade data and market guides published on this site."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Authors", url: "/authors/" }, { label: "Editorial Team" }]
+---
+{% extends "layouts/base.njk" %}
+{% block schema %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Green Plus EXIM Editorial Team",
+  "url": (site.url + "/authors/editorial-team/"),
+  "worksFor": { "@type": "Organization", "name": site.companyName, "url": site.url },
+  "description": authors[1].bio
+} | jsonify | safe }}
+</script>
+{% endblock %}
+{% block content %}
+{% set pageH1 = "Editorial Team" %}
+{% set pageLede = "Research & Content" %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:70ch">
+    <p>{{ authors[1].bio }}</p>
+    <p>See our <a href="/resources/glossary/">glossary</a> and product/market pages for the public sources we cite throughout the site.</p>
+  </div>
+</section>
+{% endblock %}

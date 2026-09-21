@@ -1,0 +1,38 @@
+{# Reusable quick-quote form. Same name="quick-quote" and field set on every instance (Netlify Forms requirement).
+   Visible labels/placeholders/buttons are localized via the `t` filter; field `name` attributes stay English. #}
+<form name="quick-quote" method="POST" action="{{ thankYouUrl | default('/thank-you/') }}"
+      data-netlify="true" netlify-honeypot="bot-field-qq" class="quick-quote-form"
+      data-sending-label="{{ i18n | t(lang, 'sendingBtn') }}"
+      {% if prefillProduct %}data-prefill-product="{{ prefillProduct }}"{% endif %}
+      {% if prefillCountry %}data-prefill-country="{{ prefillCountry }}"{% endif %}>
+  <input type="hidden" name="form-name" value="quick-quote">
+  <p class="visually-hidden"><label>{{ i18n | t(lang, 'leaveEmpty') }} <input type="text" name="bot-field-qq" tabindex="-1" autocomplete="off"></label></p>
+  <input type="hidden" name="source_page" value="">
+  <input type="hidden" name="page_language" value="{{ lang | default('en') }}">
+
+  <div class="form-field">
+    <label for="qq-name-{{ formId }}">{{ i18n | t(lang, 'fullName') }}</label>
+    <input id="qq-name-{{ formId }}" type="text" name="full_name" required autocomplete="name">
+  </div>
+  <div class="form-field">
+    <label for="qq-contact-{{ formId }}">{{ i18n | t(lang, 'quickQuoteContact') }}</label>
+    <input id="qq-contact-{{ formId }}" type="text" name="contact" required>
+  </div>
+  <div class="form-field">
+    <label for="qq-product-{{ formId }}">{{ i18n | t(lang, 'productYouNeed') }}</label>
+    <input id="qq-product-{{ formId }}" type="text" name="product_name" required value="{{ prefillProduct | default('') }}">
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <label for="qq-qty-{{ formId }}">{{ i18n | t(lang, 'approxQuantity') }}</label>
+      <input id="qq-qty-{{ formId }}" type="text" name="quantity" placeholder="e.g. 2 x 20ft">
+    </div>
+    <div class="form-field">
+      <label for="qq-country-{{ formId }}">{{ i18n | t(lang, 'destinationCountry') }}</label>
+      <input id="qq-country-{{ formId }}" type="text" name="destination_country" value="{{ prefillCountry | default('') }}">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block">{{ i18n | t(lang, 'sendEnquiry') }}</button>
+  <p class="form-microcopy">{{ i18n | t(lang, 'qqMicrocopy') }}</p>
+</form>

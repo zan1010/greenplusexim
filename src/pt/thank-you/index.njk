@@ -1,0 +1,29 @@
+---
+permalink: /pt/thank-you/
+title: "Obrigado | Green Plus EXIM"
+description: "Sua consulta foi recebida."
+lang: pt
+dir: ltr
+noindex: true
+rawTitle: true
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+<section class="section">
+  <div class="container" style="max-width:640px;text-align:center">
+    <svg width="56" height="56" aria-hidden="true" style="color:var(--color-leaf);margin-inline:auto"><use href="/assets/icons.svg#icon-check"></use></svg>
+    <h1>Obrigado — recebemos sua consulta</h1>
+    <p class="lede" style="margin-inline:auto">Responderemos dentro de 24 horas úteis. Se for urgente, envie uma mensagem pelo WhatsApp para uma resposta mais rápida.</p>
+    <div class="cluster" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-primary" href="#" data-whatsapp>
+        <svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-whatsapp"></use></svg>
+        Mensagem via WhatsApp
+      </a>
+      <a class="btn btn-secondary" href="/">Voltar ao Início</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="/assets/js/lead-thankyou.js" defer></script>
+{% endblock %}

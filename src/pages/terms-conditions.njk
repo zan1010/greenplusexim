@@ -1,0 +1,48 @@
+---
+permalink: /terms-conditions/
+title: "Terms & Conditions"
+description: "General terms and conditions covering enquiries, quotes, orders, payment and shipping with Green Plus EXIM."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Terms & Conditions" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Terms & Conditions" %}
+{% set pageLede = "Last updated: " + buildDate %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>1. Enquiries and quotes</h2>
+    <p>Enquiries submitted through this website do not constitute an order. Quotes provided are indicative and subject to a validity period stated at the time of quoting; commodity and freight prices can change before an order is confirmed.</p>
+
+    <h2>2. Orders and contracts</h2>
+    <p>An order is confirmed only once both parties agree in writing on product specification, quantity, price, Incoterm, payment terms and delivery window. Terms specific to an order take precedence over general statements made elsewhere on this website.</p>
+
+    <h2>3. Specifications</h2>
+    <p>Typical specification ranges shown on product pages are indicative starting points for discussion. Final specifications for a given shipment are those agreed in the order contract.</p>
+
+    <h2>4. Payment</h2>
+    <p>Payment terms (Letter of Credit, advance/Cash Against Documents, or Telegraphic Transfer) are agreed per order. See our <a href="/payment-terms/">Payment Terms</a> page for an overview.</p>
+
+    <h2>5. Shipping and risk transfer</h2>
+    <p>Shipping arrangements and the point at which risk transfers from seller to buyer follow the Incoterm agreed for that order. See our <a href="/logistics-shipping/">Logistics &amp; Shipping</a> page for how each Incoterm works.</p>
+
+    <h2>6. Documentation</h2>
+    <p>Export documentation is prepared to match destination-country and buyer requirements as communicated by the buyer and confirmed in the order. It is the buyer's responsibility to confirm their own country's import requirements and to advise us of any specific documentation needed before the order is confirmed.</p>
+
+    <h2>7. Force majeure</h2>
+    <p>Neither party is liable for delay or failure to perform due to circumstances beyond reasonable control, including but not limited to natural disasters, port disruptions, government export/import restrictions, or shipping line disruptions.</p>
+
+    <h2>8. Governing law</h2>
+    <p>These terms, and any order made through this website, are governed by the laws of India. Disputes are subject to the jurisdiction of courts in Mumbai, Maharashtra, unless otherwise agreed in writing.</p>
+
+    <h2>9. Website use</h2>
+    <p>Content on this website is provided for general information about our products and services. While we aim to keep specifications, pricing guidance and trade data current and sourced, commodity markets and export regulations change — always confirm current details before placing an order.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms can be sent to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </div>
+</section>
+{% endblock %}

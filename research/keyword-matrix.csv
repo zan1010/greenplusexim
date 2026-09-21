@@ -1,0 +1,98 @@
+product,hs_code,country,intent_modifier,language,local_language_term,data_backed
+organic manure (cow dung/vermicompost),3101,Italy,exporter from India,en,organic cow manure exporter from India,yes (low-confidence source)
+organic manure (cow dung/vermicompost),3101,France,supplier,fr,fournisseur d'engrais organique bio d'Inde,yes (low-confidence source)
+organic manure (cow dung/vermicompost),3101,United States,bulk,en,bulk organic cow manure supplier India,yes (low-confidence source)
+organic manure (cow dung/vermicompost),3101,Maldives,wholesale,en,cow dung fertilizer wholesale India,no (named market, no value)
+frozen vannamei shrimp,0306,United States,exporter from India,en,frozen vannamei shrimp exporter India,yes
+frozen vannamei shrimp,0306,China,supplier,zh (not in folder set — publish in English),frozen shrimp India supplier,yes
+frozen vannamei shrimp,0306,Netherlands (EU),CIF Rotterdam,nl,leverancier bevroren garnalen India,yes (EU aggregate only)
+frozen vannamei shrimp,0306,Japan,import from India,en,frozen shrimp import from India price,yes
+soybean meal,2304,Germany,exporter from India,de,Sojaschrot Lieferant Indien,yes (top-5 list, no values)
+soybean meal,2304,Bangladesh,price,en,soybean meal price India Bangladesh,yes (top-5 list, no values)
+soybean meal,2304,Nepal,wholesale,en,soybean meal wholesale supplier India Nepal,yes (top-5 list, no values)
+soybean meal,2304,Kenya,import from India,en,soybean meal import from India Kenya,yes (top-5 list, no values)
+red onion,0703,Bangladesh,exporter from India,en,red onion exporter from India Bangladesh,yes
+red onion,0703,Malaysia,supplier,ms,pembekal bawang merah dari India,yes
+red onion,0703,United Arab Emirates,bulk,ar,مورد بصل أحمر من الهند,yes
+red onion,0703,Sri Lanka,price,en,red onion price India Sri Lanka,yes (named market, no value)
+grapes,0806,Netherlands,exporter from India,nl,leverancier verse druiven India,yes (top destination, no value)
+grapes,0806,Russia,supplier,en (ru not in folder set),grapes supplier India Russia,yes (top destination, no value)
+grapes,0806,United Kingdom,CIF price,en,fresh grapes CIF price India UK,yes (top destination, no value)
+grapes,0806,United Arab Emirates,wholesale,ar,مورد عنب طازج من الهند,yes (top destination, no value)
+pomegranate,0810,United Arab Emirates,exporter from India,ar,مصدر رمان طازج من الهند,yes
+pomegranate,0810,Netherlands,supplier,nl,leverancier granaatappel India,yes (named market, no value)
+pomegranate,0810,Bangladesh,bulk,en,pomegranate bulk supplier India Bangladesh,yes (named market, no value)
+pomegranate,0810,Saudi Arabia,import from India,ar,استيراد رمان من الهند,yes (named market, no value)
+1121 basmati rice,1006,Saudi Arabia,exporter from India,ar,مصدر أرز بسمتي 1121 من الهند,yes
+1121 basmati rice,1006,Iraq,supplier,ar,مورد أرز بسمتي من الهند العراق,yes
+1121 basmati rice,1006,Iran,price,fa (not in folder set — publish in English),basmati rice price India Iran,yes
+1121 basmati rice,1006,Yemen,wholesale,ar,أرز بسمتي بالجملة من الهند,yes
+1121 basmati rice,1006,United States,manufacturer,en,basmati rice manufacturer India USA import,yes
+sesame seeds,1207,China,exporter from India,en (zh not in folder set),sesame seeds exporter India China,yes (low-confidence)
+sesame seeds,1207,United States,supplier,en,sesame seeds supplier India USA,yes (low-confidence)
+sesame seeds,1207,Japan,import from India,en,sesame seeds import from India Japan,yes (low-confidence)
+banana,0803,Iraq,exporter from India,ar,مصدر موز من الهند العراق,yes
+banana,0803,Iran,supplier,fa (not in folder set — publish in English),banana supplier India Iran,yes
+banana,0803,United Arab Emirates,CIF price,ar,سعر موز CIF من الهند,yes
+banana,0803,Uzbekistan,wholesale,en (uz not in folder set),banana wholesale India Uzbekistan,yes
+banana,0803,Oman,import from India,ar,استيراد موز من الهند عمان,yes
+banana,0803,Nepal,bulk,en,banana bulk supplier India Nepal,yes (named market, no value)
+parboiled rice,1006,Nigeria,exporter from India,en,parboiled rice exporter India Nigeria,no (not researched — West Africa named in brief as a likely market, needs verification)
+rice bran / DORB,2302,Vietnam,supplier,vi,nhà cung cấp cám gạo Ấn Độ,no (data gap — see research/unverified.md)
+groundnut cake,2305,Vietnam,animal feed supplier,vi,nhà cung cấp bã lạc Ấn Độ,no (not researched this session)
+turmeric,0910,United Arab Emirates,exporter from India,ar,مصدر كركم من الهند,no (not researched this session — high-confidence market by general India-spice-export reputation, needs data)
+cumin,0909,Vietnam,exporter from India,vi,nhà xuất khẩu hạt thì là Ấn Độ,no (not researched this session)
+chickpeas,0713,Turkey,exporter from India,en (tr not in folder set),chickpeas exporter India Turkey,no (not researched this session)
+red chilli,090421,China,exporter from India,en (zh not in folder set),dried red chilli exporter India to China,yes (WITS/Comtrade 2024)
+red chilli,090421,Thailand,supplier,en (th not in folder set),Indian dried chilli supplier Thailand,yes (WITS/Comtrade 2024)
+red chilli,090421,United States,exporter from India,en,dried red chilli exporter from India to USA,yes (WITS/Comtrade 2024)
+red chilli,090421,Bangladesh,bulk,en (bn not in folder set),bulk dried chilli import from India Bangladesh,yes (WITS/Comtrade 2024)
+red chilli,090421,Indonesia,supplier,id,pemasok cabai kering dari India,yes (WITS/Comtrade 2024)
+red chilli,090421,Malaysia,supplier,ms,pembekal cili kering dari India,yes (WITS/Comtrade 2024)
+cumin,090931,China,exporter from India,en (zh not in folder set),Indian cumin seed exporter to China,yes (WITS/Comtrade 2024)
+cumin,090931,United Arab Emirates,exporter from India,ar,مورد بذور الكمون من الهند,yes (WITS/Comtrade 2024)
+cumin,090931,Morocco,supplier,fr,fournisseur de graines de cumin d'Inde,yes (WITS/Comtrade 2024)
+cumin,090931,United States,price,en,Indian cumin seed price FOB export,yes (WITS/Comtrade 2024)
+turmeric,091030,United Arab Emirates,exporter from India,ar,مصدر الكركم من الهند,yes (WITS/Comtrade 2024)
+turmeric,091030,Malaysia,supplier,ms,pembekal kunyit dari India,yes (WITS/Comtrade 2024)
+turmeric,091030,Morocco,supplier,fr,fournisseur de curcuma d'Inde,yes (WITS/Comtrade 2024)
+turmeric,091030,Germany,wholesale,de,Kurkuma Großhandel Import Indien,yes (WITS/Comtrade 2024)
+cardamom,090831,United Arab Emirates,exporter from India,ar,مصدر الهيل من الهند,yes (WITS/Comtrade 2024)
+cardamom,090831,Saudi Arabia,supplier,ar,مورد حبهان من الهند بالجملة,yes (WITS/Comtrade 2024)
+cardamom,090831,Kuwait,bulk,ar,استيراد الهيل الهندي بالجملة الكويت,yes (WITS/Comtrade 2024)
+black pepper,090411,United States,exporter from India,en,Indian black pepper exporter to USA,yes (WITS/Comtrade 2024)
+black pepper,090411,Germany,supplier,de,schwarzer Pfeffer Lieferant aus Indien,yes (WITS/Comtrade 2024)
+black pepper,090411,Netherlands,supplier,nl,zwarte peper leverancier uit India,yes (WITS/Comtrade 2024)
+coriander,090921,Malaysia,supplier,ms,pembekal biji ketumbar dari India,yes (WITS/Comtrade 2024)
+coriander,090921,United Arab Emirates,exporter from India,ar,مورد بذور الكزبرة من الهند,yes (WITS/Comtrade 2024)
+groundnut kernels,120242,Indonesia,supplier,id,pemasok kacang tanah dari India,yes (WITS/Comtrade 2024)
+groundnut kernels,120242,Vietnam,supplier,vi,nhà cung cấp nhân lạc từ Ấn Độ,yes (WITS/Comtrade 2024)
+groundnut kernels,120242,Philippines,supplier,en,Indian groundnut kernels supplier Philippines,yes (WITS/Comtrade 2024)
+groundnut kernels,120242,Malaysia,bulk,ms,pembekal isirong kacang tanah India pukal,yes (WITS/Comtrade 2024)
+groundnut kernels,120242,Thailand,import from India,en (th not in folder set),import groundnut kernels from India Thailand,yes (WITS/Comtrade 2024)
+guar gum,130232,United States,exporter from India,en,guar gum powder exporter from India USA,yes (WITS/Comtrade 2024)
+guar gum,130232,Germany,supplier,de,Guarkernmehl Lieferant aus Indien,yes (WITS/Comtrade 2024)
+guar gum,130232,Russia,supplier,en (ru not in folder set),guar gum supplier India to Russia,yes (WITS/Comtrade 2024)
+guar gum,130232,Netherlands,wholesale,nl,guarpitmeel groothandel import India,yes (WITS/Comtrade 2024)
+chickpeas,071320,United Arab Emirates,exporter from India,ar,مصدر الحمص من الهند,yes (WITS/Comtrade 2024)
+chickpeas,071320,Algeria,supplier,fr,fournisseur de pois chiches d'Inde,yes (WITS/Comtrade 2024)
+chickpeas,071320,Sri Lanka,bulk,en,bulk chickpeas import from India Sri Lanka,yes (WITS/Comtrade 2024)
+lentils masoor,071340,Bangladesh,bulk,en (bn not in folder set),bulk masoor lentils import from India Bangladesh,yes (WITS/Comtrade 2024)
+lentils masoor,071340,Iraq,exporter from India,ar,مصدر العدس من الهند,yes (WITS/Comtrade 2024)
+fish meal,230120,Vietnam,supplier,vi,nhà cung cấp bột cá từ Ấn Độ,yes (WITS/Comtrade 2024)
+fish meal,230120,China,exporter from India,en (zh not in folder set),Indian fish meal exporter to China aquafeed,yes (WITS/Comtrade 2024)
+dehydrated onion,071220,Brazil,supplier,pt,fornecedor de cebola desidratada da Índia,yes (WITS/Comtrade 2024)
+dehydrated onion,071220,Germany,supplier,de,getrocknete Zwiebeln Lieferant Indien,yes (WITS/Comtrade 2024)
+dehydrated onion,071220,United States,exporter from India,en,dehydrated onion exporter from India USA,yes (WITS/Comtrade 2024)
+dehydrated onion,071220,Spain,supplier,es,proveedor de cebolla deshidratada de la India,yes (WITS/Comtrade 2024)
+mango,080450,United Arab Emirates,exporter from India,ar,مصدر المانجو الهندي,yes (WITS/Comtrade 2024)
+mango,080450,United Kingdom,supplier,en,Alphonso mango supplier India to UK,yes (WITS/Comtrade 2024)
+ginger,091011,Morocco,supplier,fr,fournisseur de gingembre d'Inde,yes (WITS/Comtrade 2024)
+maize,100590,Nepal,bulk,en,bulk maize supplier India to Nepal,yes (WITS/Comtrade 2024)
+maize,100590,Sri Lanka,supplier,en,Indian maize corn supplier Sri Lanka feed grade,yes (WITS/Comtrade 2024)
+squid cuttlefish,030743,Spain,supplier,es,proveedor de calamar congelado de la India,yes (WITS/Comtrade 2024)
+squid cuttlefish,030743,Italy,supplier,en (it not in folder set),frozen squid supplier India to Italy,yes (WITS/Comtrade 2024)
+psyllium husk,121190,United States,exporter from India,en,psyllium husk isabgol exporter India USA,partial (HS 1211.90 broader than psyllium)
+psyllium husk,121190,Germany,supplier,de,Flohsamenschalen Lieferant aus Indien,partial (HS 1211.90 broader than psyllium)
+de-oiled rice bran,230240,Vietnam,supplier,vi,nhà cung cấp cám gạo tách dầu Ấn Độ,partial (export ban lifted Oct 2025; 2024 data ban-suppressed)
+de-oiled rice bran,230240,Bangladesh,supplier,en,de-oiled rice bran DORB supplier India Bangladesh,partial (export ban lifted Oct 2025; 2024 data ban-suppressed)

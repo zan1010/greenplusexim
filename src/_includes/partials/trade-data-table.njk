@@ -1,0 +1,44 @@
+{# Renders a cited trade-data table + inline SVG bar chart from a src/_data/trade-data/*.json file.
+   Expects `td` to be set to the trade-data object before including. #}
+{% if td and td.india_exports_by_country.length %}
+{% set hasQty = td.india_exports_by_country | hasQty %}
+<div class="trade-data-block">
+  <h2 id="top-markets">Where India exports {{ td.product | lower }}</h2>
+  <p>India's top destination markets for {{ td.product | lower }} (HS {{ td.hs }}), {{ td.year }}{% if td.india_world_total_usd %}. India exported <strong>${{ td.india_world_total_usd | money }}</strong> of {{ td.product | lower }} worldwide that year{% endif %}:</p>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Destination country</th>
+          <th scope="col">Export value ({{ td.currency }})</th>
+          {% if hasQty %}<th scope="col">Quantity</th>{% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in td.india_exports_by_country %}
+        <tr>
+          <td>{{ row.country }}</td>
+          <td>{% if row.value_usd %}${{ row.value_usd | money }}{% else %}<span style="color:var(--color-ink-muted)">Not broken out in source</span>{% endif %}</td>
+          {% if hasQty %}<td>{% if row.qty %}{{ row.qty | money }} {{ row.qty_unit }}{% else %}—{% endif %}</td>{% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% barChart td.india_exports_by_country, { label: "India's export value of " + td.product + " by destination country, " + td.year } %}
+
+  <p class="source-note">
+    <strong>Source:</strong> {{ td.source_name }} —
+    <a href="{{ td.source_url }}" rel="noopener" target="_blank">view source</a>.
+    Data year: {{ td.year }}. Retrieved: {{ td.retrieved_date }}.
+  </p>
+  {% if td.notes %}
+  <details class="data-note">
+    <summary>Notes on this data</summary>
+    <p>{{ td.notes }}</p>
+  </details>
+  {% endif %}
+</div>
+{% endif %}

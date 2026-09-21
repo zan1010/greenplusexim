@@ -1,0 +1,71 @@
+---
+permalink: /quality-compliance/
+title: "Quality & Compliance Process"
+description: "How Green Plus EXIM manages quality: sourcing checks, grading, pre-shipment inspection and lab testing on request — and how we prepare export documentation for your market."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Quality & Compliance" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Quality & Compliance" %}
+{% set pageLede = "We manage quality as a process you can inspect, not a certificate you have to take on faith." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <p>Green Plus EXIM holds India's Import Export Code (IEC) and APEDA registration — see <a href="/registrations/">Registrations</a> for details. Beyond those, we don't claim certifications we don't hold. What we can show you is exactly how a shipment moves from sourcing to your port, and where in that process quality gets checked.</p>
+
+    <h2>1. Sourcing checks</h2>
+    <p>Before procurement, we verify the supplier and the specific lot — origin, harvest or production date, and any known quality issues for that season or region. For agricultural produce this includes checking the growing region's current condition; for processed goods like animal feed ingredients, it includes checking the mill or processor's batch records.</p>
+
+    <h2>2. Grading</h2>
+    <p>Product is sorted and graded against the specification agreed in your contract — size, count, moisture, admixture, colour, or whatever grading criteria apply to that product. Typical specification ranges are published on each product page as a starting point for discussion; final specifications are confirmed in your contract, not assumed from a general table.</p>
+
+    <h2>3. Pre-shipment inspection</h2>
+    <p>{{ site.inspectionStatement }} We can coordinate inspection scheduling with your nominated agency, or use our standard pre-shipment check if you don't have a preferred inspector.</p>
+
+    <h2>4. Lab testing on request</h2>
+    <p>Moisture, admixture, aflatoxin, pesticide residue and other lab tests can be arranged as required by your market's import regulations or your own specification. Tell us what your destination market requires and we'll confirm which tests apply and the turnaround time.</p>
+
+    <h2>5. Traceability</h2>
+    <p>We maintain lot-level records linking a shipment back to its sourcing batch, so if a question comes up after delivery — a quality dispute, a regulatory query at your port — we can trace it back to the source lot rather than shrugging.</p>
+
+    <h2>Documentation</h2>
+    <p>{{ site.complianceStatement }} Typical documents include, as applicable to your product and destination:</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th scope="col">Document</th><th scope="col">When it applies</th></tr></thead>
+        <tbody>
+          <tr><td>Phytosanitary certificate</td><td>Plant-origin products (fruits, vegetables, grains, spices)</td></tr>
+          <tr><td>Certificate of origin</td><td>Most shipments, especially where preferential tariffs apply</td></tr>
+          <tr><td>Fumigation certificate</td><td>Wooden packaging, some bulk grain/pulse shipments</td></tr>
+          <tr><td>Health certificate</td><td>Seafood, animal feed, some processed foods</td></tr>
+          <tr><td>Lab test report</td><td>On request, or where the destination market requires it</td></tr>
+          <tr><td>Bill of lading, commercial invoice, packing list</td><td>Every shipment</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>{{ site.complianceChecklistCta }} See our <a href="/export-process/">Export Process</a> page for how documentation fits into the overall shipping timeline.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+
+<section class="section section--sage">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    {% set faqId = "qc" %}
+    {% set faqs = [
+      { q: "What industry certifications does Green Plus EXIM hold?", a: "We hold IEC and APEDA registration. We don't hold or claim other industry certifications — if a specific certification is a hard requirement for your import, tell us early so we can discuss whether it's something we can arrange for your order." },
+      { q: "Can I nominate my own inspection agency?", a: "Yes. " + site.inspectionStatement },
+      { q: "What lab tests can you arrange?", a: "Moisture, admixture, aflatoxin, pesticide residue and other tests can be arranged on request, depending on the product and your market's requirements." },
+      { q: "How do I know what documents I'll need?", a: site.complianceChecklistCta },
+      { q: "How is your organic manure described?", a: "We describe our manure and fertilizer products by type — organic manure, organic fertilizer, natural — as a description of the product category, not as a certification claim." }
+    ] %}
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

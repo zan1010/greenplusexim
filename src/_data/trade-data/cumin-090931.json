@@ -1,0 +1,86 @@
+{
+  "hs": "0909.31 (cumin seeds, neither crushed nor ground); WITS legacy 0909.30",
+  "product": "Cumin Seeds",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/090930",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 784894450,
+  "india_world_total_qty_kg": 237241000,
+  "india_exports_by_country": [
+    {
+      "country": "China",
+      "iso2": "CN",
+      "value_usd": 140652850,
+      "qty": 45803300,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 91713010,
+      "qty": 29749100,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 90489620,
+      "qty": 28919100,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United States",
+      "iso2": "US",
+      "value_usd": 66901300,
+      "qty": 16699800,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Kingdom",
+      "iso2": "GB",
+      "value_usd": 26697150,
+      "qty": 5310010,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Morocco",
+      "iso2": "MA",
+      "value_usd": 26300200,
+      "qty": 7941930,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "value_usd": 22812010,
+      "qty": 7674030,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Saudi Arabia",
+      "iso2": "SA",
+      "value_usd": 21471960,
+      "qty": 7011060,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "value_usd": 18400030,
+      "qty": 5548370,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Mexico",
+      "iso2": "MX",
+      "value_usd": 17296660,
+      "qty": 7245510,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India's second-largest spice export by value: USD 784.89M in 2024 across ~237,241 MT. WITS reports under legacy code 0909.30; current HS2017+ uses 0909.31 (whole) / 0909.32 (crushed or ground). China is the top single market."
+}

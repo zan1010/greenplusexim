@@ -1,0 +1,49 @@
+---
+permalink: /about/
+title: "About Us"
+description: "Green Plus EXIM is a Mumbai-based export house founded in 2000 by Mr. Jamil Khan, supplying fresh produce, grains, seafood, feed and fertilizers to buyers worldwide."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "About" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "About Green Plus EXIM" %}
+{% set pageLede = "An Indian export house trading since " + site.foundedYear + "." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <p class="lede">Green Plus EXIM is an Indian export house, trading since {{ site.foundedYear }} out of {{ site.address.addressLocality }}, Maharashtra. We supply fresh produce, grains, pulses, spices, seafood, animal feed and fertilizers to importers, distributors and wholesalers across the Middle East, Europe, Southeast Asia, East Asia, Africa and beyond.</p>
+
+    <h2>How we started</h2>
+    <p>Green Plus EXIM was founded by Mr. Jamil Khan in {{ site.foundedYear }}, built on direct sourcing relationships across India's producing regions and a straightforward promise to buyers: consistent grading, honest specifications, and documentation that matches what the destination market actually requires. Over {{ site.yearsInTrade }} years, that promise has shaped how we work — we would rather tell a buyer a product isn't available at the grade they need than ship something that doesn't match the contract.</p>
+
+    <h2>What we do</h2>
+    <p>We are a full-fledged export house, not a single-commodity trader. That means a buyer sourcing red onions from us this quarter can come back next quarter for rice, or spices, or animal feed, and work with the same team, the same documentation process and the same account relationship. Our product range spans:</p>
+    <ul>
+      <li>Fresh fruits and vegetables — pomegranate, grapes, banana, mango, red onion, potato and more</li>
+      <li>Grains and rice — basmati and non-basmati varieties, maize, wheat, millets</li>
+      <li>Pulses and spices — chickpeas, dal varieties, turmeric, chilli, cumin, black pepper</li>
+      <li>Fish and seafood — frozen shrimp, ribbonfish, mackerel, squid and more</li>
+      <li>Animal feed ingredients — soybean meal, rice bran, oilcakes, DDGS</li>
+      <li>Fertilizers and organic manure — cow manure, vermicompost, neem cake, bio-fertilizers</li>
+    </ul>
+
+    <h2>How we source</h2>
+    <p>India's producing regions vary enormously by crop and season — Maharashtra and Karnataka for grapes and pomegranate, Punjab and Haryana for basmati rice, Gujarat and Madhya Pradesh for groundnut and soybean, coastal Andhra Pradesh and Gujarat for seafood. We work with sourcing relationships matched to each product's growing region, so grading and volume can be matched to what a buyer actually needs rather than to whatever a single supplier happens to have on hand.</p>
+
+    <h2>Registrations</h2>
+    <p>Green Plus EXIM is registered under India's Import Export Code (IEC) and holds APEDA registration for agricultural exports. See our <a href="/registrations/">Registrations</a> page for details, and our <a href="/quality-compliance/">Quality &amp; Compliance</a> page for how we handle documentation, inspection and testing on a shipment-by-shipment basis.</p>
+
+    <h2>Who writes our guides</h2>
+    <p>Buyer guides and market pages on this site are written or reviewed by <a href="/authors/jamil-khan/">Jamil Khan</a> and our <a href="/authors/editorial-team/">editorial team</a>, who research and cite public trade-data sources for every figure published.</p>
+
+    <h2>Working with us</h2>
+    <p>Most buyer relationships start with a simple question: can you supply this product, at this grade, to this port, in this quantity? Send us your requirement through the <a href="/get-a-quote/">quote form</a> or WhatsApp, and we'll come back with a straight answer — availability, specification, an FOB or CIF price, and what documentation you can expect with the shipment.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

@@ -1,0 +1,27 @@
+---
+permalink: /faq/
+title: "Export FAQs"
+description: "Answers to 30+ common questions from importers and buyers about ordering, payment, shipping and documentation with Green Plus EXIM."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "FAQ" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Frequently Asked Questions" %}
+{% set pageLede = "Grouped by topic — ordering, products, payment, shipping and documentation." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    {% for group in faqData %}
+    <h2>{{ group.group }}</h2>
+    {% set faqId = group.group | slugify %}
+    {% set faqs = group.items %}
+    {% include "partials/faq.njk" %}
+    {% endfor %}
+  </div>
+</section>
+
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

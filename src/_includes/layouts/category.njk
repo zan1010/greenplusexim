@@ -1,0 +1,85 @@
+{% extends "layouts/base.njk" %}
+
+{% block schema %}
+{% if categoryProducts %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": categoryName,
+  "itemListElement": (categoryProducts | itemListSchema(site.url))
+} | jsonify | safe }}
+</script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% set pageH1 = categoryH1 | default(categoryName + " Exporter from India") %}
+{% set pageLede = tagline %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--2" style="gap:var(--sp-5);align-items:start">
+      <div class="prose">
+        <div class="tldr-box">
+          <p><strong>Quick answer:</strong> {{ quickAnswer }}</p>
+        </div>
+        {{ content | safe }}
+      </div>
+      <div>
+        {% set formId = "category" %}
+        {% set prefillProduct = categoryName %}
+        {% include "partials/rfq-form.njk" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if categoryProducts %}
+<section class="section section--sage">
+  <div class="container">
+    <h2>{{ categoryName }} we export</h2>
+    <div class="grid grid--3" style="margin-block-start:var(--sp-3)">
+      {% for p in categoryProducts %}
+      {% if p.url %}
+      <a class="card" href="{{ p.url }}">
+        <div class="card-body">
+          <div class="chip-row"><span class="chip chip--gold">HS {{ p.hs }}</span></div>
+          <h3>{{ p.label }}</h3>
+          {% if p.blurb %}<p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ p.blurb }}</p>{% endif %}
+          <span class="markets-row">Request a quote →</span>
+        </div>
+      </a>
+      {% else %}
+      <div class="card">
+        <div class="card-body">
+          <div class="chip-row"><span class="chip chip--gold">HS {{ p.hs }}</span></div>
+          <h3>{{ p.label }}</h3>
+          {% if p.blurb %}<p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ p.blurb }}</p>{% endif %}
+          <a class="markets-row" href="/get-a-quote/" style="color:var(--color-leaf);text-decoration:underline">Ask about availability →</a>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% include "partials/cta-band.njk" %}
+
+{% if faqs %}
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    <h2>{{ categoryName }} export FAQs</h2>
+    {% set faqId = "category" %}
+    {% include "partials/faq.njk" %}
+  </div>
+</section>
+{% endif %}
+
+{% set ctaHeadline = "Request a " + (categoryName | lower) + " quote" %}
+{% set formId = "category-bottom" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

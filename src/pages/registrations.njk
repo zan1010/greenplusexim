@@ -1,0 +1,35 @@
+---
+permalink: /registrations/
+title: "Registrations — IEC & APEDA"
+description: "Green Plus EXIM's export registrations: Import Export Code (IEC) and APEDA (RCMC). What each covers and how to request confirmation for your shipment."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Registrations" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Registrations" %}
+{% set pageLede = "The registrations Green Plus EXIM holds, and what each one means for a buyer." %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container prose" style="max-width:76ch">
+    <h2>Import Export Code (IEC)</h2>
+    <p>The IEC is issued by India's Directorate General of Foreign Trade (DGFT) and is the base registration required to export from India. Every legitimate Indian export business holds one.</p>
+    <p><strong>IEC Number:</strong> {{ site.registrations.iecNumber }}</p>
+
+    <h2>APEDA registration</h2>
+    <p>APEDA (Agricultural and Processed Food Products Export Development Authority) registration (RCMC — Registration-cum-Membership Certificate) applies to exporters of scheduled agricultural products. Ours covers our agricultural export lines.</p>
+    <p><strong>APEDA RCMC Number:</strong> {{ site.registrations.apedaRcmcNumber }}</p>
+
+    <h2>What we don't claim</h2>
+    <p>Beyond IEC and APEDA, Green Plus EXIM does not hold or claim any other industry certification. If your import requires a specific certification we don't hold, tell us as early as possible in your inquiry — for some requirements we can arrange third-party verification per shipment; for others, we'll tell you honestly if we can't meet the requirement.</p>
+
+    <h2>Verifying our documentation</h2>
+    <p>{{ site.complianceChecklistCta }} We're also glad to provide our IEC and APEDA registration documents directly to a serious buyer as part of due diligence before a first order. See <a href="/blog/how-to-verify-an-indian-exporter-before-you-pay/">How to Verify an Indian Exporter Before You Pay</a> for a general checklist that applies whether you're evaluating us or anyone else.</p>
+  </div>
+</section>
+
+{% include "partials/cta-band.njk" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

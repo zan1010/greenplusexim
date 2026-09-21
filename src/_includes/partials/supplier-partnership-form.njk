@@ -1,0 +1,59 @@
+{# Reusable supplier-partnership form — same name and field set on every instance. #}
+<div class="rfq-form-wrap">
+  <form name="supplier-partnership" method="POST" action="/thank-you/"
+        data-netlify="true" netlify-honeypot="bot-field-sp" class="quick-quote-form">
+    <input type="hidden" name="form-name" value="supplier-partnership">
+    <p class="visually-hidden"><label>Leave empty: <input type="text" name="bot-field-sp" tabindex="-1" autocomplete="off"></label></p>
+    <input type="hidden" name="source_page" value="">
+    <input type="hidden" name="page_language" value="en">
+
+    <div class="form-field">
+      <label for="sp-name">Full name</label>
+      <input id="sp-name" type="text" name="full_name" required autocomplete="name">
+    </div>
+    <div class="form-field">
+      <label for="sp-org">Farm / FPO / company name</label>
+      <input id="sp-org" type="text" name="company_name" required>
+    </div>
+    <div class="form-field">
+      <label for="sp-type">Supplier type</label>
+      <select id="sp-type" name="supplier_type">
+        <option value="Farmer">Farmer</option>
+        <option value="FPO (Farmer Producer Organisation)">FPO (Farmer Producer Organisation)</option>
+        <option value="Processor">Processor</option>
+        <option value="Mill/Miller">Mill/Miller</option>
+        <option value="Aggregator/Trader">Aggregator/Trader</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="sp-product">Product(s) you supply</label>
+      <input id="sp-product" type="text" name="product_name" required placeholder="e.g. Red onion, turmeric, cow manure">
+    </div>
+    <div class="form-row">
+      <div class="form-field">
+        <label for="sp-location">Location (district, state)</label>
+        <input id="sp-location" type="text" name="location">
+      </div>
+      <div class="form-field">
+        <label for="sp-capacity">Approx. monthly capacity</label>
+        <input id="sp-capacity" type="text" name="quantity" placeholder="e.g. 50 MT/month">
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="sp-contact">Phone / WhatsApp number</label>
+      <input id="sp-contact" type="tel" name="whatsapp_phone" required>
+    </div>
+    <div class="form-field">
+      <label for="sp-email">Email <span class="hint">(optional)</span></label>
+      <input id="sp-email" type="email" name="email">
+    </div>
+    <div class="form-field">
+      <label for="sp-message">Anything else we should know? <span class="hint">(optional)</span></label>
+      <textarea id="sp-message" name="message" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Submit Supplier Details</button>
+    <p class="form-microcopy">We review new supplier submissions regularly and will reach out if there's a fit.</p>
+  </form>
+</div>

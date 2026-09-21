@@ -1,0 +1,100 @@
+---
+pagination:
+  data: collections.products
+  size: 1
+  alias: product
+permalink: "/spec-sheets/{{ product.data.productName | slugify }}/"
+layout: null
+noindex: true
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ product.data.productName }} Spec Sheet</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; color: #1a2b1f; margin: 0; padding: 28px 36px; font-size: 13px; line-height: 1.5; }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #2e7d4f; padding-bottom: 14px; margin-bottom: 20px; }
+  .company { font-size: 20px; font-weight: 700; color: #1a2b1f; }
+  .company-sub { font-size: 11px; color: #5a6b5e; margin-top: 2px; }
+  .doc-label { text-align: right; font-size: 11px; color: #5a6b5e; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  .tagline { color: #5a6b5e; font-size: 12px; margin: 0 0 16px; }
+  .chips { margin-bottom: 16px; }
+  .chip { display: inline-block; background: #eef4ee; color: #1a2b1f; border: 1px solid #cfe0d0; border-radius: 3px; padding: 3px 9px; font-size: 11px; margin-right: 6px; }
+  .chip--gold { background: #fbf1dd; border-color: #e6cd8f; }
+  h2 { font-size: 14px; margin: 20px 0 8px; border-bottom: 1px solid #dde5de; padding-bottom: 4px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 4px; }
+  th, td { text-align: left; padding: 6px 8px; border: 1px solid #dde5de; font-size: 12px; vertical-align: top; }
+  th { background: #f5f8f5; width: 38%; font-weight: 600; }
+  ul { margin: 4px 0; padding-left: 18px; }
+  li { margin-bottom: 3px; }
+  .footer { margin-top: 24px; padding-top: 12px; border-top: 1px solid #dde5de; font-size: 10.5px; color: #5a6b5e; }
+  .footer p { margin: 2px 0; }
+  .note { font-size: 10.5px; color: #5a6b5e; font-style: italic; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <div class="company">{{ site.companyName }}</div>
+      <div class="company-sub">{{ site.address.addressLocality }}, {{ site.address.addressRegion }}, India — {{ site.phoneDisplay }} — {{ site.email }}</div>
+    </div>
+    <div class="doc-label">
+      Specification Sheet<br>
+      Generated {{ buildDate }}
+    </div>
+  </div>
+
+  <h1>{{ product.data.productName }}</h1>
+  <p class="tagline">{{ product.data.tagline }}</p>
+  <div class="chips">
+    <span class="chip chip--gold">HS {{ product.data.hsCode }}</span>
+    <span class="chip">{{ product.data.category }}</span>
+  </div>
+
+  {% if product.data.specs %}
+  <h2>Specifications</h2>
+  <table>
+    <tbody>
+    {% for spec in product.data.specs %}
+    <tr><th scope="row">{{ spec.name }}</th><td>{{ spec.value }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="note">Typical specification ranges — final specification confirmed per contract.</p>
+  {% endif %}
+
+  <h2>Packaging &amp; container loading</h2>
+  <table>
+    <tbody>
+    <tr><th scope="row">Packaging</th><td>{{ product.data.packaging }}</td></tr>
+    <tr><th scope="row">Minimum order quantity</th><td>{{ product.data.moq | default(site.defaultMoq) }}</td></tr>
+    <tr><th scope="row">Loading capacity (20ft)</th><td>{{ product.data.loading20 }}</td></tr>
+    {% if product.data.loading40 %}<tr><th scope="row">Loading capacity (40ft)</th><td>{{ product.data.loading40 }}</td></tr>{% endif %}
+    {% if product.data.shelfLife %}<tr><th scope="row">Shelf life &amp; storage</th><td>{{ product.data.shelfLife }}</td></tr>{% endif %}
+    </tbody>
+  </table>
+
+  {% if product.data.keyMarkets %}
+  <h2>Key export markets</h2>
+  <p>{{ product.data.keyMarkets }}</p>
+  {% endif %}
+
+  {% if product.data.documentation %}
+  <h2>Export documentation</h2>
+  <ul>
+    {% for doc in product.data.documentation %}<li>{{ doc }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+
+  <div class="footer">
+    <p><strong>{{ site.companyName }}</strong> — {{ site.complianceStatement }}</p>
+    <p>This specification sheet is indicative and intended to support an enquiry; it is not a certificate of analysis or a contractual document. Full specification, packaging, and Incoterm are confirmed in writing before shipment. Full product page: {{ site.url }}{{ product.url }}</p>
+  </div>
+</body>
+</html>

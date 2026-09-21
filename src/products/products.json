@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/product.njk",
+  "type": "product",
+  "lang": "en",
+  "dir": "ltr"
+}

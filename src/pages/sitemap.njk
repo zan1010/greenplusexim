@@ -1,0 +1,52 @@
+---
+permalink: /sitemap/
+title: "Sitemap"
+description: "Full list of pages on the Green Plus EXIM website."
+lang: en
+dir: ltr
+breadcrumbs: [{ label: "Sitemap" }]
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+{% set pageH1 = "Sitemap" %}
+{% include "partials/page-header.njk" %}
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid--4">
+      {% for col in nav.footerColumns %}
+      <div>
+        <h3>{{ col.heading }}</h3>
+        <ul style="margin-block-start:0.5em;display:flex;flex-direction:column;gap:0.4em">
+          {% for link in col.items %}
+          <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+      <div>
+        <h3>Products</h3>
+        <ul style="margin-block-start:0.5em;display:flex;flex-direction:column;gap:0.4em">
+          {% for cat in productCategories %}
+          <li><a href="{{ cat.url }}">{{ cat.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3>Markets</h3>
+        <ul style="margin-block-start:0.5em;display:flex;flex-direction:column;gap:0.4em">
+          {% for col in nav.primary %}
+          {% if col.label == "Markets" %}
+            {% for group in col.columns %}
+              {% for link in group.items %}
+              <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+              {% endfor %}
+            {% endfor %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

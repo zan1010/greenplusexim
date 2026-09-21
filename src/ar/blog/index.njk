@@ -1,0 +1,35 @@
+---
+permalink: /ar/blog/
+layout: null
+title: "مدونة التصدير | Green Plus EXIM"
+description: "أدلة المشترين حسب المنتج والسوق — المواصفات والمستندات والخدمات اللوجستية والتسعير للمستوردين من الهند."
+lang: ar
+dir: rtl
+rawTitle: true
+noindex: true
+eleventyExcludeFromCollections: true
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+<section class="section" style="padding-block-start:var(--sp-3)">
+  <div class="container">
+    <h1>مدونة التصدير</h1>
+    <p class="lede">أدلة المشترين حسب المنتج والسوق — المواصفات والمستندات والخدمات اللوجستية والتسعير.</p>
+    <div class="grid grid--3" style="margin-block-start:var(--sp-3)">
+      {% for post in collections.all %}
+        {% if post.data.lang == "ar" and post.data.category and post.url != "/ar/blog/" %}
+        <a class="card" href="{{ post.url }}">
+          <div class="card-body">
+            <h3>{{ post.data.title }}</h3>
+            <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">{{ post.data.description }}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% set formId = "ar-blog-hub" %}
+{% set thankYouUrl = "/ar/thank-you/" %}
+{% include "partials/cta-rfq-section.njk" %}
+{% endblock %}

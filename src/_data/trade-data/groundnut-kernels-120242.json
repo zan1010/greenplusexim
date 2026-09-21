@@ -1,0 +1,86 @@
+{
+  "hs": "1202.42 (groundnuts, shelled); WITS legacy 1202.20",
+  "product": "Groundnut Kernels",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/120220",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 823206610,
+  "india_world_total_qty_kg": 730152000,
+  "india_exports_by_country": [
+    {
+      "country": "Indonesia",
+      "iso2": "ID",
+      "value_usd": 295293630,
+      "qty": 275612000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Vietnam",
+      "iso2": "VN",
+      "value_usd": 124891980,
+      "qty": 107225000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Philippines",
+      "iso2": "PH",
+      "value_usd": 70278330,
+      "qty": 60932400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Malaysia",
+      "iso2": "MY",
+      "value_usd": 56161610,
+      "qty": 50453100,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Thailand",
+      "iso2": "TH",
+      "value_usd": 53924070,
+      "qty": 44107800,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "United Arab Emirates",
+      "iso2": "AE",
+      "value_usd": 34859320,
+      "qty": 30282100,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Russia",
+      "iso2": "RU",
+      "value_usd": 26467030,
+      "qty": 21494100,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Algeria",
+      "iso2": "DZ",
+      "value_usd": 17285380,
+      "qty": 13576000,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 13169750,
+      "qty": 17804400,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Iran",
+      "iso2": "IR",
+      "value_usd": 11576940,
+      "qty": 9959340,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 823.21M across ~730,152 MT — the single largest-value product in this entire research pass. Overwhelmingly a Southeast Asia trade: Indonesia alone ~36% of value, and Indonesia + Vietnam + Philippines + Malaysia + Thailand together are ~73%. THIS IS THE KEY FINDING FOR LANGUAGE STRATEGY — it gives the Indonesian (id) and Vietnamese (vi) blog tracks a genuinely data-justified anchor product, which the first research pass did not have. WITS reports under legacy 1202.20; current HS2012+ uses 1202.41 (in shell) / 1202.42 (shelled)."
+}

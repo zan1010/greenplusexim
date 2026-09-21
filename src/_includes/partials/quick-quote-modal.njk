@@ -1,0 +1,11 @@
+<div class="modal-overlay" id="quick-quote-modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="quick-quote-modal-title">
+    <button type="button" class="modal-close" aria-label="Close">
+      <svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-close"></use></svg>
+    </button>
+    <h3 id="quick-quote-modal-title" style="margin-block-end:0.3em">Get a fast export quote</h3>
+    <p class="lede" style="font-size:var(--fs-sm);margin-block-end:1em">Tell us what you need — we'll reply within 24 business hours.</p>
+    {% set formId = "modal" %}
+    {% include "partials/quick-quote-form.njk" %}
+  </div>
+</div>

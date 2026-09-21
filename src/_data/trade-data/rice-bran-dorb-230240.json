@@ -1,0 +1,51 @@
+{
+  "hs": "2302.40 (bran/sharps of other cereals); de-oiled rice bran also moves under 2306.90 per DGFT Notification 37/2025-26",
+  "product": "Rice Bran / De-Oiled Rice Bran (DORB)",
+  "unit": "USD",
+  "currency": "USD",
+  "source_name": "WITS (World Bank) / UN Comtrade — India exports by partner, calendar year 2024",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2024/tradeflow/Exports/partner/ALL/product/230240",
+  "retrieved_date": "2026-09-17",
+  "year": "2024 (calendar year)",
+  "india_world_total_usd": 417150,
+  "india_world_total_qty_kg": 2263980,
+  "india_exports_by_country": [
+    {
+      "country": "Nepal",
+      "iso2": "NP",
+      "value_usd": 263170,
+      "qty": 2045870,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Sweden",
+      "iso2": "SE",
+      "value_usd": 98270,
+      "qty": 10152,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Bangladesh",
+      "iso2": "BD",
+      "value_usd": 54870,
+      "qty": 207570,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Germany",
+      "iso2": "DE",
+      "value_usd": 450,
+      "qty": 330,
+      "qty_unit": "Kg"
+    },
+    {
+      "country": "Maldives",
+      "iso2": "MV",
+      "value_usd": 380,
+      "qty": 60,
+      "qty_unit": "Kg"
+    }
+  ],
+  "world_top_importers": [],
+  "notes": "CRITICAL CONTEXT — DO NOT READ THIS AS MARKET DEMAND. The figures are primary-tier (WITS/UN Comtrade) and accurate, but calendar-2024 falls ENTIRELY INSIDE India's DORB export ban, which ran from July 2023 until it was lifted on 3 October 2025 (DGFT Notification No. 37/2025-26). The tiny USD 0.42M total therefore reflects a legal prohibition, not absence of buyer demand. Post-ban trade is not yet visible in 2024 data. Any content on DORB must (a) lead with the fact that export is now FREE again, (b) explicitly avoid citing 2024 volumes as indicative, and (c) be refreshed once calendar-2026 data publishes. See also the companion file other-oilcake-230690, which captures the 2306.90 stream the same notification references."
+}

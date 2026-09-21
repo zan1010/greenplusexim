@@ -1,0 +1,29 @@
+---
+permalink: /ms/thank-you/
+title: "Terima Kasih | Green Plus EXIM"
+description: "Pertanyaan anda telah diterima."
+lang: ms
+dir: ltr
+noindex: true
+rawTitle: true
+---
+{% extends "layouts/base.njk" %}
+{% block content %}
+<section class="section">
+  <div class="container" style="max-width:640px;text-align:center">
+    <svg width="56" height="56" aria-hidden="true" style="color:var(--color-leaf);margin-inline:auto"><use href="/assets/icons.svg#icon-check"></use></svg>
+    <h1>Terima kasih — pertanyaan anda telah kami terima</h1>
+    <p class="lede" style="margin-inline:auto">Kami akan membalas dalam masa 24 jam bekerja. Jika mendesak, hubungi kami melalui WhatsApp untuk respons lebih pantas.</p>
+    <div class="cluster" style="justify-content:center;margin-block-start:var(--sp-3)">
+      <a class="btn btn-primary" href="#" data-whatsapp>
+        <svg width="18" height="18" aria-hidden="true"><use href="/assets/icons.svg#icon-whatsapp"></use></svg>
+        Hubungi melalui WhatsApp
+      </a>
+      <a class="btn btn-secondary" href="/">Kembali ke Laman Utama</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="/assets/js/lead-thankyou.js" defer></script>
+{% endblock %}
