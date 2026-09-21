@@ -8,5 +8,12 @@
   "spices": { "url": "https://images.pexels.com/photos/5504603/pexels-photo-5504603.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Colourful spices on display at a market" },
   "warehouse": { "url": "https://images.pexels.com/photos/31043129/pexels-photo-31043129.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Warehouse workers handling logistics boxes" },
   "founder-portrait": { "url": "https://images.pexels.com/photos/19746166/pexels-photo-19746166.jpeg?auto=compress&cs=tinysrgb&w=800", "credit": "Istiak Remon / Pexels", "alt": "Portrait of a businessman in formal attire" },
-  "market-general": { "url": "https://images.pexels.com/photos/37321079/pexels-photo-37321079.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Vibrant display of fresh market produce" }
+  "market-general": { "url": "https://images.pexels.com/photos/37321079/pexels-photo-37321079.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Pexels", "alt": "Vibrant display of fresh market produce" },
+  "pulses": { "url": "https://images.pexels.com/photos/34949285/pexels-photo-34949285.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Mustafa Akın / Pexels", "alt": "Top-down view of dry chickpeas filling the frame" },
+  "fish-seafood": { "url": "https://images.pexels.com/photos/33211050/pexels-photo-33211050.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "ManojMk Brucelee / Pexels", "alt": "Fresh shrimp piled at a seafood market" },
+  "animal-feed": { "url": "https://images.pexels.com/photos/12293641/pexels-photo-12293641.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Lucia Barreiros Silva / Pexels", "alt": "Pile of brown burlap sacks stacked inside a barn" },
+  "fertilizers": { "url": "https://images.pexels.com/photos/13253192/pexels-photo-13253192.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Tran Nam Trung / Pexels", "alt": "Farmer applying fertilizer on a green field" },
+  "organic-manure": { "url": "https://images.pexels.com/photos/39069475/pexels-photo-39069475.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Shahrukh Dawar Khan / Pexels", "alt": "Indian gardener pouring organic compost outdoors" },
+  "oilseeds": { "url": "https://images.pexels.com/photos/8951049/pexels-photo-8951049.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Ivan S / Pexels", "alt": "Close-up of black and white sesame seeds" },
+  "dehydrated-products": { "url": "https://images.pexels.com/photos/33440710/pexels-photo-33440710.jpeg?auto=compress&cs=tinysrgb&w=1200", "credit": "Bonaventure Fernandez / Pexels", "alt": "Vibrant red chilli powder in a bowl with dried whole chillies" }
 }

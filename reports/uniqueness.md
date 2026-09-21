@@ -1,6 +1,6 @@
 # Uniqueness Report
 
-Generated 2026-09-19. Thresholds: product/category/country/region unique ratio >= 45%, blog >= 60%, max pairwise similarity < 25% (5-gram Jaccard) for all.
+Generated 2026-09-21. Thresholds: product/category/country/region unique ratio >= 45%, blog >= 60%, max pairwise similarity < 25% (5-gram Jaccard) for all.
 
 | Family | URL | Unique Ratio | Max Pairwise | Nearest Sibling | Words |
 |---|---|---|---|---|---|
