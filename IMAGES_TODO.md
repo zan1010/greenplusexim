@@ -131,3 +131,29 @@ Every entry below is a royalty-free Unsplash/Pexels placeholder used during buil
 - [ ] Products hub — Oilseeds & Others category card: https://images.pexels.com/photos/8951049/pexels-photo-8951049.jpeg?auto=compress&cs=tinysrgb&w=1200
 - [ ] Products hub — Dehydrated Products category card: https://images.pexels.com/photos/33440710/pexels-photo-33440710.jpeg?auto=compress&cs=tinysrgb&w=1200
 - [ ] Products hub — Other Indian Exports category card: https://images.pexels.com/photos/31043129/pexels-photo-31043129.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Products hub — Fresh Fruits category card: https://images.pexels.com/photos/12708049/pexels-photo-12708049.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Fresh Vegetables category card: https://images.pexels.com/photos/1437811/pexels-photo-1437811.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Grains & Rice category card: https://images.pexels.com/photos/11789292/pexels-photo-11789292.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Pulses category card: https://images.pexels.com/photos/34949285/pexels-photo-34949285.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Spices category card: https://images.pexels.com/photos/5504603/pexels-photo-5504603.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Fish & Seafood category card: https://images.pexels.com/photos/33211050/pexels-photo-33211050.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Animal Feed category card: https://images.pexels.com/photos/12293641/pexels-photo-12293641.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Fertilizers category card: https://images.pexels.com/photos/13253192/pexels-photo-13253192.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Organic Manure category card: https://images.pexels.com/photos/39069475/pexels-photo-39069475.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Oilseeds & Others category card: https://images.pexels.com/photos/8951049/pexels-photo-8951049.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Dehydrated Products category card: https://images.pexels.com/photos/33440710/pexels-photo-33440710.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Other Indian Exports category card: https://images.pexels.com/photos/31043129/pexels-photo-31043129.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Home hero — port/containers: https://images.pexels.com/photos/3063470/pexels-photo-3063470.jpeg?auto=compress&cs=tinysrgb&w=1920
+- [ ] Products hub — Fresh Fruits category card: https://images.pexels.com/photos/12708049/pexels-photo-12708049.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Fresh Vegetables category card: https://images.pexels.com/photos/1437811/pexels-photo-1437811.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Grains & Rice category card: https://images.pexels.com/photos/11789292/pexels-photo-11789292.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Pulses category card: https://images.pexels.com/photos/34949285/pexels-photo-34949285.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Spices category card: https://images.pexels.com/photos/5504603/pexels-photo-5504603.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Fish & Seafood category card: https://images.pexels.com/photos/33211050/pexels-photo-33211050.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Animal Feed category card: https://images.pexels.com/photos/12293641/pexels-photo-12293641.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Fertilizers category card: https://images.pexels.com/photos/13253192/pexels-photo-13253192.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Organic Manure category card: https://images.pexels.com/photos/39069475/pexels-photo-39069475.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Oilseeds & Others category card: https://images.pexels.com/photos/8951049/pexels-photo-8951049.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Dehydrated Products category card: https://images.pexels.com/photos/33440710/pexels-photo-33440710.jpeg?auto=compress&cs=tinysrgb&w=1200
+- [ ] Products hub — Other Indian Exports category card: https://images.pexels.com/photos/31043129/pexels-photo-31043129.jpeg?auto=compress&cs=tinysrgb&w=1200
