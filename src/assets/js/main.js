@@ -47,15 +47,14 @@
     item.addEventListener("mouseleave", scheduleClose);
 
     trigger.addEventListener("click", function (e) {
+      /* The trigger is a real link to that section's hub page. Mouse users already have the
+         panel open via hover-intent by the time a click can land, so a click should follow the
+         link. Touch/keyboard users who haven't triggered hover get the panel opened on first
+         click instead of navigating away from it — a second click then follows the link. */
+      if (panel.classList.contains("is-open")) return;
       if (panel.classList.contains("mega-menu") || panel.classList.contains("dropdown")) {
         e.preventDefault();
-        if (panel.classList.contains("is-open")) {
-          if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-          panel.classList.remove("is-open");
-          trigger.setAttribute("aria-expanded", "false");
-        } else {
-          open();
-        }
+        open();
       }
     });
     item.addEventListener("keydown", function (e) {
