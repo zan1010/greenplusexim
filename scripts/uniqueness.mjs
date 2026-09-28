@@ -62,7 +62,7 @@ function stripBoilerplate(html) {
   // all siblings outside <main>, so extracting <main> alone is a far more robust boundary than
   // trying to regex out each boilerplate block individually (a previous version of this script
   // had a runaway "mobile-drawer" removal regex that silently ate most of the real content).
-  const mainMatch = html.match(/<main id="main">([\s\S]*?)<\/main>/);
+  const mainMatch = html.match(/<main id="main"[^>]*>([\s\S]*?)<\/main>/);
   const main = mainMatch ? mainMatch[1] : html;
   return main
     .replace(/<script[\s\S]*?<\/script>/g, " ") // JSON-LD schema blocks embedded in-page

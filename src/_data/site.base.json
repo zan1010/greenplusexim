@@ -52,5 +52,8 @@
   "complianceChecklistCta": "Share your compliance checklist and we will confirm the documentation for your shipment.",
   "inspectionStatement": "Third-party inspection (SGS, Bureau Veritas, Intertek or your nominated agency) can be arranged on request.",
   "defaultMoq": "1 × 20ft container; trial orders discussed",
-  "ports": ["Nhava Sheva (JNPT)", "Mundra", "Chennai", "Kolkata", "Kochi", "Visakhapatnam"]
+  "ports": ["Nhava Sheva (JNPT)", "Mundra", "Chennai", "Kolkata", "Kochi", "Visakhapatnam"],
+  "loadingPortsShort": "JNPT / Mundra / Chennai / Kochi / Vizag as applicable",
+  "incotermsShort": "FOB / CIF / CFR",
+  "paymentTermsShort": "Irrevocable LC at sight, advance payment (TT), or Cash Against Documents (CAD) — as per order size and buyer relationship"
 }

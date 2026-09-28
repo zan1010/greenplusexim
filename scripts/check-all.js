@@ -10,8 +10,10 @@ const steps = [
   ["Orphan check", "node scripts/check-orphans.js"],
   ["Broken links", "node scripts/check-broken-links.js"],
   ["Blog quality", "node scripts/check-blog-quality.js"],
+  ["Blog content standard", "node scripts/check-blog-standard.js"],
   ["Mobile nav + RTL", "node scripts/check-mobile-rtl.mjs"],
   ["Crawler access", "node scripts/check-crawler-access.mjs"],
+  ["SEO integrity", "node scripts/check-seo-integrity.mjs"],
   ["Uniqueness ratio", "node scripts/uniqueness.mjs"],
 ];
 

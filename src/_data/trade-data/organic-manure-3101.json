@@ -3,15 +3,23 @@
   "product": "Organic manure / cow dung / animal & vegetable fertilizers",
   "unit": "USD",
   "currency": "USD",
-  "source_name": "SeAir / ExportImportData.in trade-data aggregators (compiled from Indian customs shipping-bill records); DGFT/APEDA not directly queried",
-  "source_url": "https://www.seair.co.in/blog/cow-dung-export-data-from-india.aspx",
-  "retrieved_date": "2026-09-17",
-  "year": "2023-24",
+  "source_name": "World Bank WITS (World Integrated Trade Solution), mirroring UN Comtrade — India exports of HS 310100 by partner country, calendar year 2023",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2023/tradeflow/Exports/partner/ALL/product/310100",
+  "retrieved_date": "2026-09-28",
+  "year": "2023",
+  "india_world_total_usd": 16587350,
   "india_exports_by_country": [
-    { "country": "Italy", "iso2": "IT", "value_usd": 455149.65, "qty": null, "qty_unit": null },
-    { "country": "France", "iso2": "FR", "value_usd": 436100, "qty": null, "qty_unit": null },
-    { "country": "United States", "iso2": "US", "value_usd": 367411.38, "qty": null, "qty_unit": null }
+    { "country": "Nepal", "iso2": "NP", "value_usd": 2647440, "qty": 7027220, "qty_unit": "kg" },
+    { "country": "United States", "iso2": "US", "value_usd": 2603090, "qty": 554362, "qty_unit": "kg" },
+    { "country": "Philippines", "iso2": "PH", "value_usd": 1340300, "qty": 815118, "qty_unit": "kg" },
+    { "country": "Kenya", "iso2": "KE", "value_usd": 944950, "qty": 620469, "qty_unit": "kg" },
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": 928570, "qty": 169825, "qty_unit": "kg" },
+    { "country": "China", "iso2": "CN", "value_usd": 776440, "qty": 400684, "qty_unit": "kg" },
+    { "country": "Sri Lanka", "iso2": "LK", "value_usd": 694860, "qty": 2351240, "qty_unit": "kg" },
+    { "country": "Vietnam", "iso2": "VN", "value_usd": 597110, "qty": 704298, "qty_unit": "kg" },
+    { "country": "Tanzania", "iso2": "TZ", "value_usd": 478090, "qty": 700625, "qty_unit": "kg" },
+    { "country": "Indonesia", "iso2": "ID", "value_usd": 314490, "qty": 84313, "qty_unit": "kg" }
   ],
   "world_top_importers": [],
-  "notes": "LOWER-CONFIDENCE SOURCE: figures come from private trade-data aggregator sites (SeAir, ExportImportData.in) that compile Indian customs shipping-bill records, not directly from DGCI&S/APEDA. FY2023-24 total category value cited elsewhere as ~INR 400 crore combined across fresh cow dung (INR 125 cr), 'fertilisers' (INR 173.67 cr) and compost manure (INR 88.02 cr) under this HS heading — those INR splits were not independently verified against a primary source either. Other markets repeatedly mentioned in secondary sources but without individual values: Maldives, Singapore, China, Nepal, Brazil, and Gulf countries (for palm-plantation fertilizer use). Recommend the owner verify against APEDA AgriExchange or DGCI&S TradeStat directly if this data will anchor a pillar blog post (this is the flagship 'Organic Cow Manure Exporter from India' cluster per the brief's seed title list)."
+  "notes": "Replaces an earlier lower-confidence 3-row dataset sourced from private trade-data aggregators (SeAir/ExportImportData.in), which did not independently verify against a primary database. WITS/UN Comtrade is the same primary-tier source already used for the site's other 20+ trade-data files (see research/unverified.md, Phase 2b methodology note). HS 310100 covers 'animal or vegetable fertilizers' broadly, not cow-manure specifically — India exported to 99 countries/regions in 2023 totaling USD 16,587,350 and 22,892,600 kg; the 10 rows above are the top destinations by value. Earlier secondary-source figures for Italy/France/USA (from the previous dataset) are not corroborated in this WITS pull and have been dropped rather than merged, to avoid mixing sourcing tiers in one table. The United States appears in both datasets (this one: USD 2.60M, 2023) though the exact figures differ, consistent with different data years/methodologies rather than a contradiction."
 }

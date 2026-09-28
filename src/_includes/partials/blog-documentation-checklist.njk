@@ -1,0 +1,24 @@
+{# Required documentation checklist for buyer-guide-standard blog posts. Expects `docChecklist`
+   (array of {doc, provider: "exporter"|"importer"}) and `destinationAuthority` ({name, url}) in
+   front matter. The exporter/importer split must be explicit per the content standard — never a
+   flat list. #}
+{% if docChecklist and docChecklist.length %}
+<div class="doc-checklist-block" id="documentation">
+  <h2>Documentation checklist{% if targetCountryName %} for {{ targetCountryName }}{% endif %}</h2>
+  <p>{{ site.complianceStatement }}</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th scope="col">Document</th><th scope="col">Who arranges it</th></tr></thead>
+      <tbody>
+        {% for d in docChecklist %}
+        <tr><td>{{ d.doc }}</td><td>{{ "Green Plus EXIM (exporter)" if d.provider == "exporter" else "Buyer (importer)" }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% if destinationAuthority %}
+  <p>Destination-side requirements for this market are set by <strong>{{ destinationAuthority.name }}</strong> — confirm current rules directly: <a href="{{ destinationAuthority.url }}" rel="noopener" target="_blank">{{ destinationAuthority.name }} official guidance</a>.</p>
+  {% endif %}
+  <p>{{ site.complianceChecklistCta }} {{ site.inspectionStatement }}</p>
+</div>
+{% endif %}

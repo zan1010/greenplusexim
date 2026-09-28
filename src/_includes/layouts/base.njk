@@ -92,7 +92,7 @@
 
   {% if minimalHeader %}{% include "partials/header-minimal.njk" %}{% else %}{% include "partials/header.njk" %}{% endif %}
 
-  <main id="main">
+  <main id="main"{% if category %} data-category="{{ category }}"{% endif %}>
     {% block content %}{% endblock %}
   </main>
 

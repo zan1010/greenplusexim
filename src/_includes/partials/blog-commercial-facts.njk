@@ -1,0 +1,31 @@
+{# Required commercial-facts table for buyer-guide-standard blog posts. Expects a
+   `commercialFacts` front-matter object with the per-post fields; the site-wide constants
+   (MOQ, loading ports, Incoterms, payment terms) come from site.base.json so every post states
+   them identically. Field set and order are fixed — see reports/blog-overhaul.md §1. #}
+{% if commercialFacts %}
+{% set cf = commercialFacts %}
+<div class="commercial-facts-block" id="commercial-facts">
+  <h2>{{ productName or product }} — commercial facts</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th scope="col">Field</th><th scope="col">Detail</th></tr></thead>
+      <tbody>
+        <tr><td>HS code</td><td>{{ hs_code or hsCode }}</td></tr>
+        <tr><td>Product forms / grades offered</td><td>{{ cf.productForms }}</td></tr>
+        <tr><td>Typical specification ranges</td><td>{{ cf.specRanges }}</td></tr>
+        <tr><td>Packaging options</td><td>{{ cf.packagingOptions }}</td></tr>
+        <tr><td>Net weight per 20ft / 40ft container</td><td>{{ cf.netWeight20 }} / {{ cf.netWeight40 }}</td></tr>
+        <tr><td>MOQ</td><td>{{ site.defaultMoq }}</td></tr>
+        <tr><td>Loading port(s)</td><td>{{ site.loadingPortsShort }}</td></tr>
+        <tr><td>Destination port(s) for this market</td><td>{{ cf.destinationPorts }}</td></tr>
+        <tr><td>Transit time</td><td>{{ cf.transitTime }}</td></tr>
+        <tr><td>Incoterms quoted</td><td>{{ site.incotermsShort }}</td></tr>
+        <tr><td>Payment terms available</td><td>{{ site.paymentTermsShort }}</td></tr>
+        <tr><td>Lead time from order confirmation</td><td>{{ cf.leadTime }}</td></tr>
+        <tr><td>Shelf life / storage</td><td>{{ cf.shelfLife }}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:var(--fs-sm);color:var(--color-ink-muted)">Figures are typical ranges — final terms confirmed against your specification and order size. <a href="/get-a-quote/" data-quote-cta="blog-commercial-facts">Request exact terms for your order</a>.</p>
+</div>
+{% endif %}

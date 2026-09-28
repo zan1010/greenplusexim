@@ -43,6 +43,12 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# ---- Sitemap alias ----
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+
 # ---- Legacy URL redirects (301) ----
 [[redirects]]
   from = "/about"

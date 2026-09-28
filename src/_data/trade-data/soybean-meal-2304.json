@@ -1,19 +1,23 @@
 {
   "hs": "2304",
   "product": "Soybean meal (de-oiled cake)",
-  "unit": "MT",
+  "unit": "USD",
   "currency": "USD",
-  "source_name": "Soybean Processors Association of India (SOPA), oil marketing year 2024-25 (Oct 2024–Sep 2025), as reported by Outlook Business / DPRJ Universal",
-  "source_url": "https://www.outlookbusiness.com/news/indias-soybean-meal-exports-fall-by-11-due-to-high-prices",
-  "retrieved_date": "2026-09-17",
-  "year": "2024-25 (oil marketing year, Oct–Sep)",
+  "source_name": "World Bank WITS (World Integrated Trade Solution), mirroring UN Comtrade — India exports of HS 230400 by partner country, calendar year 2023",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2023/tradeflow/Exports/partner/ALL/product/230400",
+  "retrieved_date": "2026-09-28",
+  "year": "2023",
+  "india_world_total_usd": 1115497670,
   "india_exports_by_country": [
-    { "country": "Germany", "iso2": "DE", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "France", "iso2": "FR", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "Nepal", "iso2": "NP", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "Bangladesh", "iso2": "BD", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "Kenya", "iso2": "KE", "value_usd": null, "qty": null, "qty_unit": null }
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": 271618750, "qty": 472438000, "qty_unit": "kg" },
+    { "country": "Vietnam", "iso2": "VN", "value_usd": 192228030, "qty": 346602000, "qty_unit": "kg" },
+    { "country": "Nepal", "iso2": "NP", "value_usd": 104795900, "qty": 183208000, "qty_unit": "kg" },
+    { "country": "Iran", "iso2": "IR", "value_usd": 96802770, "qty": 169522000, "qty_unit": "kg" },
+    { "country": "UAE", "iso2": "AE", "value_usd": 83211730, "qty": 146150000, "qty_unit": "kg" },
+    { "country": "Kenya", "iso2": "KE", "value_usd": 4306910, "qty": 7912060, "qty_unit": "kg" },
+    { "country": "France", "iso2": "FR", "value_usd": 2113580, "qty": 2711300, "qty_unit": "kg" },
+    { "country": "Germany", "iso2": "DE", "value_usd": 540, "qty": 575, "qty_unit": "kg" }
   ],
   "world_top_importers": [],
-  "notes": "Named as India's top 5 soybean-meal export destinations for OMY 2024-25, jointly accounting for ~55% of total export volume — but the source gave no individual per-country volume or USD value, so those fields are left null rather than estimated. Aggregate: total exports fell 11% YoY to 20.23 lakh tonnes (2.023 million MT) in OMY2024-25, down from 2.275 million MT the prior year, attributed to Indian soybean meal being priced above US/Brazil/Argentina competition. No USD export value was found in the sources checked for this session — recommend a follow-up query directly to SOPA (sopa.org) or DGCI&S for the value figure before this anchors a priced blog post."
+  "notes": "Replaces an earlier dataset (SOPA OMY2024-25 ranking via Outlook Business) that named Germany among India's top-5 soybean-meal destinations by volume but gave no per-country figures to verify. This WITS/UN Comtrade calendar-2023 pull is the primary-tier, numerically verifiable source used elsewhere on this site — and it tells a materially different story: Bangladesh, Vietnam, Nepal, Iran and UAE are India's largest soybean-meal markets by a wide margin, while Germany's calendar-2023 figure is negligible (well under 0.001% of India's total). This does not necessarily contradict the SOPA claim — SOPA's OMY2024-25 (Oct 2024-Sep 2025) marketing-year figure is a different period and may reflect a single large shipment year, and EU country-level trade data is also sometimes recorded against the port-of-entry country (e.g. Rotterdam/Hamburg as EU gateway) rather than final destination, which can understate a smaller buyer's WITS-recorded total. The blog post has been rewritten to state both figures honestly and explain the discrepancy rather than presenting Germany as a guaranteed top-5 volume market — non-GMO origin, not bulk volume ranking, is the real reason a German buyer would choose India regardless of the aggregate figures above."
 }

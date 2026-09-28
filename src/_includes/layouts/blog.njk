@@ -38,8 +38,37 @@
     <div class="tldr-box">
       <p><strong>Quick answer:</strong> {{ tldr }}</p>
     </div>
+  </div>
+</article>
 
-    <div class="cta-band reveal" style="margin-block:var(--sp-3)">
+{% if commercialFacts %}
+<section class="section section--sage">
+  <div class="container" style="max-width:76ch">
+    {% include "partials/blog-commercial-facts.njk" %}
+  </div>
+</section>
+{% endif %}
+
+{% if trade_data %}
+{% set td = tradeDataFiles[trade_data] %}
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    {% include "partials/trade-data-table.njk" %}
+  </div>
+</section>
+{% endif %}
+
+{% if docChecklist %}
+<section class="section section--sage">
+  <div class="container" style="max-width:76ch">
+    {% include "partials/blog-documentation-checklist.njk" %}
+  </div>
+</section>
+{% endif %}
+
+<article class="section" style="padding-block-start:0">
+  <div class="container prose" style="max-width:76ch">
+    <div class="cta-band reveal" style="margin-block-end:var(--sp-3)">
       <div>
         <h3 style="font-size:var(--fs-md)">{{ ctaHeadline | default("Need a quote for this?") }}</h3>
         <p style="color:rgba(255,255,255,0.8);font-size:var(--fs-sm)">Response within 24 business hours.</p>
@@ -59,15 +88,6 @@
     {% endif %}
   </div>
 </article>
-
-{% if tradeData %}
-{% set td = tradeDataFiles[tradeData] %}
-<section class="section section--sage">
-  <div class="container" style="max-width:76ch">
-    {% include "partials/trade-data-table.njk" %}
-  </div>
-</section>
-{% endif %}
 
 <section class="section">
   <div class="container" style="max-width:600px">

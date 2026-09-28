@@ -28,7 +28,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md-it", require("./scripts/markdown-config.js"));
 
   // ---- Filters ----
-  eleventyConfig.addFilter("absUrl", (url, base = "https://www.greenplusexim.com") => {
+  const { getSiteUrl } = require("./scripts/site-url.js");
+  eleventyConfig.addFilter("absUrl", (url, base = getSiteUrl()) => {
     if (!url) return base;
     return url.startsWith("http") ? url : base.replace(/\/$/, "") + url;
   });
@@ -46,6 +47,14 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("jsonify", (obj) => JSON.stringify(obj));
+
+  // Only pages that actually make it into sitemap-blog-intl.xml (see that template's own
+  // noindex/reviewed check) — used to decide whether sitemap-index.xml should even list it.
+  // An empty sitemap in the index is a crawl-budget smell, so we omit the entry entirely
+  // rather than publish an empty <urlset>.
+  eleventyConfig.addFilter("indexableIntl", (arr) =>
+    Array.isArray(arr) ? arr.filter((p) => !p.data.noindex && p.data.reviewed) : []
+  );
 
   eleventyConfig.addFilter("slugify", slugifyStr);
 
@@ -99,23 +108,34 @@ module.exports = function (eleventyConfig) {
       return "$" + n;
     };
 
+    const escAttr = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
     const bars = data
       .map((r, i) => {
         const y = i * (barH + gap) + 8;
         const w = Math.max(2, Math.round((r[field] / max) * barMaxW));
-        const escName = String(r.country).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        const escName = escAttr(r.country);
         return (
           `<text x="0" y="${y + barH / 2 + 5}" font-size="14" fill="#14201B">${escName}</text>` +
           `<rect x="${labelW}" y="${y}" width="${w}" height="${barH}" fill="#2E7D4F" rx="4"></rect>` +
-          `<text x="${labelW + w + 10}" y="${y + barH / 2 + 5}" font-size="13" fill="#45564D">${fmt(r.value_usd)}</text>`
+          `<text x="${labelW + w + 10}" y="${y + barH / 2 + 5}" font-size="13" fill="#45564D">${escAttr(fmt(r[field]))}</text>`
         );
       })
       .join("");
 
-    const escLabel = label.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const escLabel = escAttr(label);
+    // Describe the actual data as a compact list rather than a fixed boilerplate sentence —
+    // repeating the exact same scaffold sentence on every chart inflated cross-page shingle
+    // similarity enough to trip the uniqueness gate on structurally similar pages.
+    const descText = escAttr(data.map((r) => `${r.country} ${fmt(r[field])}`).join(", "));
+    const titleId = "chart-title-" + Math.random().toString(36).slice(2, 8);
+    const descId = "chart-desc-" + Math.random().toString(36).slice(2, 8);
     return (
-      `<div class="chart-wrap" role="img" aria-label="${escLabel}">` +
-      `<svg viewBox="0 0 ${chartW} ${height}" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">${bars}</svg>` +
+      `<div class="chart-wrap">` +
+      `<svg viewBox="0 0 ${chartW} ${height}" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" role="img" aria-labelledby="${titleId} ${descId}">` +
+      `<title id="${titleId}">${escLabel}</title>` +
+      `<desc id="${descId}">${descText}</desc>` +
+      `${bars}</svg>` +
       `</div>`
     );
   });

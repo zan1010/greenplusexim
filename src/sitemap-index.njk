@@ -8,5 +8,8 @@ eleventyExcludeFromCollections: true
   <sitemap><loc>{{ site.url }}/sitemap-products.xml</loc></sitemap>
   <sitemap><loc>{{ site.url }}/sitemap-markets.xml</loc></sitemap>
   <sitemap><loc>{{ site.url }}/sitemap-blog-en.xml</loc></sitemap>
+  {%- set indexableIntl = collections.blogIntl | indexableIntl %}
+  {%- if indexableIntl.length %}
   <sitemap><loc>{{ site.url }}/sitemap-blog-intl.xml</loc></sitemap>
+  {%- endif %}
 </sitemapindex>
