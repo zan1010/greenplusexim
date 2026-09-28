@@ -1,20 +1,25 @@
 {
   "hs": "0703 10 (onions, shallots)",
   "product": "Fresh red onion",
-  "unit": "USD / MT",
+  "unit": "USD",
   "currency": "USD",
-  "source_name": "Trade-data aggregator compilations (seair.co.in, tradeimex.in) citing APEDA/DGCI&S-derived figures; year attribution imprecise in sources checked",
-  "source_url": "https://www.seair.co.in/blog/onion-export-data-from-india-major-list-of-onion-exporters.aspx",
-  "retrieved_date": "2026-09-17",
-  "year": "2024-25 (approximate — see notes)",
+  "source_name": "World Bank WITS (World Integrated Trade Solution), mirroring UN Comtrade — India exports of HS 070310 by partner country, calendar year 2023",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2023/tradeflow/Exports/partner/ALL/product/070310",
+  "retrieved_date": "2026-09-28",
+  "year": "2023",
+  "india_world_total_usd": 642744790,
   "india_exports_by_country": [
-    { "country": "Bangladesh", "iso2": "BD", "value_usd": 187000000, "qty": null, "qty_unit": null },
-    { "country": "Malaysia", "iso2": "MY", "value_usd": 72100000, "qty": null, "qty_unit": null },
-    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 45600000, "qty": null, "qty_unit": null },
-    { "country": "Sri Lanka", "iso2": "LK", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "Nepal", "iso2": "NP", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "Kuwait", "iso2": "KW", "value_usd": null, "qty": null, "qty_unit": null }
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": 209500450, "qty": 884360000, "qty_unit": "kg" },
+    { "country": "Malaysia", "iso2": "MY", "value_usd": 89309220, "qty": 304842000, "qty_unit": "kg" },
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 81459800, "qty": 351498000, "qty_unit": "kg" },
+    { "country": "Sri Lanka", "iso2": "LK", "value_usd": 68602610, "qty": 263303000, "qty_unit": "kg" },
+    { "country": "Nepal", "iso2": "NP", "value_usd": 27108510, "qty": 133685000, "qty_unit": "kg" },
+    { "country": "Indonesia", "iso2": "ID", "value_usd": 22838210, "qty": 81223400, "qty_unit": "kg" },
+    { "country": "Vietnam", "iso2": "VN", "value_usd": 18813690, "qty": 68747300, "qty_unit": "kg" },
+    { "country": "Qatar", "iso2": "QA", "value_usd": 16667490, "qty": 64145900, "qty_unit": "kg" },
+    { "country": "Iraq", "iso2": "IQ", "value_usd": 14415590, "qty": 63791800, "qty_unit": "kg" },
+    { "country": "Kuwait", "iso2": "KW", "value_usd": 12827740, "qty": 47235000, "qty_unit": "kg" }
   ],
   "world_top_importers": [],
-  "notes": "CAUTION — DGFT POLICY IS VOLATILE FOR THIS PRODUCT: as of the August 2026 check, onion exports are 'Free' but subject to a Minimum Export Price (~$550/MT) and a 20% export duty; India banned onion exports outright for ~6 months in 2023-24 (HS 0703 10 19 moved to 'Prohibited' until 31 Mar 2024) and has changed policy with little notice historically. Any onion page or blog post must say pricing/duty terms are confirmed at time of order, not quoted as fixed. On the data itself: aggregate FY figure cited was ~1,147,721.91 MT / ~USD 453.95 million, but the source blended what appear to be FY2024-25 and FY2025-26 references without clearly separating them — treat the total-year figure as indicative only. The three per-country values above were stated without an explicit year in the source; verify against APEDA's Fresh Onions page (apeda.gov.in/FreshOnions) before using precise dollar figures in a published blog post. Export duty on onions was removed 1 April 2025 per one source; MEP is a separate, still-active control as of the August 2026 search."
+  "notes": "Replaces an earlier dataset with imprecise/blended year attribution and 3 of 6 rows entirely null (private aggregator compilations, seair.co.in/tradeimex.in). This WITS/UN Comtrade pull is the same primary-tier source used across the site's other 20+ trade-data files. Bangladesh alone is ~33% of India's total onion export value. CAUTION CARRIED FORWARD — DGFT POLICY IS VOLATILE FOR THIS PRODUCT: onion exports are 'Free' but historically subject to a Minimum Export Price and export duty; India banned onion exports outright for ~6 months in 2023-24. Export duty was reportedly removed 1 April 2025; MEP status should be reconfirmed at time of order. Any onion content must state pricing/duty terms are confirmed at time of order, not quoted as fixed."
 }

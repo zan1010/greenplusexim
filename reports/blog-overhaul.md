@@ -93,14 +93,40 @@ Posts: `cardamom-exporter-india-gcc`, `turmeric-exporter-india-to-uae`, `india-c
 
 **Missing fields:** 0 across all 5 posts. **Full gate suite after Batch 2: all 11 checks pass**, `check:blog-standard` reports 10/10 migrated posts clean, uniqueness 117/117.
 
-**Full gate suite after Batch 1:** all 11 checks pass — HTML validation, forms, compliance (0 violations across 201 files, including the "organic" vs "certified organic" wording check on the manure post), orphans, broken links, blog quality, blog content standard (5/5 migrated posts), mobile/RTL, crawler access, SEO integrity, uniqueness (117 pages, 0 failures).
+---
+
+## Batch 3 (2026-09-28)
+
+Posts: `red-onion-exporter-from-india-bangladesh`, `chickpeas-exporter-india-to-uae`, `masoor-lentils-exporter-india-bangladesh`, `groundnut-kernels-exporter-india-indonesia`, `fish-meal-exporter-india-vietnam`.
+
+**Trade-data fix made before the rewrite:** `red-onion-0703.json` had imprecise/blended year attribution and 3 of 6 rows entirely null (private aggregator, seair.co.in/tradeimex.in). Replaced with a verified WITS/UN Comtrade 2023 pull, 10 countries with real USD values and kg quantities (Bangladesh ~33% of total value alone, then Malaysia, UAE, Sri Lanka, Nepal, Indonesia, Vietnam, Qatar, Iraq, Kuwait). The other four products (chickpeas, masoor lentils, groundnut kernels, fish meal) already had 10-row WITS 2024 data — no fix needed.
+
+**Real gate bug found and fixed while sourcing Indonesia's destination authority:** `check-blog-standard.js`'s allowlist had `/bpom\.go\.id/i` — but that domain doesn't exist. Indonesia's government TLD is `.go.id` (not `.gov.id`), and BPOM's real domain is `pom.go.id` (no "b" prefix) — confirmed by resolving `https://www.pom.go.id` directly (HTTP 200) before `bpom.go.id` was ever going to match anything. Fixed the allowlist to `/\.go\.id/i` (any Indonesian government domain) instead of the never-matching literal. Also newly verified and added to the destination-authority set this batch: Bangladesh's BSTI (`bangladeshtradeportal.gov.bd`, reused for both Bangladesh-market posts) and Vietnam's plant-protection/import-quarantine authority (`ppd.gov.vn`).
+
+**Coordination note:** same pattern as Batches 1–2, further improved. All 5 forks' first reports were correctly scoped to their own file this time (no coordinator-narration relapse), and all 5 had actually made the edit before reporting completion — no `SendMessage` push-backs needed this batch. Every file was still independently verified by direct read before trusting the reports.
+
+**Batch 3 before/after:**
+
+| Post | Words before → after | Tables before → after | FAQs before → after |
+|---|---|---|---|
+| red-onion-exporter-from-india-bangladesh | 1,802 → 3,100 | 1 → 4 | 5 → 8 |
+| chickpeas-exporter-india-to-uae | 1,857 → 3,013 | 1 → 4 | 5 → 8 |
+| masoor-lentils-exporter-india-bangladesh | 1,753 → 2,950 | 1 → 4 | 5 → 9 |
+| groundnut-kernels-exporter-india-indonesia | 1,766 → 2,972 | 1 → 4 | 5 → 8 |
+| fish-meal-exporter-india-vietnam | 1,775 → 2,914 | 1 → 4 | 5 → 8 |
+
+**Missing fields:** 0 across all 5 posts. **Full gate suite after Batch 3: all 11 checks pass**, `check:blog-standard` reports 15/15 migrated posts clean, uniqueness 117/117.
 
 ---
 
-## Batch 2–5 and beyond
+## Batch 4–5 and beyond
 
-Not started. Per the brief's priority order: Batch 2 (cardamom-GCC, turmeric-UAE, cumin-China, dried-red-chilli-China, grapes-Netherlands), Batch 3 (red-onion-Bangladesh, chickpeas-UAE, masoor-lentils-Bangladesh, groundnut-Indonesia, fish-meal-Vietnam), Batch 4 (Alphonso mango-UK, dehydrated-onion-Brazil, DORB ban-lift, spice-market-overview-2024), Batch 5 (1121-basmati grades, kabuli-vs-desi chickpeas, guar gum food-vs-industrial, dehydrated-vs-fresh onion, Incoterms guide, verify-an-exporter, how-exporting-works). The 1121 post's known rice-news-blog citation for APEDA data (flagged in the original brief) has not yet been addressed — scheduled for Batch 5.
+Not started. Per the brief's priority order: Batch 4 (Alphonso mango-UK, dehydrated-onion-Brazil, DORB ban-lift, spice-market-overview-2024), Batch 5 — specification/logistics/education posts (1121-basmati grades, kabuli-vs-desi chickpeas, guar gum food-vs-industrial, dehydrated-vs-fresh onion, Incoterms guide, verify-an-exporter, how-exporting-works). The 1121 post's known rice-news-blog citation for APEDA data (flagged in the original brief) has not yet been addressed — scheduled for Batch 5.
 
 Special-handling items (data-study flagship post, `how-exporting-with-green-plus-exim-works` vs `/export-process/` consolidation, Incoterms cannibalization check) also not yet started — the cannibalization gate (`check-seo-integrity.mjs`) currently reports 0 conflicts, but it only checks the `primary_keyword` field, not full topical overlap, so the Incoterms pair still needs a manual read-through in Batch 5.
 
 Localized-post program (§4 of the brief) not started.
+
+Images (§3 of the brief — build-time SVG charts are already live via the market-data table on every migrated post; the packaging/loading-diagram SVG and IMAGES_TODO.md shot-list additions are not yet done) not started.
+
+Gates (§5 of the brief): all listed gate requirements are implemented in `check-blog-standard.js`/`check-seo-integrity.mjs` except one — "Cannibalization check: no two indexable pages share the same primary keyword" is currently scoped to blog posts only (where `primary_keyword` is a declared field), not the full sitewide page set (products/markets/pages don't declare this field, so a true sitewide check would need a different signal, e.g. title/H1 similarity — not yet built).

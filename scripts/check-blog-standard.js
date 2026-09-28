@@ -25,13 +25,16 @@ const REQUIRED_CF_FIELDS = [
 // Official destination-authority / primary-dataset domains. Extend as new markets are covered.
 const AUTHORITY_ALLOW_PATTERNS = [
   /\.gov(\.|\/|$)/i, /\.gov\.[a-z]{2}/i, /europa\.eu/i, /apeda\.gov\.in/i, /dgft\.gov\.in/i,
-  /customs\.gov/i, /gacc\.gov\.cn/i, /moccae\.gov\.ae/i, /bpom\.go\.id/i, /fda\.gov/i,
+  /customs\.gov/i, /gacc\.gov\.cn/i, /moccae\.gov\.ae/i, /fda\.gov/i,
   /fsis\.usda\.gov/i, /usda\.gov/i, /bstiportal\.gov\.bd/i, /apeda\.in/i, /wits\.worldbank\.org/i,
   /comtrade\.un\.org/i, /mpeda\.gov\.in/i, /ippc\.int/i,
   // GACC's official CIFER registration portal for overseas food-facility registration (Decree
   // 248) is hosted on singlewindow.cn, not a gacc.gov.cn URL — verified as the sole official
   // portal (GACC explicitly warns against lookalike domains), so allowlisted explicitly.
   /cifer(query)?\.singlewindow\.cn/i,
+  // Indonesia's government TLD is .go.id, not .gov.id — bpom.go.id doesn't exist, the real
+  // domain is pom.go.id (BPOM, the food/drug authority). \.gov\.[a-z]{2} above never matched it.
+  /\.go\.id/i,
 ];
 
 // Domains known to be secondary/aggregator republications, not primary datasets — a post citing
