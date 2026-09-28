@@ -67,6 +67,32 @@ The "0 tables before" isn't a rewrite choice — it's the sitewide `tradeData`/`
 
 **Missing fields:** 0 across all 5 posts — `check-blog-standard.js` passed clean on the first full run after the rewrite (no iteration needed).
 
+---
+
+## Batch 2 (2026-09-28)
+
+Posts: `cardamom-exporter-india-gcc`, `turmeric-exporter-india-to-uae`, `india-cumin-seed-exporter-china`, `dried-red-chilli-exporter-india-to-china`, `fresh-grapes-exporter-from-india-netherlands`.
+
+**Trade-data fix made before the rewrite:** `grapes-0806.json` had 5 country names but every `value_usd`/`qty` field was `null` (a private aggregator gave only an ordered destination list, no verifiable figures — unusable for a market-data table). Replaced with a verified WITS/UN Comtrade 2023 pull, 10 countries with real USD values and kg quantities (Netherlands ~39% of total value alone). The other four products (cardamom, turmeric, cumin, red chilli) already had 10-row WITS 2024 data from earlier research — no fix needed.
+
+**Destination authorities reused across posts** (verified once, cited consistently): GACC's CIFER registration portal (`cifer.singlewindow.cn`, verified in Batch 1) for both China-bound posts; UAE's MOCCAE import-permit page (`moccae.gov.ae/en/services/import-permit`, newly verified) for turmeric-UAE and cardamom-GCC; EU TRACES NT (verified in Batch 1) for grapes-Netherlands.
+
+**Coordination note:** dispatched as 5 parallel forks with hardened instructions (explicit "you are a worker, not the coordinator," don't spawn sub-agents, don't touch shared files) based on Batch 1's friction. Improved but not eliminated: 2 of 5 forks (cardamom, and briefly grapes/cumin in their final response) still narrated overall batch status instead of confirming their own edit on the first report back — caught the same way as Batch 1, by reading the file directly rather than trusting the summary, and cardamom's fork needed one explicit push via `SendMessage` before it actually wrote the file. One fork's self-report also surfaced a useful, real system fact: a fork cannot launch its own nested forks ("Fork is not available inside a forked worker") — it no-ops cleanly rather than erroring or duplicating, which is why no duplicate-agent cleanup was needed this batch (unlike Batch 1).
+
+**Batch 2 before/after:**
+
+| Post | Words before → after | Tables before → after | FAQs before → after |
+|---|---|---|---|
+| cardamom-exporter-india-gcc | 1,831 → 3,091 | 1 → 4 | 5 → 8 |
+| turmeric-exporter-india-to-uae | 1,780 → 2,986 | 1 → 4 | 5 → 8 |
+| india-cumin-seed-exporter-china | 1,777 → 2,806 | 1 → 4 | 5 → 8 |
+| dried-red-chilli-exporter-india-to-china | 1,785 → 2,878 | 1 → 4 | 5 → 8 |
+| fresh-grapes-exporter-from-india-netherlands | 1,711 → 3,127 | 1 → 4 | 5 → 8 |
+
+("1 table before" here, vs. "0" in Batch 1's before-column, is expected and correct — these five were measured after the Batch 1 commit already fixed the sitewide `trade_data` chart bug, so their market-data table was already rendering; they just hadn't been rebuilt to the full standard yet.)
+
+**Missing fields:** 0 across all 5 posts. **Full gate suite after Batch 2: all 11 checks pass**, `check:blog-standard` reports 10/10 migrated posts clean, uniqueness 117/117.
+
 **Full gate suite after Batch 1:** all 11 checks pass — HTML validation, forms, compliance (0 violations across 201 files, including the "organic" vs "certified organic" wording check on the manure post), orphans, broken links, blog quality, blog content standard (5/5 migrated posts), mobile/RTL, crawler access, SEO integrity, uniqueness (117 pages, 0 failures).
 
 ---

@@ -1,19 +1,25 @@
 {
   "hs": "0806 10 (fresh grapes)",
   "product": "Fresh grapes",
-  "unit": "USD / MT",
+  "unit": "USD",
   "currency": "USD",
-  "source_name": "Trade-data aggregator (seair.co.in) citing APEDA-linked export figures",
-  "source_url": "https://www.seair.co.in/blog/grapes-export-from-india.aspx",
-  "retrieved_date": "2026-09-17",
-  "year": "2023-24 (aggregate); 2025-26 (destination list, no values)",
+  "source_name": "World Bank WITS (World Integrated Trade Solution), mirroring UN Comtrade — India exports of HS 080610 by partner country, calendar year 2023",
+  "source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2023/tradeflow/Exports/partner/ALL/product/080610",
+  "retrieved_date": "2026-09-28",
+  "year": "2023",
+  "india_world_total_usd": 328773000,
   "india_exports_by_country": [
-    { "country": "Netherlands", "iso2": "NL", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "Russia", "iso2": "RU", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "United Kingdom", "iso2": "GB", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": null, "qty": null, "qty_unit": null },
-    { "country": "Bangladesh", "iso2": "BD", "value_usd": null, "qty": null, "qty_unit": null }
+    { "country": "Netherlands", "iso2": "NL", "value_usd": 129684990, "qty": 79335300, "qty_unit": "kg" },
+    { "country": "United Kingdom", "iso2": "GB", "value_usd": 26348780, "qty": 14920200, "qty_unit": "kg" },
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 24989450, "qty": 21552800, "qty_unit": "kg" },
+    { "country": "Bangladesh", "iso2": "BD", "value_usd": 21530340, "qty": 68920800, "qty_unit": "kg" },
+    { "country": "Russian Federation", "iso2": "RU", "value_usd": 21371760, "qty": 14340300, "qty_unit": "kg" },
+    { "country": "Germany", "iso2": "DE", "value_usd": 11585850, "qty": 7139780, "qty_unit": "kg" },
+    { "country": "Malaysia", "iso2": "MY", "value_usd": 11015530, "qty": 6093780, "qty_unit": "kg" },
+    { "country": "Nepal", "iso2": "NP", "value_usd": 10416040, "qty": 25011100, "qty_unit": "kg" },
+    { "country": "Hong Kong", "iso2": "HK", "value_usd": 10390850, "qty": 4586040, "qty_unit": "kg" },
+    { "country": "Saudi Arabia", "iso2": "SA", "value_usd": 10057530, "qty": 8339530, "qty_unit": "kg" }
   ],
   "world_top_importers": [],
-  "notes": "Aggregate FY2023-24 figure (best-verified number found): 343,982.34 MT exported, valued at USD 417.07 million. The 2025-26 top-5 destination list (Netherlands, Russia, UK, UAE, Bangladesh) was given as an ordered list without individual values or quantities — left null rather than estimated. Recommend checking APEDA's Grapes page (apeda.gov.in/Grapes) for the country-wise value table before publishing a data table in a blog post."
+  "notes": "Replaces an earlier dataset that had 5 country names but every value_usd/qty field null (private aggregator seair.co.in gave only an ordered destination list, no verifiable figures) — completely unusable for a market-data table. This WITS/UN Comtrade pull is the same primary-tier source used across the site's other 20+ trade-data files. Netherlands alone is ~39% of India's total fresh-grape export value, consistent with its role as the main EU re-distribution hub for Indian grapes. Full India world total for HS 080610, calendar 2023: USD 328,773,000 / 284,269,000 kg across 49 destination countries."
 }
