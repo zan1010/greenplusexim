@@ -1,20 +1,22 @@
 {
   "hs": "1006 30 (basmati rice, milled)",
-  "product": "1121 / Pusa basmati rice",
-  "unit": "USD (converted from INR crore at approx ₹83.5/USD — see notes); MT (from LMT)",
+  "product": "Basmati rice",
+  "unit": "Share of India's basmati export total (%), as published by APEDA",
   "currency": "USD",
-  "source_name": "APEDA export data as reported by ricenewstoday.com ('Indian basmati 24-25 exports up Rs1,923cr over last season')",
-  "source_url": "https://ricenewstoday.com/indian-basmati-24-25-exports-up-rs1923cr-over-last-season/",
-  "retrieved_date": "2026-09-17",
-  "year": "2024-25",
+  "source_name": "APEDA (Agricultural and Processed Food Products Export Development Authority) — Basmati Rice product page, exports 2025-26",
+  "source_url": "https://apeda.gov.in/BasmatiRice",
+  "retrieved_date": "2026-09-30",
+  "year": "2025-26",
+  "india_world_total_usd": 5670000000,
+  "india_world_total_qty_mt": 6520000,
   "india_exports_by_country": [
-    { "country": "Saudi Arabia", "iso2": "SA", "value_usd": 1220567000, "qty": 1173000, "qty_unit": "MT" },
-    { "country": "Iraq", "iso2": "IQ", "value_usd": 862395000, "qty": 905000, "qty_unit": "MT" },
-    { "country": "Iran", "iso2": "IR", "value_usd": 763353000, "qty": 855000, "qty_unit": "MT" },
-    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": 369940000, "qty": null, "qty_unit": null },
-    { "country": "Yemen", "iso2": "YE", "value_usd": 363899000, "qty": null, "qty_unit": null },
-    { "country": "United States", "iso2": "US", "value_usd": 341198000, "qty": null, "qty_unit": null }
+    { "country": "Saudi Arabia", "iso2": "SA", "value_usd": null, "qty": 16.6, "qty_unit": "% of India's basmati exports" },
+    { "country": "Iran", "iso2": "IR", "value_usd": null, "qty": 13.9, "qty_unit": "% of India's basmati exports" },
+    { "country": "Iraq", "iso2": "IQ", "value_usd": null, "qty": 11.2, "qty_unit": "% of India's basmati exports" },
+    { "country": "United Arab Emirates", "iso2": "AE", "value_usd": null, "qty": 8.2, "qty_unit": "% of India's basmati exports" },
+    { "country": "Yemen", "iso2": "YE", "value_usd": null, "qty": 5.7, "qty_unit": "% of India's basmati exports" },
+    { "country": "United States", "iso2": "US", "value_usd": null, "qty": 5.0, "qty_unit": "% of India's basmati exports" }
   ],
   "world_top_importers": [],
-  "notes": "India supplies roughly 80% of world basmati rice trade, so 'world top importers' is effectively the same list as India's export destinations for this product. FY2024-25 total: 6.06 million tonnes, USD 5.94 billion (a separately reported aggregate; the six country values above sum to ~USD 3.92bn / do not sum to the reported USD 5.94bn total, meaning material volume goes to markets outside this top-6 list — treat these six as the top named destinations, not a full breakdown). INR→USD conversion used an approximate FY2024-25 average rate of ₹83.5/USD since the source reported rupee-crore figures; the source's own reported quantities (in lakh metric tonnes, LMT) were used directly for Saudi Arabia/Iraq/Iran. A separate 2025-26 source gave market-share percentages instead of dollar values (Saudi Arabia 16.6%, Iran 13.9%, Iraq 11.2%, UAE 8.2%, Yemen 5.7%) — consistent in ranking with the FY2024-25 figures used here. Recommend the owner cross-check exact figures against apeda.gov.in/BasmatiRice before publishing a priced comparison table."
+  "notes": "PRIMARY SOURCE — APEDA's own Basmati Rice page (retrieved 2026-09-30): 'The country has exported 6.52 million MTs of Basmati Rice to the world during the year 2025-26, valued at Rs. 50,138.28 Crores/ US$ 5.67 billion. Major Export Destinations (2025-26): Saudi Arabia (16.6%), Iran (13.9%), Iraq (11.2%), UAE (8.2%), Yemen (5.7%), and USA (5.0%).' APEDA publishes destination shares, not per-country dollar values, so no per-country USD value is shown here and none has been derived. The six named destinations together account for 60.6% of the total; the rest goes to markets outside this list. Basmati is a national 8-digit tariff line within HS 1006 30, so 6-digit WITS/UN Comtrade data for 100630 (which includes non-basmati milled rice) is not a substitute. This file previously cited 2024-25 figures as republished by a rice-trade news site; that secondary citation was replaced with APEDA's primary figures on 2026-09-30."
 }

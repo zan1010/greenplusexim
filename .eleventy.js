@@ -173,6 +173,7 @@ module.exports = function (eleventyConfig) {
     const height = data.length * (barH + gap) + 24;
 
     const fmt = (n) => {
+      if (unit.startsWith("%")) return n + "%";
       if (unit !== "usd") return new Intl.NumberFormat("en-US").format(n) + " " + unit;
       if (n >= 1e9) return "$" + (n / 1e9).toFixed(2) + "B";
       if (n >= 1e6) return "$" + (n / 1e6).toFixed(1) + "M";

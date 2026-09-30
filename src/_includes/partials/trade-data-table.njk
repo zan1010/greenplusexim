@@ -2,6 +2,11 @@
    Expects `td` to be set to the trade-data object before including. #}
 {% if td and td.india_exports_by_country.length %}
 {% set hasQty = td.india_exports_by_country | hasQty %}
+{#- Share-only sources (e.g. APEDA basmati publishes % of India's exports per destination, not
+    values): rows carry qty with a "%" qty_unit and no value_usd. Show one share column instead of
+    an empty value column. -#}
+{% set firstUnit = td.india_exports_by_country[0].qty_unit or "" %}
+{% set isShare = "%" in firstUnit %}
 <div class="trade-data-block">
   <h2 id="top-markets">Where India exports {{ td.product | lower }}</h2>
   <p>India's top destination markets for {{ td.product | lower }} (HS {{ td.hs }}), {{ td.year }}{% if td.india_world_total_usd %}. India exported <strong>${{ td.india_world_total_usd | money }}</strong> of {{ td.product | lower }} worldwide that year{% endif %}:</p>
@@ -11,23 +16,31 @@
       <thead>
         <tr>
           <th scope="col">Destination country</th>
+          {% if isShare %}
+          <th scope="col">Share of India's {{ td.product | lower }} exports</th>
+          {% else %}
           <th scope="col">Export value ({{ td.currency }})</th>
           {% if hasQty %}<th scope="col">Quantity</th>{% endif %}
+          {% endif %}
         </tr>
       </thead>
       <tbody>
         {% for row in td.india_exports_by_country %}
         <tr>
           <td>{{ row.country }}</td>
+          {% if isShare %}
+          <td>{{ row.qty }}%</td>
+          {% else %}
           <td>{% if row.value_usd %}${{ row.value_usd | money }}{% else %}<span style="color:var(--color-ink-muted)">Not broken out in source</span>{% endif %}</td>
           {% if hasQty %}<td>{% if row.qty %}{{ row.qty | money }} {{ row.qty_unit }}{% else %}—{% endif %}</td>{% endif %}
+          {% endif %}
         </tr>
         {% endfor %}
       </tbody>
     </table>
   </div>
 
-  {% barChart td.india_exports_by_country, { label: "India's export value of " + td.product + " by destination country, " + td.year } %}
+  {% barChart td.india_exports_by_country, { label: ("Share of India's " + td.product | lower + " exports by destination, " + td.year) if isShare else ("India's export value of " + td.product + " by destination country, " + td.year) } %}
 
   <p class="source-note">
     <strong>Source:</strong> {{ td.source_name }} —

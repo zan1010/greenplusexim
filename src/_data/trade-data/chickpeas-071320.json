@@ -82,5 +82,26 @@
     }
   ],
   "world_top_importers": [],
-  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 283.20M across ~247,296 MT. Well-spread market base (no single country above ~12.5% of value), which is unusually good for risk diversification. The existence of substantial 2024 export flows is itself empirical evidence that chickpea export was NOT prohibited during the period — consistent with the policy search finding that pulses remain exportable."
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 283.20M across ~247,296 MT. Well-spread market base (no single country above ~12.5% of value), which is unusually good for risk diversification. The existence of substantial 2024 export flows is itself empirical evidence that chickpea export was NOT prohibited during the period — consistent with the policy search finding that pulses remain exportable.",
+  "india_world_total_by_year": [
+    {
+      "year": 2021,
+      "value_usd": 89100800
+    },
+    {
+      "year": 2022,
+      "value_usd": 225000260
+    },
+    {
+      "year": 2023,
+      "value_usd": 287163240
+    },
+    {
+      "year": 2024,
+      "value_usd": 283198020
+    }
+  ],
+  "trend_source_name": "WITS (World Bank) / UN Comtrade — India exports of HS 071320 (dried chickpeas, shelled) to World, 2021-2024",
+  "trend_source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2023/tradeflow/Exports/partner/WLD/product/071320",
+  "trend_retrieved_date": "2026-09-30"
 }
