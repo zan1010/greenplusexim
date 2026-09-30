@@ -31,8 +31,13 @@ const TEMPLATE_H2 = [
 ];
 const isTemplate = (t) => TEMPLATE_H2.some((re) => re.test(t));
 
+// CTA headings carry no content, so they can't duplicate a section; leave them out entirely.
+const CTA_H2 = [/^request an? .* quote$/i, /^get your export quote$/i];
+
 function overlappingH2s(html, threshold = 0.6) {
-  let heads = h2s(html).map((t) => ({ text: t, set: tokens(t) }));
+  let heads = h2s(html)
+    .filter((t) => !CTA_H2.some((re) => re.test(t)))
+    .map((t) => ({ text: t, set: tokens(t) }));
   // Words in 3+ H2s on the page are its topic (the product name in "Where India exports X",
   // "X — Commercial Facts", "Request an X Quote"), not a sign of duplication — ignore them.
   const df = new Map();

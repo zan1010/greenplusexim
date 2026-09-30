@@ -4,7 +4,7 @@ title: "Verify an Indian Exporter Before You Pay"
 description: "A practical checklist for verifying an Indian export company before sending payment — IEC and APEDA checks, references, trial orders and red flags to watch for."
 slug: "how-to-verify-an-indian-exporter-before-you-pay"
 date: 2026-02-17
-updated: 2026-09-18
+updated: 2026-09-30
 category: "buyer-education"
 primary_keyword: "how to verify an Indian exporter before you pay"
 tldr: "Before paying any Indian exporter, verify their IEC (Import Export Code) and, for agricultural products, their APEDA registration; ask for references from existing buyers; start with a trial order rather than a large advance payment; and be wary of anyone unwilling to discuss specification in detail or who pressures for full payment upfront on a first, large order."
@@ -15,12 +15,18 @@ product: ""
 keyFacts:
   - "IEC (Import Export Code) is the base registration every legitimate Indian exporter must hold"
   - "APEDA registration applies specifically to agricultural product exporters"
+  - "IEC, APEDA RCMC and GSTIN can each be checked on an official Indian government portal"
+  - "The name on every registration, the invoice and the bank account should match exactly"
   - "A trial order is the lowest-risk way to test a new supplier relationship"
   - "Vague specifications and pressure for full advance payment are the two biggest red flags"
 faq:
   - { q: "What is an IEC and why does it matter?", a: "The Import Export Code is issued by India's Directorate General of Foreign Trade (DGFT) and is the legal registration required to export from India. Every legitimate exporter holds one. Ask for it, and don't proceed with anyone unwilling to share it." }
   - { q: "Does APEDA registration matter for every product?", a: "It's specific to agricultural and processed food product exporters. If you're buying fresh produce, grains, spices or similar, ask whether the exporter holds APEDA registration alongside their IEC." }
-  - { q: "Can I verify these registrations independently?", a: "IEC details can be checked against DGFT's public systems, and APEDA maintains registration records. A legitimate exporter should have no objection to you doing this — treat resistance as a warning sign." }
+  - { q: "Can I verify these registrations independently?", a: "Yes. DGFT's public View Any IEC page checks an IEC against the firm name, APEDA's Exporter Status page searches by RCMC number or exporter name, and the GST portal's Search Taxpayer page looks up a GSTIN. A legitimate exporter should have no objection to you doing this — treat resistance as a warning sign." }
+  - { q: "How do I check an IEC on the DGFT website?", a: "Open DGFT's View Any IEC page and enter the IEC number and at least the first three characters of the firm name. If the portal says details for that IEC are not available, the number or name doesn't match its records. The page also shows the IEC's Denied Entity List status, which is worth checking." }
+  - { q: "How do I confirm an exporter's APEDA registration?", a: "Ask for the APEDA RCMC (Registration-cum-Membership Certificate) number, then search it on APEDA's Exporter Status page, which accepts either the RCMC number or the exporter name. Since July 2023 APEDA issues RCMCs through the DGFT portal, and an IEC is needed first, so the names on both should agree." }
+  - { q: "What if the exporter doesn't appear in the MCA company records?", a: "MCA holds records for companies and LLPs only, so a proprietorship or partnership firm won't be there, and that alone isn't a red flag. What matters is consistency: the name on the IEC, GST registration, APEDA record, invoice and bank account should all match." }
+  - { q: "Will Green Plus EXIM share its registrations before a first order?", a: "Yes. We hold an IEC and APEDA registration and will provide both documents on request as part of your due diligence. Our Registrations page lists the numbers, so you can check them on the DGFT and APEDA portals yourself." }
   - { q: "Is a trial order really lower risk than it sounds?", a: "Yes. A smaller trial quantity limits your exposure while you evaluate whether the supplier actually delivers what they specify, on time, with proper documentation. Most established buyer relationships started with a trial order for exactly this reason." }
   - { q: "What payment structure is safest for a first order?", a: "A Letter of Credit gives both sides protection — payment is released only against compliant documents, which protects you from paying for goods that don't match the contract. For smaller trial orders, a partial advance with balance on documents is also common." }
   - { q: "What should make me walk away from a deal?", a: "Persistent vagueness about specification, unwillingness to provide registration documents or references, and pressure for 100% advance payment on a first, large order are the three biggest patterns worth taking seriously." }
@@ -29,16 +35,55 @@ relatedLinks:
   - { label: "Registrations", url: "/registrations/" }
   - { label: "Payment Terms", url: "/payment-terms/" }
   - { label: "Quality & Compliance", url: "/quality-compliance/" }
-sources: []
+sources:
+  - { label: "DGFT — View Any IEC (public IEC verification)", url: "https://www.dgft.gov.in/CP/?opt=view-any-ice" }
+  - { label: "APEDA — Exporter Status (search by RCMC number or exporter name)", url: "https://apeda.gov.in/exporter-status" }
+  - { label: "APEDA — Exporter's Directory", url: "https://apeda.gov.in/exporter-directory" }
+  - { label: "APEDA — Register as Exporter (RCMC), issued via the DGFT portal since July 2023", url: "https://apeda.gov.in/RCMC" }
+  - { label: "GST portal — Search Taxpayer by GSTIN/UIN", url: "https://services.gst.gov.in/services/searchtp" }
+  - { label: "Ministry of Corporate Affairs — View company / LLP master data (MCA portal login required)", url: "https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html" }
 ---
 
 <h2>Start with registrations, not price</h2>
-<p>The first thing to check on any Indian exporter isn't their price — it's whether they're a real, registered business. Two registrations matter:</p>
+<p>The first thing to check on any Indian exporter isn't their price — it's whether they're a real, registered business. Two registrations matter most for an agricultural export, and India's government publishes a way to check each of them:</p>
 <ul>
   <li><strong>IEC (Import Export Code).</strong> Issued by India's DGFT, this is the base legal requirement to export from India. No legitimate exporter operates without one. Ask for it directly, and if a supplier is cagey about sharing it, that alone is worth pausing on.</li>
   <li><strong>APEDA registration.</strong> For agricultural and processed food exporters specifically. If you're buying fresh produce, grains, spices, or similar categories, this is the second thing to ask about.</li>
 </ul>
-<p>See our own <a href="/registrations/">Registrations page</a> for an example of how a legitimate exporter should present this information — plainly, with actual numbers, not vague assurances.</p>
+<p>Two further records, GST registration and (for companies and LLPs) the corporate registry, help you confirm that the business behind those registrations is the one you're dealing with. The steps below say what to ask for and where to check it. None of them needs a paid service.</p>
+
+<h3>Step 1: Check the IEC on DGFT's public lookup</h3>
+<p><strong>Ask for:</strong> the IEC number and the exact registered firm name.<br>
+<strong>Check it at:</strong> DGFT's <a href="https://www.dgft.gov.in/CP/?opt=view-any-ice" rel="noopener" target="_blank">View Any IEC</a> page. Enter the IEC and at least the first three characters of the firm name. If the portal replies that details for that IEC aren't available, either the number is wrong or it doesn't belong to that name. The same page shows whether the IEC is on DGFT's Denied Entity List, which you want to see clear.</p>
+
+<h3>Step 2: Confirm APEDA registration (RCMC) for farm products</h3>
+<p><strong>Ask for:</strong> the APEDA RCMC (Registration-cum-Membership Certificate) number and a copy of the certificate.<br>
+<strong>Check it at:</strong> APEDA's <a href="https://apeda.gov.in/exporter-status" rel="noopener" target="_blank">Exporter Status</a> page, which searches by RCMC number or exporter name. APEDA's <a href="https://apeda.gov.in/exporter-directory" rel="noopener" target="_blank">Exporter's Directory</a> can also be filtered by state, product and exporter type (manufacturer, merchant, or both), which helps you see whether a supplier's claimed role matches its listing. Since July 2023 APEDA issues RCMCs through the DGFT portal, and an IEC is a prerequisite, so the firm name on the RCMC should match the name on the IEC.</p>
+
+<h3>Step 3: Look up the GSTIN</h3>
+<p><strong>Ask for:</strong> the exporter's GSTIN, which should also appear on their invoices.<br>
+<strong>Check it at:</strong> the GST portal's <a href="https://services.gst.gov.in/services/searchtp" rel="noopener" target="_blank">Search Taxpayer</a> page, which takes a GSTIN and needs no login. Compare the legal name and registration status it returns with the IEC and the proforma invoice. A GSTIN that returns a different business name is a serious warning.</p>
+
+<h3>Step 4: Check company records where they apply</h3>
+<p><strong>Ask for:</strong> the Corporate Identification Number (CIN) or LLPIN, if the exporter is a company or LLP.<br>
+<strong>Check it at:</strong> the Ministry of Corporate Affairs <a href="https://www.mca.gov.in/content/mca/global/en/mca/master-data/MDS.html" rel="noopener" target="_blank">master data</a> service, which currently asks you to log in to the MCA portal first. Proprietorships and partnership firms aren't registered with MCA, so their absence isn't a problem in itself.</p>
+
+<h3>Step 5: Make sure every name matches</h3>
+<p>The single most useful test ties the steps together. The business name on the IEC, the APEDA record, the GST registration, the proforma invoice and the beneficiary on the bank account you're asked to pay should be the same entity. A request to pay a personal account, or an unrelated company "handling payments for us", deserves a direct question and a written explanation before any money moves.</p>
+
+<div class="table-wrap">
+<table class="data-table">
+  <thead><tr><th scope="col">Record</th><th scope="col">What to ask the exporter for</th><th scope="col">Where to check it</th></tr></thead>
+  <tbody>
+    <tr><td>IEC</td><td>IEC number and registered firm name</td><td>DGFT — View Any IEC</td></tr>
+    <tr><td>APEDA RCMC</td><td>RCMC number and certificate copy</td><td>APEDA — Exporter Status / Exporter's Directory</td></tr>
+    <tr><td>GST registration</td><td>GSTIN (also on the invoice)</td><td>GST portal — Search Taxpayer</td></tr>
+    <tr><td>Company / LLP record</td><td>CIN or LLPIN, if applicable</td><td>MCA portal — master data (login)</td></tr>
+    <tr><td>Bank beneficiary</td><td>Account name on the proforma invoice</td><td>Compare against all of the above</td></tr>
+  </tbody>
+</table>
+</div>
+<p>See our own <a href="/registrations/">Registrations page</a> for an example of how a legitimate exporter should present this information — plainly, with actual numbers, not vague assurances. Green Plus EXIM will share its IEC and APEDA registration documents on request, and we'd rather you check them on the DGFT and APEDA portals than take our word for it.</p>
 
 <h2>Ask for references, and actually check them</h2>
 <p>A supplier with real buyer relationships should be willing to connect you with at least one existing customer, or provide enough detail (destination markets, approximate volumes, how long they've worked together) that you can sanity-check the claim. This isn't foolproof — references can be cherry-picked — but a total unwillingness to provide any track record is itself informative.</p>

@@ -81,9 +81,48 @@ if (fs.existsSync(BLOG_DIR)) {
 let issues = [];
 let checked = 0;
 
+// Posts with no single product (market overviews, logistics and buyer-education guides) can't
+// carry a commercial-facts table. They meet a lighter "education" standard instead; every other
+// English post must meet the full buyer-guide standard. No post is exempt from both.
+const EDUCATION_CATEGORIES = new Set(["market-data", "logistics", "buyer-education"]);
+let educationChecked = 0;
+
+function checkEducation(html, rel, category) {
+  const mainMatch = html.match(/<main[\s\S]*?<\/main>/);
+  const body = mainMatch ? mainMatch[0] : html;
+  const wc = wordCount(body);
+  if (wc < WORD_COUNT_MIN.default) issues.push(`${rel}: ${wc} words, needs >= ${WORD_COUNT_MIN.default} (education standard)`);
+  if (!html.includes('class="tldr-box"')) issues.push(`${rel}: missing quick-answer box`);
+  const faqCount = (html.match(/class="faq-item"/g) || []).length;
+  if (faqCount < 7) issues.push(`${rel}: only ${faqCount} FAQ items (need >= 7)`);
+  if (!html.includes('"@type":"FAQPage"')) issues.push(`${rel}: missing FAQPage schema`);
+  const sourcesSection = (html.match(/<h2>Sources<\/h2>[\s\S]*?<\/section>/) || [""])[0];
+  const sourceLinks = (sourcesSection.match(/<a\b/g) || []).length;
+  if (sourceLinks < 2) issues.push(`${rel}: ${sourceLinks} source link(s), need >= 2 primary sources`);
+  for (const domain of KNOWN_AGGREGATOR_DOMAINS) {
+    if (sourcesSection.includes(domain)) issues.push(`${rel}: cites known aggregator domain "${domain}"`);
+  }
+  if (/id="top-markets"/.test(html) && !/aria-labelledby="chart-title-/.test(html)) {
+    issues.push(`${rel}: market-data table without its SVG chart`);
+  }
+  for (const pair of overlappingH2s(html)) {
+    issues.push(`${rel}: duplicated sections — "${pair.a}" ~ "${pair.b}" (${Math.round(pair.score * 100)}% overlap); merge or rename`);
+  }
+}
+
 for (const file of files) {
   const html = fs.readFileSync(file, "utf8");
-  if (!html.includes('id="commercial-facts"')) continue; // not migrated yet
+  if (!html.includes('id="commercial-facts"')) {
+    const rel = path.relative(SITE_ROOT, file);
+    const category = (html.match(/data-category="([^"]+)"/) || [])[1];
+    if (EDUCATION_CATEGORIES.has(category)) {
+      educationChecked++;
+      checkEducation(html, rel, category);
+    } else {
+      issues.push(`${rel}: not migrated — category "${category}" requires the full buyer-guide standard (commercialFacts etc.)`);
+    }
+    continue;
+  }
   checked++;
   const rel = path.relative(SITE_ROOT, file);
   const mainMatch = html.match(/<main[\s\S]*?<\/main>/);
@@ -214,9 +253,9 @@ for (const file of files) {
 }
 
 if (issues.length) {
-  console.error(`\nBlog content-standard check FAILED — ${issues.length} issue(s) across ${checked} migrated post(s):\n`);
+  console.error(`\nBlog content-standard check FAILED — ${issues.length} issue(s) across ${checked + educationChecked} post(s):\n`);
   issues.forEach((i) => console.error("  " + i));
   process.exit(1);
 } else {
-  console.log(`Blog content-standard check passed — ${checked} migrated post(s) meet the full standard (${files.length - checked} not yet migrated, covered by check:blog-quality only).`);
+  console.log(`Blog content-standard check passed — ${checked} buyer-guide post(s) meet the full standard and ${educationChecked} market-overview/education post(s) meet the education standard (${files.length} English posts total).`);
 }
