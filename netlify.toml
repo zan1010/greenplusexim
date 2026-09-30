@@ -51,6 +51,14 @@
 
 # ---- Legacy URL redirects (301) ----
 [[redirects]]
+  from = "/blog/incoterms-guide-fob-cif-cfr-exw-explained/"
+  to = "/resources/incoterms-guide/"
+  status = 301
+[[redirects]]
+  from = "/blog/incoterms-guide-fob-cif-cfr-exw-explained"
+  to = "/resources/incoterms-guide/"
+  status = 301
+[[redirects]]
   from = "/about"
   to = "/about/"
   status = 301

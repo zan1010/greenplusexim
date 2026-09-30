@@ -119,14 +119,90 @@ Posts: `red-onion-exporter-from-india-bangladesh`, `chickpeas-exporter-india-to-
 
 ---
 
-## Batch 4–5 and beyond
+## Template fixes, section order and Batches 4–5 ✅ (2026-09-30 – 10-01)
 
-Not started. Per the brief's priority order: Batch 4 (Alphonso mango-UK, dehydrated-onion-Brazil, DORB ban-lift, spice-market-overview-2024), Batch 5 — specification/logistics/education posts (1121-basmati grades, kabuli-vs-desi chickpeas, guar gum food-vs-industrial, dehydrated-vs-fresh onion, Incoterms guide, verify-an-exporter, how-exporting-works). The 1121 post's known rice-news-blog citation for APEDA data (flagged in the original brief) has not yet been addressed — scheduled for Batch 5.
+**Template defects fixed before continuing (all 15 earlier posts re-rendered):**
+- Commercial-facts heading used the product slug ("guar-gum — commercial facts"). Now uses a required `productName` ("Guar Gum — Commercial Facts").
+- Section order is now enforced by the layout. Post bodies carry `<!-- slot:facts -->` and `<!-- slot:docs -->` markers, and `layouts/blog.njk` places the structured blocks around them in this order:
+  1. Quick answer
+  2. Orientation
+  3. Commercial facts
+  4. Market data + chart
+  5. Spec/grades
+  6. Documentation (checklist + post notes)
+  7. Price behaviour
+  8. What goes wrong
+  9. Comparison
+  10. Key facts, FAQ, sources, related, CTA
+- Duplicated sections (prose "Documentation" next to the checklist, grade explanations repeated as the comparison) were merged in every post. New gate: no two H2s on a page may share ≥60% of their content words (`scripts/heading-overlap.js`).
+- Charts: every buyer-guide already had its build-time SVG bar chart (the "text bars" report was mistaken; verified on the live page).
+  - Added a `lineChart` trend component with a data-table fallback. It renders only when a trade-data file has a verified `india_world_total_by_year` series.
+  - Series added from WITS for chickpeas, guar gum and dehydrated onion. Figures spot-checked against WITS.
+- Share-only sources (APEDA basmati publishes % by destination, not values) render as a "Share of India's exports" column instead of an empty value column.
 
-Special-handling items (data-study flagship post, `how-exporting-with-green-plus-exim-works` vs `/export-process/` consolidation, Incoterms cannibalization check) also not yet started — the cannibalization gate (`check-seo-integrity.mjs`) currently reports 0 conflicts, but it only checks the `primary_keyword` field, not full topical overlap, so the Incoterms pair still needs a manual read-through in Batch 5.
+**Batch 4:** Alphonso mango–UK, dehydrated onion–Brazil and DORB were finished from the owner's drafts.
+- Onion–Brazil got its missing price, what-goes-wrong and comparison sections.
+- DORB's "table below/above" contradiction was fixed.
+- DORB's DGFT citation is now labelled as the export-policy authority, since the post has no destination market.
 
-Localized-post program (§4 of the brief) not started.
+**Batch 5:**
+- **1121 vs Pusa basmati, kabuli vs desi, guar gum food vs industrial, dehydrated vs fresh onion:** migrated to the full standard.
+- **Basmati data:** moved from an aggregator news site to APEDA's primary page (6.52 million MT, US$5.67bn, 2025-26).
+  - Every page quoting the old figures was corrected. Iraq was corrected from #2 to #3 market.
+  - The unsourced "India ≈80% of world basmati trade" claim was removed sitewide.
+- **Onion ban length:** corrected to "almost five months" (Dec 2023–May 2024, per PIB) on all onion pages, including the Portuguese post.
+- **Education standard:** spice market overview, verify-an-exporter and how-exporting-works have no single product, so they meet a new education tier in `check-blog-standard.js` (1600+ words, 7+ FAQs, primary sources, charts with any market table, no duplicate H2s). No post is exempt from both tiers.
+- **Owner decisions (1 Oct):**
+  - The Incoterms blog post was merged into `/resources/incoterms-guide/` and its URL 301s there.
+  - How-exporting-works was kept and rewritten as a first-order walkthrough, distinct from `/export-process/`.
 
-Images (§3 of the brief — build-time SVG charts are already live via the market-data table on every migrated post; the packaging/loading-diagram SVG and IMAGES_TODO.md shot-list additions are not yet done) not started.
+**Coordination:** 9 sequential general-purpose agents (no parallel forks), each scoped to named files. Every agent's output was verified directly rather than trusted:
+- a number-diff of old source vs new page for every post;
+- a compliance scan;
+- a rerun of the gates;
+- spot-checks of new figures against WITS/APEDA.
 
-Gates (§5 of the brief): all listed gate requirements are implemented in `check-blog-standard.js`/`check-seo-integrity.mjs` except one — "Cannibalization check: no two indexable pages share the same primary keyword" is currently scoped to blog posts only (where `primary_keyword` is a declared field), not the full sitewide page set (products/markets/pages don't declare this field, so a true sitewide check would need a different signal, e.g. title/H1 similarity — not yet built).
+Issues caught this way:
+- A spec-section off-by-one in the order gate. The agent reported it; the fix was confirmed against the code.
+- A HACCP implication in a shrimp FAQ that an agent missed.
+- "Organic-certified" phrasing that slipped past the lint. The lint now bans the hyphenated forms.
+- One agent stalled after finishing its edits (work verified and committed).
+- A crawler-access fixture that pointed at a heading the rewrite removed.
+
+**Final state:** 25 English posts, all passing. `npm run check` passes all 15 gates, including the new sitemap-health gate.
+
+| Post | Words | Tables | Chart | MOQ | Ports | Transit | Payment | Docs | FAQs | Op-detail words |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1121-basmati-vs-pusa-basmati-grades-length-aging | 3,989 | 5 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 9 | 290 |
+| alphonso-mango-exporter-india-uk | 3,344 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 361 |
+| cardamom-exporter-india-gcc | 3,094 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 293 |
+| chickpeas-exporter-india-to-uae | 3,052 | 5 | ✓ (2) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 310 |
+| dehydrated-onion-exporter-india-brazil | 3,561 | 5 | ✓ (2) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 347 |
+| dehydrated-onion-vs-fresh-onion-mep | 4,255 | 6 | ✓ (2) | ✓ | ✓ | ✓ | ✓ | ✓ | 9 | 314 |
+| dorb-export-ban-lifted-what-buyers-need-to-know | 3,318 | 5 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 257 |
+| dried-red-chilli-exporter-india-to-china | 2,915 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 329 |
+| fish-meal-exporter-india-vietnam | 2,984 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 278 |
+| fresh-grapes-exporter-from-india-netherlands | 3,077 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 336 |
+| frozen-shrimp-import-from-india-to-china | 3,468 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 9 | 360 |
+| frozen-vannamei-shrimp-exporter-usa | 3,351 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 9 | 341 |
+| groundnut-kernels-exporter-india-indonesia | 2,960 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 308 |
+| guar-gum-exporter-india-usa | 2,928 | 5 | ✓ (2) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 283 |
+| guar-gum-food-vs-industrial-grade | 4,511 | 6 | ✓ (2) | ✓ | ✓ | ✓ | ✓ | ✓ | 9 | 329 |
+| how-exporting-with-green-plus-exim-works | 3,156 | 2 | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | 8 | — |
+| how-to-verify-an-indian-exporter-before-you-pay | 2,624 | 1 | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | 10 | — |
+| india-cumin-seed-exporter-china | 2,793 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 293 |
+| india-spice-export-market-overview-2024 | 2,960 | 3 | ✓ (2) | ✗ | ✗ | ✗ | ✗ | ✗ | 9 | — |
+| kabuli-vs-desi-chickpeas-buyer-guide | 3,539 | 6 | ✓ (2) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 257 |
+| masoor-lentils-exporter-india-bangladesh | 2,950 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 9 | 276 |
+| organic-cow-manure-exporter-from-india | 3,133 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 292 |
+| red-onion-exporter-from-india-bangladesh | 3,151 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 303 |
+| soybean-meal-exporter-from-india-germany | 3,086 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 290 |
+| turmeric-exporter-india-to-uae | 3,045 | 4 | ✓ (1) | ✓ | ✓ | ✓ | ✓ | ✓ | 8 | 312 |
+
+(Education posts have no commercial-facts table by design, hence the ✗ in those columns.)
+
+### Still open
+- Localized-post program (13 translated posts await native review; see `research/translation-review.md`).
+- Packaging/loading-diagram SVG and photo shot list (`IMAGES_TODO.md`).
+- 31 meta descriptions outside 70–160 characters and 12 pages with fewer than 3 in-content inbound links (see `reports/launch-checklist.md`).
+- Product pages have their own duplicated-H2 pairs (e.g. guar gum "Guar gum export policy and EU documentation" vs "Export documentation"). The blog gate doesn't cover them.

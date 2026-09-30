@@ -68,7 +68,7 @@ if (/X-Robots-Tag/i.test(netlifyToml)) {
 const SPOT_CHECK_PAGES = [
   { file: "index.html", marker: "India's Export House" },
   { file: "products/fresh-fruits/banana/index.html", marker: "Cavendish" },
-  { file: "blog/how-exporting-with-green-plus-exim-works/index.html", marker: "Send your requirement" },
+  { file: "blog/how-exporting-with-green-plus-exim-works/index.html", marker: "First-order timeline at a glance" },
 ];
 for (const { file, marker } of SPOT_CHECK_PAGES) {
   try {

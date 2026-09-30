@@ -1,7 +1,7 @@
 ---
 permalink: /resources/incoterms-guide/
-title: "Incoterms Guide for Importers"
-description: "FOB, CIF, CFR and EXW explained for buyers importing from India — who arranges shipping, who pays for what, and when risk transfers."
+title: "Incoterms Guide: Which to Pick from India"
+description: "FOB, CIF, CFR and EXW explained for buyers importing from India: who pays for what, when risk transfers, and which Incoterm to choose for your order."
 lang: en
 dir: ltr
 breadcrumbs: [{ label: "Resources", url: "/resources/" }, { label: "Incoterms Guide" }]
@@ -9,12 +9,13 @@ breadcrumbs: [{ label: "Resources", url: "/resources/" }, { label: "Incoterms Gu
 {% extends "layouts/base.njk" %}
 {% block content %}
 {% set pageH1 = "Incoterms Guide" %}
-{% set pageLede = "The four Incoterms we use most often, explained in plain terms." %}
+{% set pageLede = "The four Incoterms we use most often, explained in plain terms, and how to choose between them for an order from India." %}
 {% include "partials/page-header.njk" %}
 
 <section class="section">
   <div class="container prose" style="max-width:76ch">
-    <p><strong>Quick answer:</strong> FOB means the buyer arranges and pays for the main sea freight from the Indian port onward; CIF and CFR mean the seller arranges it (CIF also includes insurance); EXW means the buyer arranges everything from our warehouse door. Which one you choose affects your price, your risk, and how much logistics coordination falls on you.</p>
+    <p><strong>Quick answer:</strong> FOB means the buyer arranges and pays for the main sea freight from the Indian port onward; CIF and CFR mean the seller arranges it (CIF also includes insurance); EXW means the buyer arranges everything from our warehouse door. Which one you choose affects your price, your risk, and how much logistics coordination falls on you. Choose based on your logistics set-up, not habit.</p>
+    <p>Incoterms® are trade terms published by the <a href="https://iccwbo.org/business-solutions/incoterms-rules/" rel="noopener" target="_blank">International Chamber of Commerce (ICC)</a>; the current edition, Incoterms® 2020, came into force on 1 January 2020. The ICC set has eleven terms. The four below cover almost every order we quote.</p>
 
     <h2>EXW — Ex Works</h2>
     <p>We make the goods available at our warehouse or factory. You (or your forwarder) arrange and pay for everything from there — inland transport to port, export customs formalities, ocean freight, import customs, and delivery to your final location. This gives you maximum control over logistics but requires you to have or appoint a capable forwarder in India.</p>
@@ -29,18 +30,66 @@ breadcrumbs: [{ label: "Resources", url: "/resources/" }, { label: "Incoterms Gu
     <p>Same as CFR, but we also arrange marine insurance for the shipment. This is popular with first-time importers who want fewer moving parts to coordinate, at the cost of less control over carrier and routing choices.</p>
 
     <h2>Which one should I choose?</h2>
+    <p>The right term depends less on the definitions than on your own logistics situation. Four questions settle most cases:</p>
+    <ul>
+      <li><strong>Do you already work with a freight forwarder?</strong> If yes, FOB usually gives the lowest landed cost, since an established forwarder often gets better rates than a new customer would through any single exporter.</li>
+      <li><strong>Is this your first order from India?</strong> CIF reduces the moving parts on a first transaction: we handle freight and insurance, and you handle import clearance at your end.</li>
+      <li><strong>How much control do you want over routing and carrier?</strong> EXW gives the most control but needs the most logistics capability on your side, starting from our warehouse door.</li>
+      <li><strong>Do you already insure your cargo?</strong> CFR bundles freight into our price but leaves insurance to you, which suits a buyer whose marine cargo policy already covers all shipments regardless of origin.</li>
+    </ul>
     <div class="table-wrap">
       <table class="data-table">
         <thead><tr><th scope="col">If you...</th><th scope="col">Consider</th></tr></thead>
         <tbody>
+          <tr><td>Are placing a first order and have no existing forwarder</td><td>CIF</td></tr>
           <tr><td>Already have a freight forwarder and want the lowest landed cost</td><td>FOB</td></tr>
-          <tr><td>Want fewer parties to coordinate on your first order</td><td>CIF</td></tr>
-          <tr><td>Want to manage the entire logistics chain yourself</td><td>EXW</td></tr>
-          <tr><td>Want freight handled for you but manage your own insurance</td><td>CFR</td></tr>
+          <tr><td>Want freight handled for you but hold your own cargo insurance policy</td><td>CFR</td></tr>
+          <tr><td>Want to manage the entire logistics chain from India onward</td><td>EXW</td></tr>
         </tbody>
       </table>
     </div>
-    <p>Not sure? Tell us your destination port and whether you have an existing forwarder relationship when you <a href="/get-a-quote/">request a quote</a> — we'll recommend a term. See also <a href="/blog/incoterms-guide-fob-cif-cfr-exw-explained/">Choosing the Right Incoterm from India</a> on our blog for a decision-framework walkthrough.</p>
+    <p>You don't have to use the same term on every order. Many buyers start on CIF for a first shipment, then move to FOB once they have a forwarder relationship and want more control over freight cost.</p>
+    <p><strong>Cash flow is a secondary factor.</strong> Under FOB and EXW you pay your carrier on your own schedule. Under CIF and CFR the freight is bundled into what you pay us, which can simplify budgeting even if it doesn't change the total landed cost much. Neither is better in itself; it depends on how your business prefers to time payments across a shipment.</p>
+
+    <h2>What an Incoterm doesn't settle</h2>
+    <p>An Incoterm governs shipping responsibility and the point where risk transfers. It doesn't set the product specification, the documentation requirements or the payment terms. Those are separate parts of the contract, and they decide whether you're happy with what arrives. Agree them in writing alongside the Incoterm — see <a href="/payment-terms/">Payment Terms</a> and our <a href="/export-process/">Export Process</a> for where each is fixed.</p>
+
+    <h2>Shipping from Indian ports: what changes by term</h2>
+    <p>Depending on product and destination, we load at {{ site.ports | join(', ') }}. A few India-specific points affect which term works best:</p>
+    <ul>
+      <li><strong>Name the port, not just the term.</strong> "FOB" alone is incomplete. A quote reads "FOB Nhava Sheva" or "CIF Jebel Ali", and the named port decides the inland haul on our side and the sailing options on yours.</li>
+      <li><strong>The loading port follows the sourcing region.</strong> Nhava Sheva (JNPT) and Mundra handle most of our container volume. Chennai, Kolkata, Kochi and Visakhapatnam are used where they give a shorter inland leg from where the product is grown or processed, or a better sailing to your port. On FOB, your forwarder needs to book from the port we agree, not their default one.</li>
+      <li><strong>On FOB, your forwarder works to our cut-offs.</strong> Your booking has to line up with our stuffing, export clearance and the vessel's cut-off at the Indian port. Share your forwarder's contact early so the booking and our packing schedule are set together.</li>
+      <li><strong>Reefer cargo leaves less slack.</strong> Fresh produce and frozen seafood ship in temperature-controlled reefer containers. On FOB or EXW, the reefer booking and set temperature are your forwarder's to arrange, and a missed sailing affects shelf life, not just the delivery date.</li>
+      <li><strong>EXW still needs Indian export paperwork.</strong> Under EXW your forwarder handles export formalities in India, which relies on documents from us as the exporter. It works for buyers with an established Indian forwarder; for most others, FOB is the simpler way to keep control of the ocean leg.</li>
+    </ul>
+    <p>For typical transit times by region and container types, see <a href="/logistics-shipping/">Logistics &amp; Shipping</a>.</p>
+
+    <h2>Common mistakes when picking a term</h2>
+    <ul>
+      <li><strong>Comparing an FOB price with a CIF price directly.</strong> Add your own freight and insurance cost to the FOB figure before comparing, or the FOB offer will always look cheaper than it is.</li>
+      <li><strong>Assuming CIF means the seller carries the voyage risk.</strong> Under both FOB and CIF, risk passes to the buyer once the goods are loaded at the Indian port. CIF changes who arranges freight and insurance, not who bears the risk at sea.</li>
+      <li><strong>Choosing FOB without a forwarder.</strong> Booking ocean freight as a new, one-off customer can cost more than the exporter's arranged freight, which erases the reason for choosing FOB.</li>
+      <li><strong>Forgetting the destination-side costs.</strong> Under all four terms, import clearance, duties and delivery from your port to your warehouse stay with you. Budget for them whichever term you pick.</li>
+      <li><strong>Letting the Incoterm stand in for the contract.</strong> A clear Incoterm with a vague specification is still a vague contract. Specification, documents and payment need their own written terms.</li>
+    </ul>
+    <p>Not sure? Tell us your destination port and whether you have an existing forwarder relationship when you <a href="/get-a-quote/">request a quote</a>, and we'll recommend a term. A supplier who ships your route regularly should give you a specific answer rather than a generic "it depends".</p>
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    {% set faqId = "incoterms" %}
+    {% set faqs = [
+      { q: "Which Incoterm is cheapest?", a: "It depends on your access to competitive freight rates. If you or your forwarder can book ocean freight cheaper than the exporter's rate, FOB usually wins on landed cost. If you don't have an established forwarder relationship, the exporter's CIF rate may be more competitive than what you'd pay shopping freight yourself as a new customer." },
+      { q: "Is CIF safer than FOB?", a: "CIF means the seller arranges insurance, which removes one task from your side, but it doesn't make the transaction inherently safer. Risk transfers to the buyer once goods are loaded at the origin port under both terms. The practical difference is who arranges freight and insurance, not who bears risk during the voyage." },
+      { q: "When does EXW make sense?", a: "When you have your own established logistics chain in India, with your own forwarder and customs relationships, and want maximum control over routing and cost. It's less common for buyers new to sourcing from India, since it means managing more moving parts from a distance." },
+      { q: "Can I switch Incoterms between orders with the same supplier?", a: "Yes. There's no requirement to use the same term every time. Many buyers start with CIF on a first order to reduce complexity, then move to FOB once they've built a forwarder relationship and want more control over freight costs." },
+      { q: "Which Indian port will my order ship from?", a: "It depends on where the product is sourced and where it's going. Most of our container volume moves through Nhava Sheva (JNPT) and Mundra; Chennai, Kolkata, Kochi and Visakhapatnam are used when they shorten the inland leg or offer a better sailing. The quote names the port." },
+      { q: "What if I don't know which one to choose?", a: "Tell your supplier your destination port and whether you have an existing freight forwarder relationship. A supplier who knows the route should recommend a term rather than leaving you to guess." }
+    ] %}
+    {% include "partials/faq.njk" %}
   </div>
 </section>
 
