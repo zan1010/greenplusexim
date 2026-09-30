@@ -95,7 +95,17 @@
   to = "/terms-conditions/"
   status = 301
 
-# ---- No host-level redirects here ----
+# ---- Netlify subdomain -> canonical host ----
+# Exact-host match: only the production *.netlify.app host, never deploy-preview-N--/branch--
+# subdomains (those stay reachable and are noindexed via _headers, see src/_headers.njk), and
+# never the custom domains, so this cannot interact with the apex/www primary-domain redirect.
+[[redirects]]
+  from = "https://greenplusexim.netlify.app/*"
+  to = "https://www.greenplusexim.com/:splat"
+  status = 301
+  force = true
+
+# ---- No other host-level redirects here ----
 # apex -> www is done by Netlify's primary-domain setting (primary = www.greenplusexim.com,
 # greenplusexim.com as alias) and http -> https by Netlify's Force HTTPS. Adding our own
 # `force = true` host rules on top caused an infinite apex <-> www loop (Sep 2026) whenever the

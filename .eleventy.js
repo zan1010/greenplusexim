@@ -40,6 +40,15 @@ module.exports = function (eleventyConfig) {
     return date.toISOString().split("T")[0];
   });
 
+  // Latest `updated`/date across a collection — used as <lastmod> for that child in
+  // sitemap-index.xml, so Google re-reads a child sitemap when any of its posts change.
+  eleventyConfig.addFilter("latestDate", (items = []) =>
+    items.reduce((max, p) => {
+      const d = new Date(p.data.updated || p.date);
+      return d > max ? d : max;
+    }, new Date(0))
+  );
+
   eleventyConfig.addFilter("dateDisplay", (d) => {
     if (!d) return "";
     const date = d instanceof Date ? d : new Date(d);

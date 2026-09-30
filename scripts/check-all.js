@@ -14,6 +14,7 @@ const steps = [
   ["Mobile nav + RTL", "node scripts/check-mobile-rtl.mjs"],
   ["Crawler access", "node scripts/check-crawler-access.mjs"],
   ["SEO integrity", "node scripts/check-seo-integrity.mjs"],
+  ["Sitemap health", "node scripts/sitemap-health.mjs"],
   ["Uniqueness ratio", "node scripts/uniqueness.mjs"],
 ];
 

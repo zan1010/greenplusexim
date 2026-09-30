@@ -29,11 +29,14 @@
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:image" content="{{ ogImage or placeholderImages['hero-port'].url }}">
 
-  {% if site.analytics.gscVerification and 'TODO' not in site.analytics.gscVerification %}
-  <meta name="google-site-verification" content="{{ site.analytics.gscVerification }}">
+  {#- Verification codes: Netlify env var wins (paste without a code change), else site.base.json. -#}
+  {% set gscCode = env.GOOGLE_SITE_VERIFICATION or site.analytics.gscVerification %}
+  {% set bingCode = env.BING_SITE_VERIFICATION or site.analytics.bingVerification %}
+  {% if gscCode and 'TODO' not in gscCode %}
+  <meta name="google-site-verification" content="{{ gscCode }}">
   {% endif %}
-  {% if site.analytics.bingVerification and 'TODO' not in site.analytics.bingVerification %}
-  <meta name="msvalidate.01" content="{{ site.analytics.bingVerification }}">
+  {% if bingCode and 'TODO' not in bingCode %}
+  <meta name="msvalidate.01" content="{{ bingCode }}">
   {% endif %}
 
   <link rel="stylesheet" href="/assets/css/fonts.css">

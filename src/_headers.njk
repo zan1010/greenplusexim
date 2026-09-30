@@ -1,0 +1,12 @@
+---
+permalink: /_headers
+eleventyExcludeFromCollections: true
+---
+{#- Netlify merges this file with the [[headers]] in netlify.toml. netlify.toml headers can't be
+    scoped to a deploy context, so the non-production noindex lives here instead: CONTEXT is set by
+    Netlify at build time ("production", "deploy-preview", "branch-deploy"). Local builds (no
+    CONTEXT) emit nothing, which is the production behaviour. -#}
+{%- if env.CONTEXT and env.CONTEXT != "production" %}
+/*
+  X-Robots-Tag: noindex, nofollow
+{%- endif %}

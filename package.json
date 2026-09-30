@@ -18,6 +18,7 @@
     "check:mobile-rtl": "node scripts/check-mobile-rtl.mjs",
     "check:crawler-access": "node scripts/check-crawler-access.mjs",
     "check:seo-integrity": "node scripts/check-seo-integrity.mjs",
+    "check:sitemap-health": "node scripts/sitemap-health.mjs",
     "check:uniqueness": "node scripts/uniqueness.mjs",
     "seo-audit": "node scripts/seo-audit.mjs",
     "indexnow-submit": "node scripts/indexnow-submit.mjs",
