@@ -1,102 +1,134 @@
-/* Submits changed URLs to IndexNow (Bing/Yandex) after a deploy. Compares the current sitemap
-   URL list against the last-submitted snapshot (reports/indexnow-last-submitted.json) and only
-   submits the diff. Run with --dry-run to see what would be submitted without calling the API —
-   useful in CI/preview builds and required before the real key exists.
-
-   IndexNow key setup (see OWNER_TODO.md): generate a key at https://www.bing.com/indexnow,
-   set it in src/_data/site.json -> analytics.indexNowKey, and this script will create the
-   required /<key>.txt verification file at the site root on the next build. Until a real key
-   is set, this script only ever runs in dry-run mode regardless of the flag, so it can't
-   accidentally submit with a placeholder key. */
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+/* Submits changed URLs to IndexNow (Bing, Yandex, Seznam, Naver — and, via Bing, the AI
+ * assistants that use Bing's index) after a production build.
+ *
+ * How "changed" is decided: Netlify runs this during the build, while the PREVIOUS deploy is
+ * still the one being served. So for every URL in the freshly built sitemaps we compare a hash of
+ * the page's <main> content in _site against the same hash of the live page. New URLs (live 404)
+ * and URLs whose content differs are submitted; unchanged pages are not. No state file is needed,
+ * which matters because Netlify build containers are thrown away after every deploy.
+ *
+ *   node scripts/indexnow-submit.mjs            # production builds only (CONTEXT=production)
+ *   node scripts/indexnow-submit.mjs --dry-run  # compute + print the diff, never POST
+ *   node scripts/indexnow-submit.mjs --all      # submit every sitemap URL (first-time seeding)
+ *
+ * The key lives in site.base.json → analytics.indexNowKey; src/indexnow-key.njk publishes it at
+ * /<key>.txt, which is how IndexNow verifies ownership. Responses are appended to
+ * reports/indexnow.log (and printed, so they also appear in the Netlify deploy log).
+ */
+import { readFile, appendFile, mkdir } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import https from "node:https";
+import { createRequire } from "node:module";
 
+const require = createRequire(import.meta.url);
+const { PRODUCTION_URL } = require("./site-url.js");
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const REPORTS_DIR = path.join(ROOT, "reports");
-const SNAPSHOT_FILE = path.join(REPORTS_DIR, "indexnow-last-submitted.json");
+const SITE_DIR = process.env.INDEXNOW_SITE_DIR || path.join(ROOT, "_site");
+const LOG_FILE = path.join(ROOT, "reports", "indexnow.log");
 
-const isDryRun = process.argv.includes("--dry-run");
+const dryRun = process.argv.includes("--dry-run");
+const submitAll = process.argv.includes("--all");
+const context = process.env.CONTEXT || "";
 
-const site = JSON.parse(await readFile(path.join(ROOT, "src", "_data", "site.json"), "utf8"));
+const site = JSON.parse(await readFile(path.join(ROOT, "src", "_data", "site.base.json"), "utf8"));
 const key = site.analytics && site.analytics.indexNowKey;
-const host = new URL(site.url).host;
-const hasRealKey = key && !/TODO/i.test(key);
+const base = PRODUCTION_URL;
+const host = new URL(base).host;
 
-// --- Gather current indexable URLs from the built sitemaps ---
-async function currentUrls() {
-  const sitemapFiles = [
-    "sitemap-pages.xml",
-    "sitemap-products.xml",
-    "sitemap-markets.xml",
-    "sitemap-blog-en.xml",
-    "sitemap-blog-intl.xml",
-  ];
-  const urls = new Set();
-  for (const f of sitemapFiles) {
-    try {
-      const xml = await readFile(path.join(ROOT, "_site", f), "utf8");
-      for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) urls.add(m[1]);
-    } catch (e) {
-      /* sitemap not built yet — skip */
-    }
-  }
-  return [...urls];
-}
-
-async function loadSnapshot() {
+async function log(line) {
+  const stamped = `${new Date().toISOString()} ${line}`;
+  console.log(`IndexNow: ${line}`);
   try {
-    return JSON.parse(await readFile(SNAPSHOT_FILE, "utf8"));
-  } catch (e) {
-    return { urls: [] };
+    await mkdir(path.dirname(LOG_FILE), { recursive: true });
+    await appendFile(LOG_FILE, stamped + "\n");
+  } catch {
+    /* logging must never fail the deploy */
   }
 }
 
-function postToIndexNow(urlList) {
-  return new Promise((resolve, reject) => {
-    const body = JSON.stringify({ host, key, keyLocation: `${site.url}/${key}.txt`, urlList });
-    const req = https.request(
-      "https://api.indexnow.org/indexnow",
-      { method: "POST", headers: { "Content-Type": "application/json; charset=utf-8", "Content-Length": Buffer.byteLength(body) } },
-      (res) => {
-        let data = "";
-        res.on("data", (c) => (data += c));
-        res.on("end", () => resolve({ status: res.statusCode, body: data }));
+if (!key || /TODO/i.test(key)) {
+  await log("no key configured (analytics.indexNowKey) — nothing submitted.");
+  process.exit(0);
+}
+if (context && context !== "production" && !dryRun) {
+  await log(`CONTEXT=${context} — only production deploys submit; nothing submitted.`);
+  process.exit(0);
+}
+
+// Key file must be in the build, or IndexNow rejects the submission (403).
+try {
+  const served = (await readFile(path.join(SITE_DIR, `${key}.txt`), "utf8")).trim();
+  if (served !== key) throw new Error("content mismatch");
+} catch (e) {
+  await log(`key file _site/${key}.txt missing or wrong (${e.message}) — nothing submitted.`);
+  process.exit(0);
+}
+
+// ---- URLs from the built sitemaps (the index decides which children are live) ----
+const indexXml = await readFile(path.join(SITE_DIR, "sitemap-index.xml"), "utf8");
+const children = [...indexXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/^https?:\/\/[^/]+/, ""));
+const urls = [];
+for (const child of children) {
+  const xml = await readFile(path.join(SITE_DIR, child), "utf8");
+  for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) urls.push(m[1]);
+}
+
+// ---- Content diff against the live site ----
+const mainHash = (html) => {
+  const main = (html.match(/<main[^>]*>([\s\S]*?)<\/main>/) || [, html])[1];
+  // Compare text + element structure only. Attributes are dropped because Netlify rewrites every
+  // <form> tag on the served page (removes data-netlify, injects a hidden form-name <input>), and
+  // chart ids are random per build — neither is a content change worth re-crawling.
+  const normalized = main
+    .replace(/<input\b[^>]*>/gi, "")
+    .replace(/<([a-z0-9]+)\b[^>]*>/gi, "<$1>")
+    .replace(/\s+/g, " ")
+    .trim();
+  return createHash("sha1").update(normalized).digest("hex");
+};
+const builtFile = (url) => {
+  const p = new URL(url).pathname;
+  return path.join(SITE_DIR, p.endsWith("/") ? p + "index.html" : p);
+};
+
+async function changedUrls() {
+  if (submitAll) return urls;
+  const out = [];
+  const queue = [...urls];
+  const worker = async () => {
+    while (queue.length) {
+      const url = queue.shift();
+      try {
+        const built = mainHash(await readFile(builtFile(url), "utf8"));
+        const res = await fetch(url, { redirect: "manual", headers: { "user-agent": "GreenPlusEXIM-IndexNow/1.0" } });
+        if (res.status !== 200) { out.push(url); continue; }
+        if (mainHash(await res.text()) !== built) out.push(url);
+      } catch {
+        out.push(url); // can't compare → safer to submit than to miss a change
       }
-    );
-    req.on("error", reject);
-    req.write(body);
-    req.end();
-  });
+    }
+  };
+  await Promise.all(Array.from({ length: 8 }, worker));
+  return out;
 }
 
-const current = await currentUrls();
-const snapshot = await loadSnapshot();
-const previousSet = new Set(snapshot.urls || []);
-const changed = current.filter((u) => !previousSet.has(u));
+const changed = await changedUrls();
+await log(`${urls.length} sitemap URLs, ${changed.length} new or changed vs. live${submitAll ? " (--all)" : ""}.`);
+if (!changed.length) process.exit(0);
 
-console.log(`IndexNow: ${current.length} indexable URLs total, ${changed.length} new/changed since last submission.`);
-
-if (!hasRealKey) {
-  console.log("IndexNow: no real key configured yet (site.json analytics.indexNowKey is still a TODO placeholder) — running in forced dry-run mode.");
+if (dryRun) {
+  changed.forEach((u) => console.log("  [dry-run] " + u));
+  process.exit(0);
 }
 
-const effectiveDryRun = isDryRun || !hasRealKey;
-
-if (changed.length === 0) {
-  console.log("IndexNow: nothing new to submit.");
-} else if (effectiveDryRun) {
-  console.log(`IndexNow: [DRY RUN] would submit ${changed.length} URL(s):`);
-  changed.forEach((u) => console.log("  " + u));
-} else {
-  const result = await postToIndexNow(changed);
-  console.log(`IndexNow: submitted ${changed.length} URL(s), response ${result.status}`);
-}
-
-// Only persist the new snapshot on a real (non-dry) submission, so repeated dry-runs stay idempotent.
-if (!effectiveDryRun && changed.length > 0) {
-  await mkdir(REPORTS_DIR, { recursive: true });
-  await writeFile(SNAPSHOT_FILE, JSON.stringify({ urls: current, submittedAt: new Date().toISOString() }, null, 2));
-}
+const res = await fetch("https://api.indexnow.org/indexnow", {
+  method: "POST",
+  headers: { "content-type": "application/json; charset=utf-8" },
+  body: JSON.stringify({ host, key, keyLocation: `${base}/${key}.txt`, urlList: changed.slice(0, 10000) }),
+});
+const body = (await res.text()).slice(0, 300).replace(/\s+/g, " ");
+// 200 = accepted, 202 = accepted, key validation pending. Anything else is worth reading.
+await log(`submitted ${changed.length} URL(s) → HTTP ${res.status}${body ? ` ${body}` : ""}`);
+changed.forEach((u) => console.log("  " + u));
