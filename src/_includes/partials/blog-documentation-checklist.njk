@@ -16,8 +16,13 @@
       </tbody>
     </table>
   </div>
-  {% if destinationAuthority %}
+  {% if destinationAuthority and targetCountryName %}
   <p>Destination-side requirements for this market are set by <strong>{{ destinationAuthority.name }}</strong> — confirm current rules directly: <a href="{{ destinationAuthority.url }}" rel="noopener" target="_blank">{{ destinationAuthority.name }} official guidance</a>.</p>
+  {% elif destinationAuthority %}
+  {#- No single destination market (e.g. a policy-update post): the cited body is the Indian
+      export-policy authority, so don't call it destination-side. Import rules are the buyer's
+      country's — the checklist's importer rows cover that. -#}
+  <p>Export policy for this product is set by <strong>{{ destinationAuthority.name }}</strong> — confirm the current position directly: <a href="{{ destinationAuthority.url }}" rel="noopener" target="_blank">{{ destinationAuthority.name }} official source</a>. Import requirements depend on your destination country; share them and we will confirm the documentation for your shipment.</p>
   {% endif %}
   <p>{{ site.complianceChecklistCta }} {{ site.inspectionStatement }}</p>
 </div>
