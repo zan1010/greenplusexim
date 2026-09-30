@@ -82,5 +82,26 @@
     }
   ],
   "world_top_importers": [],
-  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 417.32M across ~239,920 MT. India is the dominant world origin for guar gum. Markets are industrial/Western (USA ~23%, Russia, Germany, China) and demand is partly tied to oil & gas fracturing fluid as well as food-grade thickener use — worth splitting those buyer personas in content. Strong candidate for German- and Russian-language market pages, and notable as one of the few products here where Russia is a top-3 market."
+  "notes": "HIGH CONFIDENCE — primary-tier (WITS/UN Comtrade). India world total 2024: USD 417.32M across ~239,920 MT. India is the dominant world origin for guar gum. Markets are industrial/Western (USA ~23%, Russia, Germany, China) and demand is partly tied to oil & gas fracturing fluid as well as food-grade thickener use — worth splitting those buyer personas in content. Strong candidate for German- and Russian-language market pages, and notable as one of the few products here where Russia is a top-3 market.",
+  "india_world_total_by_year": [
+    {
+      "year": 2021,
+      "value_usd": 339415130
+    },
+    {
+      "year": 2022,
+      "value_usd": 508072240
+    },
+    {
+      "year": 2023,
+      "value_usd": 401366560
+    },
+    {
+      "year": 2024,
+      "value_usd": 417321500
+    }
+  ],
+  "trend_source_name": "WITS (World Bank) / UN Comtrade — India exports of HS 130232 (mucilages and thickeners from locust beans, locust bean seeds or guar seeds) to World, 2021-2024",
+  "trend_source_url": "https://wits.worldbank.org/trade/comtrade/en/country/IND/year/2022/tradeflow/Exports/partner/WLD/product/130232",
+  "trend_retrieved_date": "2026-09-30"
 }
