@@ -15,7 +15,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.clarity.ms https://*.clarity.ms https://region1.google-analytics.com; frame-src https://www.google.com; base-uri 'self'; form-action 'self'; object-src 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.clarity.ms https://*.clarity.ms; frame-src https://www.google.com; base-uri 'self'; form-action 'self'; object-src 'none'"
 
 [[headers]]
   for = "/*.html"
@@ -95,21 +95,8 @@
   to = "/terms-conditions/"
   status = 301
 
-# ---- Force www + HTTPS ----
-[[redirects]]
-  from = "https://greenplusexim.com/*"
-  to = "https://www.greenplusexim.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://greenplusexim.com/*"
-  to = "https://www.greenplusexim.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.greenplusexim.com/*"
-  to = "https://www.greenplusexim.com/:splat"
-  status = 301
-  force = true
+# ---- No host-level redirects here ----
+# apex -> www is done by Netlify's primary-domain setting (primary = www.greenplusexim.com,
+# greenplusexim.com as alias) and http -> https by Netlify's Force HTTPS. Adding our own
+# `force = true` host rules on top caused an infinite apex <-> www loop (Sep 2026) whenever the
+# primary domain in the Netlify UI disagreed with them. Keep only path-level redirects above.

@@ -53,7 +53,7 @@ Once steps 1–5 above are live, check these weekly (a recurring 15-minute calen
 - [ ] **IEC number** — add the real Import Export Code to `src/_data/site.json` → `registrations.iecNumber`.
 - [ ] **APEDA RCMC number** — add the real registration number to `src/_data/site.json` → `registrations.apedaRcmcNumber`.
 - [ ] **Registered office address** — `src/_data/site.json` → `address.streetAddress` and `postalCode` are placeholders.
-- [ ] **GA4 Measurement ID** — `src/_data/site.json` → `analytics.ga4MeasurementId`.
+- [x] **GA4 Measurement ID** (G-EXQ3T0Y142, added 30 Sep 2026) — `src/_data/site.json` → `analytics.ga4MeasurementId`.
 - [ ] **Microsoft Clarity project ID** — `analytics.clarityProjectId`.
 - [ ] **Google Search Console verification** — `analytics.gscVerification` (the `<meta>` content value, or switch to DNS verification).
 - [ ] **Bing Webmaster verification** — `analytics.bingVerification`.
