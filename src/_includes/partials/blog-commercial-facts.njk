@@ -5,7 +5,7 @@
 {% if commercialFacts %}
 {% set cf = commercialFacts %}
 <div class="commercial-facts-block" id="commercial-facts">
-  <h2>{{ productName or product }} — commercial facts</h2>
+  <h2>{{ productName or (product | replace("-", " ") | title) }} — Commercial Facts</h2>
   <div class="table-wrap">
     <table class="data-table">
       <thead><tr><th scope="col">Field</th><th scope="col">Detail</th></tr></thead>

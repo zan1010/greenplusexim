@@ -62,3 +62,32 @@ hreflang_group: ""   # only if a true translated equivalent exists
 
 ## Never invent a number
 Every statistic, ranking, or "top importer" claim must trace to a cited public source with a link, dataset name and year, stored in `src/_data/trade-data/`. If it can't be verified, write around it qualitatively and log it in `research/unverified.md` — do not publish it.
+
+## Buyer-guide standard: body layout (enforced by `check-blog-standard.js`)
+The layout renders structured blocks from front matter; the post body supplies the prose and two
+slot markers that tell the layout where those blocks go. Required body shape:
+
+```html
+<p>Short orientation — 60–150 words, what this trade lane is and who the guide is for. No H2.</p>
+<!-- slot:facts -->          ← layout inserts: Commercial Facts table, market-data table + chart(s)
+<h2>…specification / grades…</h2>   ← at least one H2 (grades, specs, forms, packaging)
+<!-- slot:docs -->           ← layout inserts: documentation checklist (docChecklist front matter)
+<p>Optional product-specific documentation notes — NO heading; they render under the checklist.</p>
+<!-- price-behaviour:start --> <h2>…</h2> … <!-- price-behaviour:end -->
+<!-- operator-detail:start --> <h2>What goes wrong…</h2> … (≥200 words) <!-- operator-detail:end -->
+<div id="compare-options"><h2>…</h2><table>…</table></div>
+```
+Key facts, FAQ, sources, related reading and the CTA follow automatically.
+
+- **No duplicate sections.** Never write a prose "Documentation" H2 (the checklist already is
+  that section — put notes under `<!-- slot:docs -->`), and never repeat the comparison topic as
+  its own prose H2. The gate fails any two H2s sharing ≥60% of their content words.
+- **`productName`** front matter is required (display name, e.g. "Guar Gum") — it titles the
+  Commercial Facts table and the WhatsApp message. Never let a slug reach a heading.
+- **`destinationAuthority`** must be the *importing* country's regulator (e.g. FDA, MAPA,
+  APHA), never an Indian export body such as DGFT or APEDA.
+- **Trend chart (optional, data-driven):** add `india_world_total_by_year: [{year, value_usd}]`
+  (≥3 years) plus `trend_source_name` / `trend_source_url` / `trend_retrieved_date` to the
+  trade-data JSON **only** from a primary source you actually opened (WITS / UN Comtrade /
+  official ministry release). The layout then draws a line chart + table automatically. If you
+  can't verify a series, leave the field out — never estimate.

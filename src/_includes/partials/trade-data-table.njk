@@ -34,6 +34,22 @@
     <a href="{{ td.source_url }}" rel="noopener" target="_blank">view source</a>.
     Data year: {{ td.year }}. Retrieved: {{ td.retrieved_date }}.
   </p>
+  {% set trend = td.india_world_total_by_year %}
+  {% if trend and trend.length >= 3 %}
+  <h3>India's total {{ td.product | lower }} exports by year</h3>
+  {% lineChart trend, { label: "India's total export value of " + td.product + " by year" } %}
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th scope="col">Year</th><th scope="col">India's total export value ({{ td.currency }})</th></tr></thead>
+      <tbody>
+        {% for p in trend %}<tr><td>{{ p.year }}</td><td>${{ p.value_usd | money }}</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="source-note"><strong>Source:</strong> {{ td.trend_source_name or td.source_name }} —
+    <a href="{{ td.trend_source_url or td.source_url }}" rel="noopener" target="_blank">view source</a>.
+    Retrieved: {{ td.trend_retrieved_date or td.retrieved_date }}.</p>
+  {% endif %}
   {% if td.notes %}
   <details class="data-note">
     <summary>Notes on this data</summary>

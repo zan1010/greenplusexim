@@ -9,6 +9,7 @@
    until the localized program (blog-overhaul.md §4) builds them to an equivalent bar. */
 const fs = require("fs");
 const path = require("path");
+const { overlappingH2s } = require("./heading-overlap.js");
 
 const SITE_ROOT = path.join(__dirname, "..", "_site");
 const BLOG_DIR = path.join(SITE_ROOT, "blog");
@@ -157,6 +158,48 @@ for (const file of files) {
   const faqCount = (html.match(/class="faq-item"/g) || []).length;
   if (faqCount < 7) issues.push(`${rel}: only ${faqCount} FAQ items (need >= 7)`);
   if (!html.includes('"@type":"FAQPage"')) issues.push(`${rel}: missing FAQPage schema`);
+
+  // 11. Section order (reports/blog-overhaul.md): quick answer → orientation → commercial facts →
+  //     market data + chart → spec/grades → documentation → price behaviour → what goes wrong
+  //     (operator-detail) → comparison → key facts → FAQ → sources → related → CTA.
+  const pos = (needle) => html.indexOf(needle);
+  const ORDER = [
+    ["quick answer", 'class="tldr-box"'],
+    ["commercial facts", 'id="commercial-facts"'],
+    ["market data", 'id="top-markets"'],
+    ["documentation", 'id="documentation"'],
+    ["price behaviour", "<!-- price-behaviour:start"],
+    ["what goes wrong", "<!-- operator-detail:start"],
+    ["comparison", 'id="compare-options"'],
+    ["key facts", 'class="key-facts"'],
+    ["FAQ", "<h2>Frequently Asked Questions</h2>"],
+    ["sources", "<h2>Sources</h2>"],
+    ["related", "<h2>Related reading</h2>"],
+    ["CTA", 'id="rfq-category-blog-bottom"'],
+  ].map(([label, needle]) => ({ label, at: pos(needle) }));
+  const missingOrder = ORDER.filter((o) => o.at < 0).map((o) => o.label);
+  if (missingOrder.length) {
+    issues.push(`${rel}: section order — missing ${missingOrder.join(", ")}`);
+  } else {
+    for (let i = 1; i < ORDER.length; i++) {
+      if (ORDER[i].at < ORDER[i - 1].at) {
+        issues.push(`${rel}: section order — "${ORDER[i].label}" appears before "${ORDER[i - 1].label}"`);
+        break;
+      }
+    }
+    // Short orientation: real prose between the quick answer and the commercial-facts table.
+    const orientation = wordCount(html.slice(html.lastIndexOf("<div", ORDER[0].at), ORDER[1].at).replace(/<div class="tldr-box">[\s\S]*?<\/div>/, ""));
+    if (orientation < 60) issues.push(`${rel}: section order — orientation before commercial facts is ${orientation} words (need a short intro, >= 60)`);
+    // Spec/grades: at least one of the post's own H2s between market data and documentation.
+    const between = html.slice(ORDER[2].at, ORDER[3].at);
+    const specH2 = (between.match(/<h2\b/g) || []).length - 1; // minus the market-data H2 itself
+    if (specH2 < 1) issues.push(`${rel}: section order — no specification/grades section between market data and documentation`);
+  }
+
+  // 12. Duplicated sections: no two H2s on the page with >= 60% content-word overlap.
+  for (const pair of overlappingH2s(html)) {
+    issues.push(`${rel}: duplicated sections — "${pair.a}" ~ "${pair.b}" (${Math.round(pair.score * 100)}% overlap); merge or rename`);
+  }
 
   // 10. Sources — flag known aggregator citations
   const sourcesSection = html.match(/<h2>Sources<\/h2>[\s\S]*?<\/section>/);

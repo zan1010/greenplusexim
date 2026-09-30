@@ -49,6 +49,27 @@ module.exports = function (eleventyConfig) {
     }, new Date(0))
   );
 
+  // Splits a standard-migrated blog body at its two slot markers so layouts/blog.njk can place
+  // the structured blocks in the required order: orientation → [commercial facts, market data] →
+  // spec/grades → [documentation checklist + the post's doc notes] → price behaviour, what goes
+  // wrong, comparison. Returns null for posts without both markers (they keep the legacy order).
+  eleventyConfig.addFilter("blogSlots", (html = "") => {
+    const FACTS = "<!-- slot:facts -->";
+    const DOCS = "<!-- slot:docs -->";
+    const f = html.indexOf(FACTS);
+    const d = html.indexOf(DOCS);
+    if (f < 0 || d < 0 || d < f) return null;
+    const afterDocs = html.slice(d + DOCS.length);
+    // Doc notes = prose directly under the marker, up to the next heading/section marker.
+    const cut = afterDocs.search(/<h2\b|<!--|<div id="compare-options"/);
+    return {
+      orientation: html.slice(0, f),
+      spec: html.slice(f + FACTS.length, d),
+      docNotes: cut < 0 ? afterDocs : afterDocs.slice(0, cut),
+      rest: cut < 0 ? "" : afterDocs.slice(cut),
+    };
+  });
+
   eleventyConfig.addFilter("dateDisplay", (d) => {
     if (!d) return "";
     const date = d instanceof Date ? d : new Date(d);
@@ -91,6 +112,48 @@ module.exports = function (eleventyConfig) {
   });
 
   // Build-time inline SVG bar chart from trade data — no chart library, no client JS.
+  // Trend line for a trade-data file's optional `india_world_total_by_year` series
+  // ([{year, value_usd}], verified primary source only — see CONTENT_GUIDE.md). Renders nothing
+  // for fewer than 3 points; the partial prints the same series as a table (the fallback).
+  eleventyConfig.addShortcode("lineChart", (series, opts = {}) => {
+    const data = (series || [])
+      .filter((p) => typeof p.value_usd === "number" && p.value_usd > 0 && p.year)
+      .sort((a, b) => a.year - b.year);
+    if (data.length < 3) return "";
+    const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    const fmt = (n) => (n >= 1e9 ? "$" + (n / 1e9).toFixed(2) + "B" : n >= 1e6 ? "$" + (n / 1e6).toFixed(1) + "M" : "$" + Math.round(n / 1e3) + "K");
+    const W = 620, H = 300, padL = 70, padR = 24, padT = 24, padB = 44;
+    const vals = data.map((p) => p.value_usd);
+    const lo = Math.min(...vals) * 0.9, hi = Math.max(...vals) * 1.05;
+    const x = (i) => padL + (i * (W - padL - padR)) / (data.length - 1);
+    const y = (v) => padT + (1 - (v - lo) / (hi - lo)) * (H - padT - padB);
+    const pts = data.map((p, i) => `${x(i).toFixed(1)},${y(p.value_usd).toFixed(1)}`).join(" ");
+    const grid = [0, 0.5, 1]
+      .map((t) => {
+        const v = lo + t * (hi - lo);
+        return `<line x1="${padL}" x2="${W - padR}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#DDE3DC"></line>` +
+          `<text x="${padL - 8}" y="${(y(v) + 4).toFixed(1)}" font-size="12" fill="#45564D" text-anchor="end">${esc(fmt(v))}</text>`;
+      })
+      .join("");
+    const dots = data
+      .map((p, i) =>
+        `<circle cx="${x(i).toFixed(1)}" cy="${y(p.value_usd).toFixed(1)}" r="4" fill="#2E7D4F"></circle>` +
+        `<text x="${x(i).toFixed(1)}" y="${H - padB + 20}" font-size="13" fill="#14201B" text-anchor="middle">${esc(p.year)}</text>`)
+      .join("");
+    const titleId = "trend-title-" + Math.random().toString(36).slice(2, 8);
+    const descId = "trend-desc-" + Math.random().toString(36).slice(2, 8);
+    return (
+      `<div class="chart-wrap">` +
+      `<svg viewBox="0 0 ${W} ${H}" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" role="img" aria-labelledby="${titleId} ${descId}">` +
+      `<title id="${titleId}">${esc(opts.label || "Export value by year")}</title>` +
+      `<desc id="${descId}">${esc(data.map((p) => `${p.year} ${fmt(p.value_usd)}`).join(", "))}</desc>` +
+      grid +
+      `<polyline points="${pts}" fill="none" stroke="#2E7D4F" stroke-width="3" stroke-linejoin="round"></polyline>` +
+      dots +
+      `</svg></div>`
+    );
+  });
+
   eleventyConfig.addShortcode("barChart", (rows, opts = {}) => {
     // Chart USD value where available; fall back to quantity when the source only
     // published volumes (e.g. MPEDA's shrimp data). Never charts a row with neither.
