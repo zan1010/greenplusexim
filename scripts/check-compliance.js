@@ -12,6 +12,8 @@ const BANNED = [
   "MPEDA registered",
   "certified organic",
   "organic certified",
+  "organic-certified",
+  "certified-organic",
   "Halal certified",
   "BRC",
   "GlobalGAP certified",

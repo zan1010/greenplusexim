@@ -191,8 +191,9 @@ for (const file of files) {
     const orientation = wordCount(html.slice(html.lastIndexOf("<div", ORDER[0].at), ORDER[1].at).replace(/<div class="tldr-box">[\s\S]*?<\/div>/, ""));
     if (orientation < 60) issues.push(`${rel}: section order — orientation before commercial facts is ${orientation} words (need a short intro, >= 60)`);
     // Spec/grades: at least one of the post's own H2s between market data and documentation.
+    // ORDER[2].at is inside the market-data <h2 id="top-markets"> tag, so that H2 isn't counted.
     const between = html.slice(ORDER[2].at, ORDER[3].at);
-    const specH2 = (between.match(/<h2\b/g) || []).length - 1; // minus the market-data H2 itself
+    const specH2 = (between.match(/<h2\b/g) || []).length;
     if (specH2 < 1) issues.push(`${rel}: section order — no specification/grades section between market data and documentation`);
   }
 
