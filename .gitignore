@@ -17,3 +17,4 @@ _site/
 # Env / secrets (none committed yet — real keys go here once issued, never in site.json)
 .env
 .env.local
+reports/indexnow.log
