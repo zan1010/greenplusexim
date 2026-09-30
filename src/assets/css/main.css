@@ -425,3 +425,4 @@ html[lang="ar"] { --font-sans: "IBM Plex Sans Arabic", var(--font-sans); --font-
 .consent-banner a { color: var(--color-gold-light); text-decoration: underline; }
 .consent-actions { display: flex; gap: var(--sp-2); margin-block-start: var(--sp-2); }
 @media (min-width: 1024px) { .consent-banner { inset-inline-start: auto; width: 380px; } }
+.footer-cookie-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
