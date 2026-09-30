@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang | default('en') }}" dir="{{ dir | default('ltr') }}" data-ga4-id="{{ site.analytics.ga4MeasurementId }}" data-clarity-id="{{ site.analytics.clarityProjectId }}">
+<html lang="{{ lang | default('en') }}" dir="{{ dir | default('ltr') }}" data-ga4-id="{{ site.analytics.ga4MeasurementId }}" data-clarity-id="{{ site.analytics.clarityProjectId }}" data-wa-number="{{ site.whatsappNumber }}"{% if productName %} data-wa-product="{{ productName | escape }}"{% endif %}{% if marketName %} data-wa-market="{{ marketName | escape }}"{% endif %}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">

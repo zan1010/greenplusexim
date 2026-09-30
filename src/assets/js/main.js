@@ -179,9 +179,19 @@
   }
 
   /* ---- WhatsApp link message + click tracking ---- */
+  // Number and page topic come from <html data-wa-*> (site.base.json + page front matter), so the
+  // pre-filled message names the product/market instead of dumping the browser-tab title.
+  var waData = document.documentElement.dataset;
+  var waPage = location.href.split(/[?#]/)[0];
+  var waMsg = "Hi Green Plus EXIM, I have an export enquiry. Could you help?";
+  if (waData.waProduct) {
+    waMsg = "Hi Green Plus EXIM, I'd like a quote for " + waData.waProduct +
+      (waData.waMarket ? " shipped to " + waData.waMarket : "") + ".\n\n" + waPage;
+  } else if (waData.waMarket) {
+    waMsg = "Hi Green Plus EXIM, I'm looking to import from India to " + waData.waMarket + ".\n\n" + waPage;
+  }
   document.querySelectorAll("a[data-whatsapp]").forEach(function (link) {
-    var msg = "Hi Green Plus EXIM, I'd like to enquire about: " + document.title;
-    link.href = "https://wa.me/918767180960?text=" + encodeURIComponent(msg);
+    link.href = "https://wa.me/" + waData.waNumber + "?text=" + encodeURIComponent(waMsg);
     link.addEventListener("click", function () {
       if (window.gpTrack) window.gpTrack("whatsapp_click", {});
     });
