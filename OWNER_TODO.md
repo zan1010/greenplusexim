@@ -27,6 +27,14 @@ Where a value goes into the site, the file is `src/_data/site.base.json` unless 
   `https://www.greenplusexim.com`, and the same address as the site (needs item 3 below). Update
   the number on your WhatsApp Business profile too — Google cross-checks NAP consistency.
 
+## 1b. Keyword & content pass — your decisions (Oct 2026)
+
+- [ ] **Approve the 20 proposed new posts** in `research/content-gaps.md` (strike or reorder; nothing is written until you approve).
+- [ ] **Paste keyword volumes** from Google Keyword Planner and/or Bing keyword research into `research/kw-volumes.csv`, then run `npm run reprioritize` to re-sort `research/keyword-map.csv` by real demand.
+- [ ] **Confirm container loads with your packer** for de-oiled rice bran (page says 18–20 MT / 22–24 MT) and cow manure powder (18–22 / 24–26 MT). Both look heavy and were not used in any analysis.
+- [ ] Have a native speaker check the local-language keyword variants in the keyword map before they're used.
+- Full list of unverified points: `reports/keyword-insight-pass.md`.
+
 ## 2. Leads — before you rely on the forms
 
 - [ ] **Netlify form detection** — Netlify → Site configuration → Forms → confirm detection is

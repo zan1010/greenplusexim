@@ -1,8 +1,6 @@
 /* Insight / targeting-depth gate for English blog posts, plus a site-wide anchor-text check.
  *
- * Per post (enforced on every post that has a Key takeaways block, i.e. has been through the
- * insight pass; set INSIGHT_STRICT=1 — or flip STRICT below once every post is done — to require
- * it of all posts):
+ * Per post (every English post; INSIGHT_STRICT=0 limits it to posts that already carry Key takeaways):
  *   - >= 4 question-shaped H2s ("What documents…?", "How much … fits in a 20ft container?")
  *   - >= 3 insight sections, each wrapped in <!-- insight:TYPE --> … <!-- /insight --> with TYPE
  *     from INSIGHT_TYPES, and each containing a number or a "Scenario:" lead
@@ -20,7 +18,9 @@ import path from "node:path";
 const SITE = path.resolve("_site");
 const BLOG = path.join(SITE, "blog");
 const TERMS = JSON.parse(fs.readFileSync(path.resolve("research/term-sets.json"), "utf8"));
-const STRICT = process.env.INSIGHT_STRICT === "1";
+// Strict since 1 Oct 2026 (all 25 posts through the insight pass): every English post must meet
+// the standard. INSIGHT_STRICT=0 relaxes it to upgraded-posts-only, e.g. while drafting a new batch.
+const STRICT = process.env.INSIGHT_STRICT !== "0";
 const COVERAGE_MIN = 0.7;
 
 export const INSIGHT_TYPES = [
