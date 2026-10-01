@@ -49,6 +49,56 @@
   to = "/sitemap-index.xml"
   status = 301
 
+# ---- Product x country pages consolidated into their blog guides (owner decision, Oct 2026) ----
+[[redirects]]
+  from = "/products/oilseeds/guar-gum/usa/"
+  to = "/blog/guar-gum-exporter-india-usa/"
+  status = 301
+[[redirects]]
+  from = "/products/oilseeds/guar-gum/usa"
+  to = "/blog/guar-gum-exporter-india-usa/"
+  status = 301
+[[redirects]]
+  from = "/products/spices/cumin/china/"
+  to = "/blog/india-cumin-seed-exporter-china/"
+  status = 301
+[[redirects]]
+  from = "/products/spices/cumin/china"
+  to = "/blog/india-cumin-seed-exporter-china/"
+  status = 301
+[[redirects]]
+  from = "/products/spices/red-chilli/china/"
+  to = "/blog/dried-red-chilli-exporter-india-to-china/"
+  status = 301
+[[redirects]]
+  from = "/products/spices/red-chilli/china"
+  to = "/blog/dried-red-chilli-exporter-india-to-china/"
+  status = 301
+[[redirects]]
+  from = "/products/pulses/masoor-lentils/bangladesh/"
+  to = "/blog/masoor-lentils-exporter-india-bangladesh/"
+  status = 301
+[[redirects]]
+  from = "/products/pulses/masoor-lentils/bangladesh"
+  to = "/blog/masoor-lentils-exporter-india-bangladesh/"
+  status = 301
+[[redirects]]
+  from = "/products/oilseeds/groundnut-kernels/indonesia/"
+  to = "/blog/groundnut-kernels-exporter-india-indonesia/"
+  status = 301
+[[redirects]]
+  from = "/products/oilseeds/groundnut-kernels/indonesia"
+  to = "/blog/groundnut-kernels-exporter-india-indonesia/"
+  status = 301
+[[redirects]]
+  from = "/products/fresh-vegetables/red-onion/bangladesh/"
+  to = "/blog/red-onion-exporter-from-india-bangladesh/"
+  status = 301
+[[redirects]]
+  from = "/products/fresh-vegetables/red-onion/bangladesh"
+  to = "/blog/red-onion-exporter-from-india-bangladesh/"
+  status = 301
+
 # ---- Legacy URL redirects (301) ----
 [[redirects]]
   from = "/blog/incoterms-guide-fob-cif-cfr-exw-explained/"

@@ -26,7 +26,8 @@
     "seo-audit": "node scripts/seo-audit.mjs",
     "indexnow-submit": "node scripts/indexnow-submit.mjs",
     "check:lhci": "lhci autorun",
-    "reprioritize": "node scripts/reprioritize.mjs"
+    "reprioritize": "node scripts/reprioritize.mjs",
+    "check:keywords": "node scripts/check-keywords.mjs"
   },
   "type": "commonjs",
   "devDependencies": {

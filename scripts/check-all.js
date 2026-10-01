@@ -15,6 +15,7 @@ const steps = [
   ["Crawler access", "node scripts/check-crawler-access.mjs"],
   ["SEO integrity", "node scripts/check-seo-integrity.mjs"],
   ["Sitemap health", "node scripts/sitemap-health.mjs"],
+  ["Keyword targeting", "node scripts/check-keywords.mjs"],
   ["Uniqueness ratio", "node scripts/uniqueness.mjs"],
 ];
 

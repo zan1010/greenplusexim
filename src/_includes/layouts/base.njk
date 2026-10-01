@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>{{ title }}{% if title and not rawTitle %} | Green Plus EXIM{% endif %}</title>
+  {#- seoTitle (from research/keyword-map.csv) is the complete <title>, already <=60 chars with no
+      brand suffix; pages without one keep "title | Green Plus EXIM". -#}
+  <title>{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }}{% if title and not rawTitle %} | Green Plus EXIM{% endif %}{% endif %}</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ (canonical or page.url) | absUrl }}">
   {% if noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large">{% endif %}
@@ -19,13 +21,13 @@
   {# ---- Open Graph / Twitter ---- #}
   <meta property="og:type" content="{{ ogType | default('website') }}">
   <meta property="og:site_name" content="Green Plus EXIM">
-  <meta property="og:title" content="{{ ogTitle | default(title) }}">
+  <meta property="og:title" content="{{ ogTitle or seoTitle or title }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:url" content="{{ (canonical or page.url) | absUrl }}">
   <meta property="og:image" content="{{ ogImage or placeholderImages['hero-port'].url }}">
   <meta property="og:locale" content="{{ ogLocale | default('en_US') }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ ogTitle | default(title) }}">
+  <meta name="twitter:title" content="{{ ogTitle or seoTitle or title }}">
   <meta name="twitter:description" content="{{ description }}">
   <meta name="twitter:image" content="{{ ogImage or placeholderImages['hero-port'].url }}">
 
