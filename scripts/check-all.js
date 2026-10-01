@@ -16,6 +16,7 @@ const steps = [
   ["SEO integrity", "node scripts/check-seo-integrity.mjs"],
   ["Sitemap health", "node scripts/sitemap-health.mjs"],
   ["Keyword targeting", "node scripts/check-keywords.mjs"],
+  ["Blog insight + anchors", "node scripts/check-blog-insight.mjs"],
   ["Uniqueness ratio", "node scripts/uniqueness.mjs"],
 ];
 

@@ -30,7 +30,7 @@
 
         <div class="chip-row" style="margin-block:var(--sp-2)">
           <span class="chip chip--gold">HS {{ hsCode }}</span>
-          <span class="chip"><a href="{{ productUrl }}" style="color:inherit">{{ productName }} product page</a></span>
+          <span class="chip"><a href="{{ productUrl }}" style="color:inherit">{{ productLinkLabel | default(productName + " product page") }}</a></span>
           <span class="chip"><a href="{{ marketUrl }}" style="color:inherit">{{ marketName }} market page</a></span>
         </div>
 

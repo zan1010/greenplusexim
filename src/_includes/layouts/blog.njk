@@ -137,6 +137,20 @@
   </div>
 </section>
 
+{% if keyTakeaways and keyTakeaways.length %}
+{#- Five actionable conclusions (not a summary), required by check-blog-insight.mjs. -#}
+<section class="section">
+  <div class="container" style="max-width:76ch">
+    <div class="key-takeaways" id="key-takeaways">
+      <h2>Key takeaways</h2>
+      <ol>
+        {% for t in keyTakeaways %}<li>{{ t }}</li>{% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if faq and faq.length %}
 <section class="section section--sage">
   <div class="container" style="max-width:76ch">

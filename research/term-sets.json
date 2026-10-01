@@ -1,0 +1,1493 @@
+{
+ "_about": "Expert vocabulary per product and per destination. A post's term set = its product set + each destination set + the shared trade set. Each term is a list of accepted spellings (first is canonical); a term counts as covered if any spelling appears in the post's rendered main text (case-insensitive). Target: >= 70% coverage (scripts/check-blog-insight.mjs). Add terms only if a trade professional would actually use them for this product or market; never add a term to a post where it isn't true.",
+ "shared_trade": [
+  [
+   "HS code",
+   "HS subheading",
+   "ITC-HS"
+  ],
+  [
+   "phytosanitary certificate",
+   "phytosanitary"
+  ],
+  [
+   "certificate of origin"
+  ],
+  [
+   "certificate of analysis",
+   "COA"
+  ],
+  [
+   "fumigation certificate",
+   "fumigation"
+  ],
+  [
+   "bill of lading",
+   "B/L"
+  ],
+  [
+   "FOB"
+  ],
+  [
+   "CIF"
+  ],
+  [
+   "letter of credit",
+   "LC"
+  ],
+  [
+   "pre-shipment inspection",
+   "SGS",
+   "Bureau Veritas"
+  ],
+  [
+   "20ft",
+   "20-foot"
+  ],
+  [
+   "APEDA"
+  ],
+  [
+   "DGFT"
+  ],
+  [
+   "RoDTEP"
+  ]
+ ],
+ "products": {
+  "basmati": [
+   [
+    "1121"
+   ],
+   [
+    "Pusa 1509",
+    "1509"
+   ],
+   [
+    "Pusa 1401",
+    "1401"
+   ],
+   [
+    "sella",
+    "parboiled"
+   ],
+   [
+    "golden sella"
+   ],
+   [
+    "steam basmati",
+    "steam"
+   ],
+   [
+    "aged",
+    "aging",
+    "ageing"
+   ],
+   [
+    "grain length"
+   ],
+   [
+    "length-to-breadth",
+    "L/B ratio"
+   ],
+   [
+    "RCAC",
+    "contract registration"
+   ],
+   [
+    "geographical indication",
+    "GI"
+   ],
+   [
+    "Punjab"
+   ],
+   [
+    "Haryana"
+   ],
+   [
+    "broken",
+    "brokens"
+   ],
+   [
+    "kharif"
+   ],
+   [
+    "moisture"
+   ]
+  ],
+  "chickpeas": [
+   [
+    "kabuli"
+   ],
+   [
+    "desi"
+   ],
+   [
+    "count per ounce",
+    "per ounce"
+   ],
+   [
+    "42-44",
+    "42/44",
+    "44-46",
+    "58-60"
+   ],
+   [
+    "millimetre",
+    "mm"
+   ],
+   [
+    "chana dal"
+   ],
+   [
+    "besan"
+   ],
+   [
+    "Madhya Pradesh"
+   ],
+   [
+    "rabi"
+   ],
+   [
+    "moisture"
+   ],
+   [
+    "foreign matter"
+   ],
+   [
+    "admixture"
+   ],
+   [
+    "weevil",
+    "insect damage"
+   ],
+   [
+    "splits",
+    "split"
+   ]
+  ],
+  "masoor": [
+   [
+    "masoor"
+   ],
+   [
+    "masoor dal",
+    "split masoor",
+    "malka"
+   ],
+   [
+    "red lentil"
+   ],
+   [
+    "Madhya Pradesh"
+   ],
+   [
+    "Uttar Pradesh"
+   ],
+   [
+    "rabi"
+   ],
+   [
+    "Canada",
+    "Canadian"
+   ],
+   [
+    "Australia",
+    "Australian"
+   ],
+   [
+    "admixture"
+   ],
+   [
+    "foreign matter"
+   ],
+   [
+    "moisture"
+   ],
+   [
+    "husk"
+   ]
+  ],
+  "cumin": [
+   [
+    "Unjha"
+   ],
+   [
+    "machine clean",
+    "machine-clean"
+   ],
+   [
+    "sortex"
+   ],
+   [
+    "purity"
+   ],
+   [
+    "singles"
+   ],
+   [
+    "splits"
+   ],
+   [
+    "volatile oil"
+   ],
+   [
+    "admixture"
+   ],
+   [
+    "Gujarat"
+   ],
+   [
+    "Rajasthan"
+   ],
+   [
+    "rabi"
+   ],
+   [
+    "NCDEX"
+   ],
+   [
+    "arrivals"
+   ],
+   [
+    "pesticide residue",
+    "MRL"
+   ],
+   [
+    "salmonella"
+   ]
+  ],
+  "red_chilli": [
+   [
+    "Guntur"
+   ],
+   [
+    "Byadgi"
+   ],
+   [
+    "Teja"
+   ],
+   [
+    "Sannam",
+    "S4"
+   ],
+   [
+    "ASTA colour",
+    "ASTA color",
+    "ASTA"
+   ],
+   [
+    "Scoville",
+    "SHU"
+   ],
+   [
+    "capsaicin"
+   ],
+   [
+    "stemless"
+   ],
+   [
+    "aflatoxin"
+   ],
+   [
+    "Sudan dye",
+    "Sudan"
+   ],
+   [
+    "oleoresin"
+   ],
+   [
+    "cold storage"
+   ],
+   [
+    "Khammam"
+   ],
+   [
+    "Warangal"
+   ],
+   [
+    "moisture"
+   ]
+  ],
+  "turmeric": [
+   [
+    "curcumin"
+   ],
+   [
+    "Erode"
+   ],
+   [
+    "Nizamabad"
+   ],
+   [
+    "Sangli"
+   ],
+   [
+    "finger"
+   ],
+   [
+    "bulb"
+   ],
+   [
+    "polished"
+   ],
+   [
+    "lead chromate"
+   ],
+   [
+    "Salem"
+   ],
+   [
+    "Rajapuri"
+   ],
+   [
+    "NCDEX"
+   ],
+   [
+    "moisture"
+   ],
+   [
+    "curing",
+    "cured"
+   ]
+  ],
+  "cardamom": [
+   [
+    "Idukki"
+   ],
+   [
+    "Bodinayakanur",
+    "Bodi"
+   ],
+   [
+    "e-auction",
+    "auction"
+   ],
+   [
+    "AGEB"
+   ],
+   [
+    "AGS"
+   ],
+   [
+    "AGB"
+   ],
+   [
+    "8mm",
+    "8 mm"
+   ],
+   [
+    "litre weight",
+    "g/l",
+    "grams per litre"
+   ],
+   [
+    "Spices Board"
+   ],
+   [
+    "Guatemala"
+   ],
+   [
+    "qahwa"
+   ],
+   [
+    "green colour",
+    "green color"
+   ],
+   [
+    "moisture"
+   ]
+  ],
+  "guar_gum": [
+   [
+    "viscosity"
+   ],
+   [
+    "cps",
+    "centipoise"
+   ],
+   [
+    "Brookfield"
+   ],
+   [
+    "mesh"
+   ],
+   [
+    "hydration"
+   ],
+   [
+    "E412",
+    "INS 412"
+   ],
+   [
+    "JECFA"
+   ],
+   [
+    "galactomannan"
+   ],
+   [
+    "Jodhpur"
+   ],
+   [
+    "guar split",
+    "guar splits"
+   ],
+   [
+    "fast hydrating",
+    "fast-hydrating"
+   ],
+   [
+    "borate",
+    "crosslinking",
+    "cross-linking"
+   ],
+   [
+    "fracturing",
+    "fracking"
+   ],
+   [
+    "PCP",
+    "pentachlorophenol"
+   ],
+   [
+    "21 CFR 184.1339"
+   ]
+  ],
+  "soybean_meal": [
+   [
+    "crude protein"
+   ],
+   [
+    "46%"
+   ],
+   [
+    "48%"
+   ],
+   [
+    "urease"
+   ],
+   [
+    "Hi-Pro",
+    "hipro"
+   ],
+   [
+    "solvent extraction",
+    "solvent-extracted"
+   ],
+   [
+    "non-GMO",
+    "non-GM"
+   ],
+   [
+    "SOPA"
+   ],
+   [
+    "Madhya Pradesh"
+   ],
+   [
+    "Maharashtra"
+   ],
+   [
+    "kharif"
+   ],
+   [
+    "sand",
+    "silica"
+   ],
+   [
+    "moisture"
+   ],
+   [
+    "Argentina"
+   ],
+   [
+    "Brazil"
+   ],
+   [
+    "DOC",
+    "de-oiled cake"
+   ]
+  ],
+  "fish_meal": [
+   [
+    "crude protein"
+   ],
+   [
+    "60%"
+   ],
+   [
+    "65%"
+   ],
+   [
+    "TVN",
+    "total volatile nitrogen"
+   ],
+   [
+    "histamine"
+   ],
+   [
+    "ethoxyquin"
+   ],
+   [
+    "salmonella"
+   ],
+   [
+    "Peru",
+    "Peruvian"
+   ],
+   [
+    "steam dried",
+    "steam-dried"
+   ],
+   [
+    "ash"
+   ],
+   [
+    "fat"
+   ],
+   [
+    "sardine",
+    "oil sardine"
+   ],
+   [
+    "aquafeed",
+    "aquaculture feed"
+   ],
+   [
+    "moisture"
+   ]
+  ],
+  "shrimp": [
+   [
+    "vannamei",
+    "L. vannamei"
+   ],
+   [
+    "HOSO"
+   ],
+   [
+    "HLSO"
+   ],
+   [
+    "PD"
+   ],
+   [
+    "PDTO"
+   ],
+   [
+    "PUD"
+   ],
+   [
+    "count",
+    "counts per lb"
+   ],
+   [
+    "glaze",
+    "glazing"
+   ],
+   [
+    "IQF"
+   ],
+   [
+    "block frozen",
+    "block"
+   ],
+   [
+    "STPP",
+    "phosphate"
+   ],
+   [
+    "antibiotic",
+    "nitrofuran",
+    "chloramphenicol"
+   ],
+   [
+    "MPEDA"
+   ],
+   [
+    "Andhra Pradesh"
+   ],
+   [
+    "-18°C",
+    "cold chain"
+   ]
+  ],
+  "cow_manure": [
+   [
+    "compost",
+    "composted"
+   ],
+   [
+    "NPK"
+   ],
+   [
+    "organic carbon"
+   ],
+   [
+    "C:N",
+    "carbon-to-nitrogen"
+   ],
+   [
+    "moisture"
+   ],
+   [
+    "E. coli",
+    "salmonella",
+    "pathogen"
+   ],
+   [
+    "heat treatment",
+    "heat-treated",
+    "sterilis"
+   ],
+   [
+    "import permit"
+   ],
+   [
+    "3101"
+   ],
+   [
+    "pellets",
+    "pellet"
+   ],
+   [
+    "mesh"
+   ],
+   [
+    "weed seed"
+   ],
+   [
+    "fumigation"
+   ]
+  ],
+  "grapes": [
+   [
+    "Thompson Seedless"
+   ],
+   [
+    "Flame Seedless"
+   ],
+   [
+    "Sonaka"
+   ],
+   [
+    "Crimson"
+   ],
+   [
+    "Nashik"
+   ],
+   [
+    "Sangli"
+   ],
+   [
+    "Brix"
+   ],
+   [
+    "berry size",
+    "berry diameter"
+   ],
+   [
+    "MRL",
+    "maximum residue"
+   ],
+   [
+    "GrapeNet"
+   ],
+   [
+    "pre-cooling",
+    "pre-cooled"
+   ],
+   [
+    "SO2",
+    "sulphur pad",
+    "sulfur pad"
+   ],
+   [
+    "reefer"
+   ],
+   [
+    "Rotterdam"
+   ]
+  ],
+  "red_onion": [
+   [
+    "Nashik"
+   ],
+   [
+    "Lasalgaon"
+   ],
+   [
+    "APMC",
+    "mandi"
+   ],
+   [
+    "40-60mm",
+    "40–60mm",
+    "40-60 mm"
+   ],
+   [
+    "MEP",
+    "minimum export price"
+   ],
+   [
+    "kharif"
+   ],
+   [
+    "rabi"
+   ],
+   [
+    "late kharif"
+   ],
+   [
+    "curing",
+    "cured"
+   ],
+   [
+    "mesh bag",
+    "mesh bags"
+   ],
+   [
+    "ventilated"
+   ],
+   [
+    "sprouting"
+   ],
+   [
+    "NAFED"
+   ]
+  ],
+  "groundnut": [
+   [
+    "HPS",
+    "hand-picked"
+   ],
+   [
+    "bold"
+   ],
+   [
+    "Java"
+   ],
+   [
+    "38/42",
+    "40/50",
+    "50/60"
+   ],
+   [
+    "aflatoxin"
+   ],
+   [
+    "aflatoxin B1"
+   ],
+   [
+    "Gujarat"
+   ],
+   [
+    "Saurashtra"
+   ],
+   [
+    "kharif"
+   ],
+   [
+    "blanched"
+   ],
+   [
+    "moisture"
+   ],
+   [
+    "oil content"
+   ],
+   [
+    "counts per ounce",
+    "per ounce"
+   ]
+  ],
+  "mango": [
+   [
+    "Alphonso",
+    "Hapus"
+   ],
+   [
+    "Kesar"
+   ],
+   [
+    "Ratnagiri"
+   ],
+   [
+    "Devgad"
+   ],
+   [
+    "hot water treatment",
+    "HWT"
+   ],
+   [
+    "vapour heat treatment",
+    "VHT"
+   ],
+   [
+    "irradiation"
+   ],
+   [
+    "ripening",
+    "ripen"
+   ],
+   [
+    "Brix"
+   ],
+   [
+    "single-layer",
+    "single layer"
+   ],
+   [
+    "air freight"
+   ],
+   [
+    "reefer"
+   ],
+   [
+    "season"
+   ]
+  ],
+  "dehydrated_onion": [
+   [
+    "kibbled"
+   ],
+   [
+    "flakes"
+   ],
+   [
+    "minced"
+   ],
+   [
+    "chopped"
+   ],
+   [
+    "granules"
+   ],
+   [
+    "powder"
+   ],
+   [
+    "mesh"
+   ],
+   [
+    "Mahuva"
+   ],
+   [
+    "Gujarat"
+   ],
+   [
+    "moisture"
+   ],
+   [
+    "TPC",
+    "total plate count",
+    "microbiolog"
+   ],
+   [
+    "white onion"
+   ],
+   [
+    "0712.20"
+   ],
+   [
+    "MEP"
+   ]
+  ],
+  "dorb": [
+   [
+    "crude protein"
+   ],
+   [
+    "crude fibre",
+    "crude fiber"
+   ],
+   [
+    "sand",
+    "silica"
+   ],
+   [
+    "solvent extraction",
+    "solvent-extracted"
+   ],
+   [
+    "rice bran oil"
+   ],
+   [
+    "37/2025-26"
+   ],
+   [
+    "2306"
+   ],
+   [
+    "poultry"
+   ],
+   [
+    "cattle feed",
+    "cattle"
+   ],
+   [
+    "aflatoxin"
+   ],
+   [
+    "DORB"
+   ],
+   [
+    "moisture"
+   ]
+  ],
+  "spices_overview": [
+   [
+    "WITS"
+   ],
+   [
+    "UN Comtrade",
+    "Comtrade"
+   ],
+   [
+    "unit value"
+   ],
+   [
+    "Spices Board"
+   ],
+   [
+    "red chilli"
+   ],
+   [
+    "cumin"
+   ],
+   [
+    "turmeric"
+   ],
+   [
+    "cardamom"
+   ],
+   [
+    "coriander"
+   ],
+   [
+    "black pepper"
+   ],
+   [
+    "0904"
+   ],
+   [
+    "0909"
+   ],
+   [
+    "calendar year"
+   ]
+  ],
+  "verification": [
+   [
+    "IEC"
+   ],
+   [
+    "DGFT"
+   ],
+   [
+    "RCMC"
+   ],
+   [
+    "APEDA"
+   ],
+   [
+    "GSTIN",
+    "GST"
+   ],
+   [
+    "MCA"
+   ],
+   [
+    "CIN"
+   ],
+   [
+    "LLPIN",
+    "LLP"
+   ],
+   [
+    "Denied Entity List"
+   ],
+   [
+    "letter of credit",
+    "LC"
+   ],
+   [
+    "beneficiary"
+   ],
+   [
+    "proforma"
+   ],
+   [
+    "trial order"
+   ]
+  ],
+  "first_order": [
+   [
+    "proforma invoice",
+    "proforma"
+   ],
+   [
+    "Incoterms"
+   ],
+   [
+    "letter of credit",
+    "LC"
+   ],
+   [
+    "TT",
+    "telegraphic transfer"
+   ],
+   [
+    "CAD",
+    "cash against documents"
+   ],
+   [
+    "sample"
+   ],
+   [
+    "spec sheet",
+    "specification sheet"
+   ],
+   [
+    "bill of lading",
+    "B/L"
+   ],
+   [
+    "certificate of origin"
+   ],
+   [
+    "phytosanitary"
+   ],
+   [
+    "pre-shipment inspection"
+   ],
+   [
+    "booking"
+   ],
+   [
+    "cut-off"
+   ]
+  ]
+ },
+ "destinations": {
+  "US": [
+   [
+    "FDA"
+   ],
+   [
+    "FSVP"
+   ],
+   [
+    "FSMA"
+   ],
+   [
+    "prior notice"
+   ],
+   [
+    "CBP",
+    "Customs and Border Protection"
+   ],
+   [
+    "21 CFR"
+   ],
+   [
+    "Seafood HACCP",
+    "HACCP"
+   ],
+   [
+    "import alert"
+   ]
+  ],
+  "CN": [
+   [
+    "GACC"
+   ],
+   [
+    "CIFER"
+   ],
+   [
+    "Decree 248"
+   ],
+   [
+    "Decree 280"
+   ],
+   [
+    "GB 2763",
+    "GB standard"
+   ],
+   [
+    "CIQ"
+   ],
+   [
+    "Shanghai"
+   ],
+   [
+    "Qingdao"
+   ]
+  ],
+  "AE": [
+   [
+    "MOCCAE"
+   ],
+   [
+    "Dubai Municipality"
+   ],
+   [
+    "Jebel Ali"
+   ],
+   [
+    "ZAD",
+    "Emirates Conformity",
+    "ESMA"
+   ],
+   [
+    "halal"
+   ],
+   [
+    "re-export"
+   ]
+  ],
+  "GCC": [
+   [
+    "SFDA"
+   ],
+   [
+    "MOCCAE"
+   ],
+   [
+    "GSO"
+   ],
+   [
+    "halal"
+   ],
+   [
+    "Jebel Ali"
+   ],
+   [
+    "Dammam",
+    "Jeddah"
+   ]
+  ],
+  "GB": [
+   [
+    "IPAFFS"
+   ],
+   [
+    "APHA"
+   ],
+   [
+    "BTOM",
+    "Border Target Operating Model"
+   ],
+   [
+    "Heathrow"
+   ],
+   [
+    "phytosanitary"
+   ],
+   [
+    "UK Global Tariff"
+   ]
+  ],
+  "NL": [
+   [
+    "TRACES NT",
+    "TRACES"
+   ],
+   [
+    "NVWA"
+   ],
+   [
+    "Regulation (EU) 2019/1793",
+    "2019/1793"
+   ],
+   [
+    "CHED"
+   ],
+   [
+    "RASFF"
+   ],
+   [
+    "396/2005",
+    "EU MRL"
+   ],
+   [
+    "Rotterdam"
+   ]
+  ],
+  "DE": [
+   [
+    "TRACES NT",
+    "TRACES"
+   ],
+   [
+    "VLOG",
+    "Ohne Gentechnik"
+   ],
+   [
+    "GMO labelling",
+    "GMO-free",
+    "GM-free"
+   ],
+   [
+    "Hamburg"
+   ],
+   [
+    "EU feed",
+    "Regulation (EC) 1829/2003",
+    "1829/2003"
+   ],
+   [
+    "RASFF"
+   ]
+  ],
+  "BD": [
+   [
+    "BSTI"
+   ],
+   [
+    "SAFTA"
+   ],
+   [
+    "Bangladesh Bank"
+   ],
+   [
+    "Benapole"
+   ],
+   [
+    "Petrapole"
+   ],
+   [
+    "Chattogram",
+    "Chittagong"
+   ],
+   [
+    "import permit"
+   ]
+  ],
+  "ID": [
+   [
+    "BPOM"
+   ],
+   [
+    "BPJPH"
+   ],
+   [
+    "Barantin",
+    "quarantine"
+   ],
+   [
+    "SNI"
+   ],
+   [
+    "Tanjung Priok"
+   ],
+   [
+    "import approval",
+    "import permit"
+   ]
+  ],
+  "VN": [
+   [
+    "PPD",
+    "Plant Protection Department"
+   ],
+   [
+    "Cat Lai"
+   ],
+   [
+    "Haiphong"
+   ],
+   [
+    "MARD"
+   ],
+   [
+    "import quarantine",
+    "quarantine"
+   ]
+  ],
+  "BR": [
+   [
+    "MAPA"
+   ],
+   [
+    "SISCOMEX"
+   ],
+   [
+    "RADAR"
+   ],
+   [
+    "Santos"
+   ],
+   [
+    "ANVISA"
+   ],
+   [
+    "Portuguese"
+   ]
+  ],
+  "GLOBAL": [
+   [
+    "destination"
+   ],
+   [
+    "importer"
+   ],
+   [
+    "import permit"
+   ],
+   [
+    "MRL",
+    "maximum residue"
+   ]
+  ]
+ },
+ "posts": {
+  "1121-basmati-vs-pusa-basmati-grades-length-aging": {
+   "product": "basmati",
+   "destinations": [
+    "GLOBAL"
+   ]
+  },
+  "alphonso-mango-exporter-india-uk": {
+   "product": "mango",
+   "destinations": [
+    "GB"
+   ]
+  },
+  "cardamom-exporter-india-gcc": {
+   "product": "cardamom",
+   "destinations": [
+    "GCC"
+   ]
+  },
+  "chickpeas-exporter-india-to-uae": {
+   "product": "chickpeas",
+   "destinations": [
+    "AE"
+   ]
+  },
+  "dehydrated-onion-exporter-india-brazil": {
+   "product": "dehydrated_onion",
+   "destinations": [
+    "BR"
+   ]
+  },
+  "dehydrated-onion-vs-fresh-onion-mep": {
+   "product": "dehydrated_onion",
+   "destinations": [
+    "GLOBAL"
+   ]
+  },
+  "dorb-export-ban-lifted-what-buyers-need-to-know": {
+   "product": "dorb",
+   "destinations": [
+    "GLOBAL"
+   ]
+  },
+  "dried-red-chilli-exporter-india-to-china": {
+   "product": "red_chilli",
+   "destinations": [
+    "CN"
+   ]
+  },
+  "fish-meal-exporter-india-vietnam": {
+   "product": "fish_meal",
+   "destinations": [
+    "VN"
+   ]
+  },
+  "fresh-grapes-exporter-from-india-netherlands": {
+   "product": "grapes",
+   "destinations": [
+    "NL"
+   ]
+  },
+  "frozen-shrimp-import-from-india-to-china": {
+   "product": "shrimp",
+   "destinations": [
+    "CN"
+   ]
+  },
+  "frozen-vannamei-shrimp-exporter-usa": {
+   "product": "shrimp",
+   "destinations": [
+    "US"
+   ]
+  },
+  "groundnut-kernels-exporter-india-indonesia": {
+   "product": "groundnut",
+   "destinations": [
+    "ID"
+   ]
+  },
+  "guar-gum-exporter-india-usa": {
+   "product": "guar_gum",
+   "destinations": [
+    "US"
+   ]
+  },
+  "guar-gum-food-vs-industrial-grade": {
+   "product": "guar_gum",
+   "destinations": [
+    "GLOBAL"
+   ]
+  },
+  "how-exporting-with-green-plus-exim-works": {
+   "product": "first_order",
+   "destinations": [
+    "GLOBAL"
+   ]
+  },
+  "how-to-verify-an-indian-exporter-before-you-pay": {
+   "product": "verification",
+   "destinations": []
+  },
+  "india-cumin-seed-exporter-china": {
+   "product": "cumin",
+   "destinations": [
+    "CN"
+   ]
+  },
+  "india-spice-export-market-overview-2024": {
+   "product": "spices_overview",
+   "destinations": []
+  },
+  "kabuli-vs-desi-chickpeas-buyer-guide": {
+   "product": "chickpeas",
+   "destinations": [
+    "GLOBAL"
+   ]
+  },
+  "masoor-lentils-exporter-india-bangladesh": {
+   "product": "masoor",
+   "destinations": [
+    "BD"
+   ]
+  },
+  "organic-cow-manure-exporter-from-india": {
+   "product": "cow_manure",
+   "destinations": [
+    "GLOBAL"
+   ]
+  },
+  "red-onion-exporter-from-india-bangladesh": {
+   "product": "red_onion",
+   "destinations": [
+    "BD"
+   ]
+  },
+  "soybean-meal-exporter-from-india-germany": {
+   "product": "soybean_meal",
+   "destinations": [
+    "DE"
+   ]
+  },
+  "turmeric-exporter-india-to-uae": {
+   "product": "turmeric",
+   "destinations": [
+    "AE"
+   ]
+  }
+ }
+}

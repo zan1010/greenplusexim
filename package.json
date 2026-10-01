@@ -27,7 +27,8 @@
     "indexnow-submit": "node scripts/indexnow-submit.mjs",
     "check:lhci": "lhci autorun",
     "reprioritize": "node scripts/reprioritize.mjs",
-    "check:keywords": "node scripts/check-keywords.mjs"
+    "check:keywords": "node scripts/check-keywords.mjs",
+    "check:insight": "node scripts/check-blog-insight.mjs"
   },
   "type": "commonjs",
   "devDependencies": {
